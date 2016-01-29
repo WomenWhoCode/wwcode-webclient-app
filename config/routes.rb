@@ -53,5 +53,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  get '/', to: redirect("http://example.com/blog")
+  get '/', to: "events#index"
 end
