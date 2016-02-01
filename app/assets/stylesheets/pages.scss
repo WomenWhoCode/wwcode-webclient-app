@@ -35,7 +35,6 @@ body.sign_up {
 
 .join_us_button {
   float: left;
-  margin-left: 38%;
   text-decoration: none;
   color: white;
   font-size: 24px;
@@ -59,4 +58,10 @@ body.sign_up {
   padding-right: 45px;
   border-radius: 5px;
   margin-left: 10px;
+}
+
+.center_buttons {
+  display: inline-block;
+  text-align: center;
+  
 }
