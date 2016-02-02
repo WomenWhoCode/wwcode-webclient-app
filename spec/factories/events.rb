@@ -2,12 +2,12 @@
 
 FactoryGirl.define do
   factory :event do
-    name "MyString"
-    description "MyText"
-    date_time_start "2016-01-31 18:59:37"
-    date_time_end "2016-01-31 18:59:37"
+    name "Members Montly Hangout"
+    description "This is when our fabulous members get to hangout every month. There may be some new faces to meet!"
+    date_time_start "2016-02-01 18:00:00"
+    date_time_end "2016-02-01 20:00:00"
     rsvp_needed false
     tickets_needed false
-    anemities "MyString"
+    anemities "Food and Wine"
   end
 end
