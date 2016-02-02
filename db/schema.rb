@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160201031135) do
+ActiveRecord::Schema.define(version: 20160201072642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160201031135) do
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "anemities"
+    t.string   "amenities"
     t.datetime "date_time_start"
     t.datetime "date_time_end"
     t.boolean  "rsvp_needed"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 20160201031135) do
     t.datetime "updated_at"
     t.string   "location_name"
     t.string   "location_address"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160201031135) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "role_id"
     t.string   "username"
   end
 
