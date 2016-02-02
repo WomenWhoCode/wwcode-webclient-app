@@ -8,6 +8,8 @@ FactoryGirl.define do
     date_time_end "2016-02-01 20:00:00"
     rsvp_needed false
     tickets_needed false
-    anemities "Food and Wine"
+    amenities "Food and Wine"
+    location_name "Coit Tower"
+    location_address "1 Telegraph Hill Blvd, San Francisco, CA"
   end
 end
