@@ -8,6 +8,7 @@ body.sign_up {
   background: #00B5A9;
   height: 40px;
   width: 100px;
+  border: none;
 }
 
 input {
@@ -16,4 +17,19 @@ input {
  margin: 20px;
  border-radius: 4px;
  width: 300px;
+}
+
+.remember_me_checkbox {
+  display: inline-block;
+}
+
+.remember_me {
+  display: inline-block;
+  margin-left: -140px;
+}
+
+.remember_me_div {
+  display: inline-block;
+  text-align: center;
+  margin-left: -130px;
 }
