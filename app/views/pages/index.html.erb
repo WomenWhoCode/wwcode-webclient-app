@@ -1,10 +1,25 @@
-<p class="main_text main_text_top">Dear women,</p>
-<p class="main_text">We need you.</p>
-<p class="sub_text">-The Tech Industry</p>
-
-<%= image_tag('logo.png', class: 'logo') %>
-
-<div class="center_buttons">
-  <a href="/users/sign_up" class="join_us_button">JOIN US</a>
-  <a href="/users/sign_in" class="log_in_button">LOG IN</a>
+<div class="first_fade hidden">
+  <p class="main_text main_text_top">Dear women,</p>
 </div>
+<div class="second_fade hidden">
+  <p class="main_text">We need you.</p>
+</div>
+<div class="fade_last hidden">
+  <p class="sub_text">-The Tech Industry</p>
+
+
+  <%= image_tag('logo.png', class: 'logo') %>
+
+  <div class="center_buttons">
+    <a href="/users/sign_up" class="join_us_button">JOIN US</a>
+    <a href="/users/sign_in" class="log_in_button">LOG IN</a>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('div.first_fade').fadeIn(5000).removeClass('hidden');
+    $('div.second_fade').hide().delay(3000).fadeIn(5000).removeClass('hidden');
+    $('div.fade_last').hide().delay(5000).fadeIn(5000).removeClass('hidden');
+  });
+</script>

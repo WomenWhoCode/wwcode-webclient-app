@@ -1,3 +1,79 @@
 body.sign_up {
   background-color: #212121;
 }
+
+#engineering_interests_title {
+  margin-top: 15px;
+}
+
+.interest_labels {
+  color: #696969;
+  margin-left: 13px;
+}
+
+.interest_checkboxes {
+  width: 350px;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin-left: 27%;
+  background: #212121;
+  outline: 2px solid #696969;
+}
+
+.other {
+  width: 140px;
+  margin-left: 125px;
+  padding-bottom: 5px;
+  margin-top: -1px;
+  padding-top: 3px;
+  color: #696969;
+}
+
+.next_button {
+  background: #00B5A9;
+  height: 40px;
+  width: 100px;
+  border: none;
+}
+
+.circle_one {
+  width: 33px;
+  height: 33px;
+  display: inline;
+  text-align: center;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+#circle_two {
+  font-size: 15px;
+  background: #00B5A9;
+  width:30px;
+  display: inline;
+  text-align: center;
+  border-radius: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#circle_three {
+  font-size: 15px;
+  background: #696969;
+  width:30px;
+  display: inline;
+  text-align: center;
+  border-radius: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-left: 10px;
+}
