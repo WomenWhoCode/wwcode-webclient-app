@@ -20,16 +20,16 @@ input {
 }
 
 .remember_me_checkbox {
-  display: inline-block;
+  float: left;
+  width: 10px;
 }
 
 .remember_me {
-  display: inline-block;
-  margin-left: -140px;
+  margin-left: 10px;
+  
 }
 
 .remember_me_div {
   display: inline-block;
-  text-align: center;
-  margin-left: -130px;
+  width: 120px; 
 }
