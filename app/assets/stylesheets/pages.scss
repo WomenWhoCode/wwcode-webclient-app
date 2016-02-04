@@ -62,6 +62,54 @@ body.sign_up {
 
 .center_buttons {
   display: inline-block;
-  text-align: center;
-  
+  text-align: center; 
 }
+
+#thanks_title {
+  margin-top: 50px;
+  font-size: 22px;
+  width: 285px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.github {
+  display: inline-block;
+  margin-top: 150px;
+  text-align: center;
+}
+
+
+.github_button {
+  background: #00B6AA;
+  font: white;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+
+.email {
+  display: block;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.mail_button {
+  background: #00B6AA;
+  font: white;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 17px;
+  padding-right: 17px;
+  border-radius: 5px;
+}
+
