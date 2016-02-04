@@ -1,0 +1,36 @@
+<%= image_tag('personalization.gif', class: 'check_pic')%>
+<%= image_tag('personalization.gif', class: 'check_pic')%>
+<%= image_tag('personalization_3.png', class: 'circle_number_pic')%>
+
+<div class="title">
+  <p id="form_title">What's your current techincal skill-set level?</p>
+<div>
+
+<%= form_tag '/experiences', method: :post do %>
+  <div class='form_checkboxes_list'>
+    <div class='form_checkboxes'>
+      <%= radio_button_tag 'experience', "expert" %> 
+      <%= label_tag 'expert', 'sigularity (10+ years)', class: "form_checkbox_labels" %> 
+    </div>
+    <div class='form_checkboxes'>
+      <%= radio_button_tag 'experience', "advanced" %> 
+      <%= label_tag 'advanced', 'advanced (5+ years)', class: "form_checkbox_labels" %> 
+    </div>
+    <div class='form_checkboxes'>
+      <%= radio_button_tag 'experience', "intermediate" %> 
+      <%= label_tag 'intermediate', 'intermediate (2-5 years)', class: "form_checkbox_labels" %> 
+    </div>
+    <div class='form_checkboxes'>
+      <%= radio_button_tag 'experience', "beginner" %> 
+      <%= label_tag 'beginner', 'beginner (2 years)', class: "form_checkbox_labels" %> 
+    </div>
+    <div class='form_checkboxes'>
+      <%= radio_button_tag 'experience', "newbie (1 year)"  %> 
+      <%= label_tag 'newbie', 'newbie (1 year)', class: "form_checkbox_labels" %> 
+    </div >
+    <div class='form_checkboxes'>
+      <%= text_field_tag "Other", nil, placeholder: "Other", class: "other" %>
+    </div>
+    <%= submit_tag "Next", class: "next_button" %>  
+  </div> 
+<% end %>

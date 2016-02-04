@@ -1,48 +1,48 @@
-<%= image_tag('checkbox.png', class: 'circle_one')%>
-<p id="circle_two">2</p>
-<p id="circle_three">3</p>
+<%= image_tag('personalization.gif', class: 'check_pic')%>
+<%= image_tag('personalization_2.png', class: 'circle_number_pic')%>
+<%= image_tag('personalization_3_dark.png', class: 'circle_number_pic')%>
 
-<p id="engineering_interests_title">Engineering area(s) of interest</p>
+<p id="form_title">Engineering area(s) of interest</p>
 
 <%= form_tag '/interests', method: :post do %>
-  <div class='interest_checkboxes_list'>
-    <div class='interest_checkboxes'>
+  <div class='form_checkboxes_list'>
+    <div class='form_checkboxes'>
       <%= check_box_tag 'architecture' %> 
-      <%= label_tag 'architecture', 'architecture', class: "interest_labels" %> 
+      <%= label_tag 'architecture', 'architecture', class: "form_checkbox_labels" %> 
     </div>
-    <div class='interest_checkboxes'>
+    <div class='form_checkboxes'>
       <%= check_box_tag 'security' %> 
-      <%= label_tag 'security', 'security', class: "interest_labels" %> 
+      <%= label_tag 'security', 'security', class: "form_checkbox_labels" %> 
     </div>
-    <div class='interest_checkboxes'>
+    <div class='form_checkboxes'>
       <%= check_box_tag 'data science' %> 
-      <%= label_tag 'data science', 'data science', class: "interest_labels" %> 
+      <%= label_tag 'data science', 'data science', class: "form_checkbox_labels" %> 
     </div>
-    <div class='interest_checkboxes'>
+    <div class='form_checkboxes'>
       <%= check_box_tag 'analytics' %> 
-      <%= label_tag 'analytics', 'analytics', class: "interest_labels" %> 
+      <%= label_tag 'analytics', 'analytics', class: "form_checkbox_labels" %> 
     </div>
-    <div class='interest_checkboxes'>
+    <div class='form_checkboxes'>
       <%= check_box_tag 'open source' %> 
-      <%= label_tag 'open source', 'open source', class: "interest_labels" %> 
-    </div class='interest_checkboxes'>
-    <div class='interest_checkboxes'>
+      <%= label_tag 'open source', 'open source', class: "form_checkbox_labels" %> 
+    </div >
+    <div class='form_checkboxes'>
       <%= check_box_tag 'devops' %> 
-      <%= label_tag 'devops', 'devops', class: "interest_labels" %> 
+      <%= label_tag 'devops', 'devops', class: "form_checkbox_labels" %> 
     </div>
-    <div class='interest_checkboxes'>
+    <div class='form_checkboxes'>
       <%= check_box_tag 'web' %> 
-      <%= label_tag 'web', 'web', class: "interest_labels" %> 
+      <%= label_tag 'web', 'web', class: "form_checkbox_labels" %> 
     </div>
-    <div class='interest_checkboxes'>
+    <div class='form_checkboxes'>
       <%= check_box_tag 'mobile' %> 
-      <%= label_tag 'mobile', 'mobile', class: "interest_labels" %> 
+      <%= label_tag 'mobile', 'mobile', class: "form_checkbox_labels" %> 
     </div>
-    <div class='interest_checkboxes'>
+    <div class='form_checkboxes'>
       <%= check_box_tag 'enterprise' %> 
-      <%= label_tag 'enterprise', 'enterprise', class: "interest_labels" %>
+      <%= label_tag 'enterprise', 'enterprise', class: "form_checkbox_labels" %>
     </div>
-    <div class='interest_checkboxes'>
+    <div class='form_checkboxes'>
       <%= text_field_tag "Other", nil, placeholder: "Other", class: "other" %>
     </div>
     <%= submit_tag "Next", class: "next_button" %>  

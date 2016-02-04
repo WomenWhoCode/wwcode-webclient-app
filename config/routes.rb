@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   resources :events
   resources :routes
   resources :interests
+  resources :hopes
+  resources :experiences
+  resources :pages
 
 end
