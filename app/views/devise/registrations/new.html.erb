@@ -24,6 +24,10 @@
    <!--  <%= f.label :password_confirmation %><br /> -->
     <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation" %>
   </div>
+
+  <div class="field">
+  <%= text_field_tag "access_code", nil, placeholder: "Access Code" %>
+  </div>
 <br />
   <div class="actions">
     <%= f.submit "SIGN UP!", class: 'button' %>

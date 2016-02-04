@@ -2,17 +2,26 @@ body.sign_up {
   background-color: #212121;
 }
 
-#engineering_interests_title {
+#form_title {
   margin-top: 15px;
+  font-size: 22px;
+  width: 285px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.interest_labels {
-  color: #696969;
+.form_checkbox_labels {
+  color: #bebebe;
   margin-left: 13px;
+  width: 190px;
+  vertical-align: middle;
+  font-weight: normal;
+  font-size: 16px;
 }
 
-.interest_checkboxes {
-  width: 350px;
+.form_checkboxes {
+  width: 450px;
   text-align: left;
   margin-right: auto;
   margin-left: auto;
@@ -21,59 +30,48 @@ body.sign_up {
 input[type="checkbox"] {
   width: 17px;
   height: 17px;
-  margin-left: 27%;
+  margin-left: 25%;
   background: #212121;
-  outline: 2px solid #696969;
+  outline: 2px solid  #48484A;
+}
+
+input[type="radio"] {
+  width: 17px;
+  height: 17px;
+  margin-left: 25%;
+  background: #212121;
+  margin-bottom: 15px;
 }
 
 .other {
-  width: 140px;
-  margin-left: 125px;
-  padding-bottom: 5px;
+  width: 200px;
+  margin-left: 142px;
+  padding-bottom: 8px;
   margin-top: -1px;
   padding-top: 3px;
-  color: #696969;
+  color: #48484A;
+  font-size: 16px;
 }
 
 .next_button {
-  background: #00B5A9;
+  background: #00B6AA;
   height: 40px;
   width: 100px;
   border: none;
+  font-size: 20px;
 }
 
-.circle_one {
-  width: 33px;
-  height: 33px;
+.check_pic {
+  width: 50px;
+  height: 50px;
   display: inline;
   text-align: center;
-  border-radius: 15px;
-  margin-right: 10px;
 }
 
-#circle_two {
-  font-size: 15px;
-  background: #00B5A9;
-  width:30px;
+.circle_number_pic {
+  width: 50px;
+  height: 50px;
   display: inline;
   text-align: center;
-  border-radius: 15px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
 
-#circle_three {
-  font-size: 15px;
-  background: #696969;
-  width:30px;
-  display: inline;
-  text-align: center;
-  border-radius: 15px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-left: 10px;
-}
