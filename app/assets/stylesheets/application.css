@@ -14,3 +14,9 @@
  *= require_self
  *= require font-awesome
  */
+
+
+ .alert-dismissible{
+ margin-top:50px;
+ margin-bottom:0px;
+}
