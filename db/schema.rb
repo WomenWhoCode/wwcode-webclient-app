@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160205034954) do
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "amenities"
+    t.string   "anemities"
     t.datetime "date_time_start"
     t.datetime "date_time_end"
     t.boolean  "rsvp_needed"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20160205034954) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.integer  "role_id"
     t.string   "username"
   end
 
