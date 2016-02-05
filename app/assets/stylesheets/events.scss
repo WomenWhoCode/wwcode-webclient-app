@@ -9,6 +9,7 @@
 .navbar-item{
   display: inline-block;
   color: grey;
+  margin-bottom: 0px;
 }
 
 .nav-title{
@@ -18,6 +19,20 @@
 }
 
 .navbar-menu {
+  display: inline-block;
   font-size: 20px !important;
   color: grey;
+  padding: 10px 17px 10px 15px!important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar {
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
+.container-fluid {
+  padding-left: 10px !important
 }
