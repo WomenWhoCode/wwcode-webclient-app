@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_admin!
     if !current_user || !current_user.role.admin?
-      flash[:danger] = "Error: adminstrator permission required for this url."
+      flash[:danger] = "Error: administrator permission required for this url."
       redirect_to '/events'
     end
   end
