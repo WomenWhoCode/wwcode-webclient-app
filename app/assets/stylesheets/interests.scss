@@ -35,6 +35,14 @@ input[type="checkbox"] {
   outline: 2px solid  #48484A;
 }
 
+input[type="checkbox"]:checked {
+  width: 17px;
+  height: 17px;
+  margin-left: 25%;
+  background: #212121;
+  outline: 2px solid  #00B6AA;
+}
+
 input[type="radio"] {
   width: 17px;
   height: 17px;
