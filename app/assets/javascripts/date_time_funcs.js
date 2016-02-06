@@ -1,8 +1,8 @@
 convertEventsDates = function(events){
   for(var i=0;i<events.length;i++){
     var UTC_time = new Date(events[i].event_date).getTime();
-    var event_time_offset = -5*3600;
-    //need conversion code depending on time-zone depending on network geo-cords. e.g. Google Maps Time Zone API.Trying Eastern time as example here.
+    var event_time_offset = -8*3600;
+    //need conversion code depending on time-zone depending on network geo-cords. e.g. Google Maps Time Zone API.Trying Pacific time, no DST as example here.
     var date_at_event_time_zone= new Date(UTC_time+event_time_offset * 1000);
     events[i].month=monthNames[date_at_event_time_zone.getUTCMonth()];
     events[i].day=date_at_event_time_zone.getUTCDate();

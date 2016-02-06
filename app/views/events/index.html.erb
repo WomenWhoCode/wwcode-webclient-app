@@ -1,20 +1,21 @@
-<p> <%= link_to "Sign up", "/users/sign_up" %> </p>
-
-<% if current_user %>
-<p> <%= link_to "Sign out", "/users/sign_out", method: "delete" %> <p>
-<% else %>
-<p> <%= link_to "Sign in", "/users/sign_in" %> </p>
-<% end %>
-
-<div ng-app="app">
-  <div ng-controller="eventsCtrl" ng-init="setup()">
-    <div ng-repeat="event in events">
-      <p>{{event.title}}</p>
-      <p>{{event.network.title.toUpperCase() + " NETWORK"}}</p>
-      <p>{{event.month + " " + event.date}}</p>
-      <p>{{event.hour + ":" + event.minute + " " + event.ampm}}</p>
-      <p>{{"at " + event.location}}</p>
-      <br>
+<div ng-app="app" class="events-table-div">
+  <div ng-controller="eventsCtrl" ng-init="setup()" class="events-cell-div">
+    <div  class="events-inner-div">
+      <p class="events-heading font-montserrat"> Upcoming events near you:</p>
+      <div ng-repeat="event in events" class="event-repeat">
+        <div class="panel-default my-panel">  
+          <div class="panel-heading my-panel-heading font-montserrat-light">
+            <p class="event-title">{{event.title}}</p>
+            <p class="event-network">{{event.network.title.toUpperCase() + " NETWORK"}}</p>
+          </div>
+          <div class="panel-body my-panel-body font-hind">
+            <p>{{event.month + " " + event.date}}</p>
+            <p>{{event.hour + ":" + event.minute + " " + event.ampm}}</p>
+            <p>{{"at " + event.location}}</p>
+          </div>
+        </div>
+        <p></p>
+      </div>
     </div>
   </div>
 </div>

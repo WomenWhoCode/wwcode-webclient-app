@@ -5,3 +5,84 @@
 .font-montserrat{
   font-family: 'Montserrat', sans-serif;
 }
+
+.font-montserrat-light{
+  font-family: 'Montserrat Light', arial;
+}
+
+.events-table-div {
+  background-color: white;
+  display: table;
+  height:90%;
+  width:100%;
+}
+
+.events-cell-div {
+  display: table-cell;
+  text-align: center;
+}
+
+.events-inner-div {
+  display: inline-block;
+  text-align: left;
+}
+
+.events-inner-div>p{
+  font-size: 14.5px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding-left: 9px;
+  font-weight: 300;
+}
+
+.events-heading{
+  color: black;
+}
+
+.event-repeat>p{
+  line-height: .5;
+}
+
+.my-panel{
+  border-color: transparent;
+/*  -webkit-box-shadow: ;
+  -moz-box-shadow: ;*/
+  box-shadow: 1.5px 0px 2.5px rgba(180, 180, 180, 0.5), 0px 5px 3px rgba(180, 180, 180, 0.5);
+  border-radius:2px 2px 2px 2px !important;
+}
+
+.my-panel-heading{
+  padding: 18px;
+  background-color: #00B5A9 !important;
+  border: none;
+  border-radius:2px 2px 0px 0px !important;
+}
+
+.my-panel-heading .event-title, .my-panel-heading .event-network{
+  color: white !important;
+  line-height: .5;
+  padding-top: 10px;
+}
+
+.my-panel-heading .event-title {
+  font-size: 16px;
+  font-weight: bold ;
+}
+
+.my-panel-heading .event-network {
+  font-size: 10px;
+  opacity: .75;
+}
+
+.my-panel-body {
+  padding: 10px 18px !important;
+  background-color:#F4F4F4;
+  border-radius:0px 0px 2px 2px !important;
+}
+
+.my-panel-body p{
+  color: #333;
+  line-height: 0.5;
+  padding-top: 10px;
+  font-size: 14px;
+} 
