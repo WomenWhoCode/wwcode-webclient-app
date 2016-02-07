@@ -1,6 +1,7 @@
 convertEventsDates = function(events){
   for(var i=0;i<events.length;i++){
-    var UTC_time = new Date(events[i].event_date).getTime();
+    eventMozDate = convertToMozFriendlyDate(events[i].event_date);//need this for Firefox
+    var UTC_time = new Date(eventMozDate).getTime();
     var event_time_offset = -8*3600;
     //need conversion code depending on time-zone depending on network geo-cords. e.g. Google Maps Time Zone API.Trying Pacific time, no DST as example here.
     var date_at_event_time_zone=new Date(UTC_time+event_time_offset * 1000);
@@ -17,6 +18,12 @@ convertEventsDates = function(events){
   };
   return events;
 };
+
+convertToMozFriendlyDate = function(dateString){
+  var index_space_first = dateString.indexOf(" ")
+  var index_space_last = dateString.lastIndexOf(" UTC");
+  return dateString.slice(0,index_space_first) + "T" + dateString.slice(index_space_first+1,index_space_last) + "Z";
+}
 
 convertToAMPM = function(hour){        
     var result = [];
