@@ -21,7 +21,7 @@ convertEventsDates = function(events){
 
 convertToMozFriendlyDate = function(dateString){
   var index_space_first = dateString.indexOf(" ")
-  var index_space_last = dateString.lastIndexOf(" UTC");
+  var index_space_last = dateString.indexOf(" UTC");
   return dateString.slice(0,index_space_first) + "T" + dateString.slice(index_space_first+1,index_space_last) + "Z";
 }
 
