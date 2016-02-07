@@ -21,15 +21,15 @@
           }
         },
         { 
-          title: "Women Who Code - Medellín",
-          event_date: "2016-01-23 18:45:00 UTC",
+          title: "Algorhitms and Interview Prep - TBD",
+          event_date: "2016-01-01 18:45:00 UTC",
           location: "Hack Reactor",
           network: {
             title:"East Bay"
           }
         },
         { 
-          title: "Women Who Code - Medellín",
+          title: "JavaScript Study Group (Hack Reactor)",
           event_date: "2016-01-23 24:00:00 UTC",
           location: "Hack Reactor",
           network: {
