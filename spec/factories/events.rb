@@ -2,14 +2,28 @@
 
 FactoryGirl.define do
   factory :event do
-    name "Members Montly Hangout"
-    description "This is when our fabulous members get to hangout every month. There may be some new faces to meet!"
-    date_time_start "2016-02-01 18:00:00"
-    date_time_end "2016-02-01 20:00:00"
-    rsvp_needed false
-    tickets_needed false
-    amenities "Food and Wine"
-    location_name "Coit Tower"
-    location_address "1 Telegraph Hill Blvd, San Francisco, CA"
+
+    name {Faker::Hacker.adjective.capitalize + " " + Faker::Hacker.abbreviation.capitalize + " " + Faker::Hacker.noun.capitalize + " " + ["Evening", "Night", "Symposium", "Conference", "Meetup", "Day", "Challenge", "Party", "Tutorial", "Hangout"].sample}
+
+    description {Faker::Hacker.say_something_smart.downcase.split(" ").zip(\
+        (Faker::Company.catch_phrase+" "+Faker::Company.bs).downcase.split(" ")\
+        ).flatten(1).compact.join(" ").capitalize}
+
+    date_time_start {[Faker::Date.forward(200), Faker::Date.backward(60)].sample + (rand(48)/2).hours}
+
+    date_time_end {date_time_start+ (rand(16)/2+0.5).hours}
+
+    rsvp_needed {[true, false].sample}
+
+    tickets_needed {[true, false].sample}
+
+    amenities {([Faker::Commerce.product_name, 
+        Faker::Commerce.product_name, 
+        Faker::Commerce.product_name,
+         Faker::Commerce.product_name][0,rand(4)+1]).join(", ")}
+
+    location_name {Faker::Company.name}
+
+    location_address {Faker::Address.street_address + ", " + Faker::Address.city}
   end
 end
