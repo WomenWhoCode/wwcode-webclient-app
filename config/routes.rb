@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :hopes
   resources :experiences
   resources :pages
+  resources :profiles
 
 end
