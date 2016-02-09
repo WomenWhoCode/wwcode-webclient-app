@@ -5,7 +5,7 @@ body.sign_up {
 #form_title {
   margin-top: 15px;
   font-size: 22px;
-  width: 285px;
+  width: 292px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -13,11 +13,12 @@ body.sign_up {
 
 .form_checkbox_labels {
   color: #bebebe;
-  margin-left: 13px;
+  margin-left: 35%;
   width: 190px;
   vertical-align: middle;
   font-weight: normal;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 .form_checkboxes {
@@ -27,37 +28,63 @@ body.sign_up {
   margin-left: auto;
 }
 
-input[type="checkbox"] {
-  width: 17px;
-  height: 17px;
-  margin-left: 25%;
-  background: #212121;
-  outline: 2px solid  #48484A;
+label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  margin-right: 15px;
+  font-size: 13px;
+
 }
 
-input[type="checkbox"]:checked {
-  width: 17px;
-  height: 17px;
-  margin-left: 25%;
-  background: #212121;
-  outline: 2px solid  #00B6AA;
+input[type="checkbox"] {
+  display: none;
 }
 
 input[type="radio"] {
+  display: none;
+}
+
+label:before {
+  content: "";
+  display: inline-block;
   width: 17px;
   height: 17px;
-  margin-left: 25%;
+  margin-left: -17%;
   background: #212121;
-  margin-bottom: 15px;
+  outline: 2px solid  #48484A;
+  position: absolute;
+  margin-right: 10px;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  color: black;
+  text-align: center;
+  background: #00B6AA;
+  vertical-align: middle;
+}
+
+input[type="radio"]:checked + label:before {
+  content: "\2713";
+  color: black;
+  text-align: center;
+  background: #00B6AA;
+  vertical-align: middle;
 }
 
 .other {
   width: 200px;
-  margin-left: 142px;
+  margin-left: 155px;
   padding-bottom: 8px;
-  margin-top: -1px;
+  padding-left: 5px;
+  margin-top: 5px;
   padding-top: 3px;
-  color: #48484A;
+  color: #00B6AA;
   font-size: 16px;
 }
 
@@ -74,6 +101,7 @@ input[type="radio"] {
   height: 50px;
   display: inline;
   text-align: center;
+  margin-top: 50px;
 }
 
 .circle_number_pic {
@@ -81,4 +109,5 @@ input[type="radio"] {
   height: 50px;
   display: inline;
   text-align: center;
+  margin-top: 50px;
 }
