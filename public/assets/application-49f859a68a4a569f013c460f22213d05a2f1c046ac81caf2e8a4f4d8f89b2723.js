@@ -42943,10 +42943,115 @@ $provide.value("$locale", {
   angular.module("app", []);
 
 }());
+convertEventsDates = function(events){
+  for(var i=0;i<events.length;i++){
+    eventMozDate = convertToMozFriendlyDate(events[i].event_date);//need this for Firefox
+    var UTC_time = new Date(eventMozDate).getTime();
+    var event_time_offset = -8*3600;
+    //need conversion code depending on time-zone depending on network geo-cords. e.g. Google Maps Time Zone API.Trying Pacific time, no DST as example here.
+    var date_at_event_time_zone=new Date(UTC_time+event_time_offset * 1000);
+
+    events[i].month=monthNames[date_at_event_time_zone.getUTCMonth()];
+
+    events[i].date=Ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCDate());
+
+    var hourAndAMPM=convertToAMPM(date_at_event_time_zone.getUTCHours());
+    events[i].hour=hourAndAMPM[0];
+    events[i].ampm=hourAndAMPM[1];
+
+    events[i].minute=Ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCMinutes());
+  };
+  return events;
+};
+
+convertToMozFriendlyDate = function(dateString){
+  var index_space_first = dateString.indexOf(" ")
+  var index_space_last = dateString.indexOf(" UTC");
+  return dateString.slice(0,index_space_first) + "T" + dateString.slice(index_space_first+1,index_space_last) + "Z";
+}
+
+convertToAMPM = function(hour){        
+    var result = [];
+    hour = Math.floor(parseInt(hour))%24;
+    if (hour>12 && hour < 24){
+      result.push(hour-12);
+      result.push("PM");
+    }
+    else if (hour==0 || hour==24) {
+      result.push(12);
+      result.push("AM");
+    }
+    else if (hour==12){
+      result.push(12);
+      result.push("PM");
+    }
+    else {
+      result.push(hour);
+      result.push("AM");
+    }
+    return result;
+};
+
+Ensure2DigitsWithLeadZero = function(number){
+  var numStr = number.toString();
+  if (numStr.length==1){
+    numStr = "0" + numStr;
+  }
+  return numStr;
+}
+
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 (function() {
 
 
 }).call(this);
+(function () {
+  "use strict";
+
+  angular.module("app").controller("eventsCtrl", function($scope, $http) {
+
+    $scope.setup = function() {
+      $scope.events=convertEventsDates($scope.events);
+    //   $http.get("/api/v1/people.json").then(function(response) {
+    //     $scope.people = response.data;
+    //     console.log(response);
+    //   });
+    }
+
+    $scope.events = [
+        { 
+          title: "Women Who Code - Medellín",
+          event_date: "2016-12-23 18:00:00 UTC",
+          location: "Hack Reactor",
+          network: {
+            title:"San Francisco"
+          }
+        },
+        { 
+          title: "Algorhitms and Interview Prep - TBD",
+          event_date: "2016-01-01 18:45:00 UTC",
+          location: "Hack Reactor",
+          network: {
+            title:"East Bay"
+          }
+        },
+        { 
+          title: "JavaScript Study Group (Hack Reactor)",
+          event_date: "2016-01-23 24:00:00 UTC",
+          location: "Hack Reactor",
+          network: {
+            title:"San Francisco"
+          }
+        }
+    ];
+
+    window.$scope = $scope;
+  
+  });
+}());
+
 (function() {
 
 
