@@ -22,8 +22,17 @@
       <br />
     <div class="profile_div">
       <p><%= label_tag "Network You Belong To" %></p> 
-      <%= select_tag :network, params[:network], placeholder: "Network You Belong To" %> 
+     <!--  <%= select_tag :network, params[:network], placeholder: "Network You Belong To" %>  -->
     </div>
+    <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div>
     <div>
       <%= submit_tag "FINALIZE PROFILE", class: "finalize_button" %> 
     </div> 
