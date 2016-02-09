@@ -9208,6 +9208,50 @@ body.sign_up {
   padding-right: 17px;
   border-radius: 5px;
 }
+/* line 5, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+.finalize_button {
+  width: auto;
+  background: #00B6AA;
+  height: 40px;
+  border: none;
+  font-size: 20px;
+}
+
+/* line 13, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+p {
+  color: #48484A;
+  font-family: Hind;
+  margin-left: 488px;
+  text-align: left;
+}
+
+/* line 20, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+input[type="text"] {
+  margin: 10px;
+}
+
+/* line 24, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+.profile_header {
+  height: 150px;
+}
+
+/* line 28, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+.btn {
+  background: transparent;
+  border-color: transparent transparent #48484A transparent;
+  margin: 20px;
+  border-radius: 4px;
+  width: 300px;
+  border-width: 2px;
+  text-align: left;
+}
+
+/* line 38, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+label:before {
+  display: none;
+  width: 17px;
+  margin: left;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

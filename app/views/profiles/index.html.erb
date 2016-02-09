@@ -7,25 +7,25 @@
 <%= form_tag '/profiles', method: :post do %>
     <div class="profile_div">
       <div>
-        <p><%= label_tag "Full Name" %></p>
+        <p class='profile_text'><%= label_tag "Full Name" %></p>
       </div>
       <div>
         <%= text_field_tag :full_name, params[:full_name] %>
       </div> 
     </div>
       <br />
-    <div  class="profile_div">
-      <div><p><%= label_tag "Email Address" %></p></div>
+    <div class="profile_div">
+      <div><p class='profile_text'><%= label_tag "Email Address" %></p></div>
       <div><%= text_field_tag :email, params[:email] %></div> 
     </div>
       <br />
     <div class="profile_div">
-      <div><p><%= label_tag "Job Title" %></p></div>
+      <div><p class='profile_text'><%= label_tag "Job Title" %></p></div>
       <div><%= text_field_tag :job_title, params[:job_title] %></div> 
     </div>
       <br />
     <div class="profile_div">
-      <div><p><%= label_tag "Network You Belong To" %></p></div> 
+      <div><p class='profile_text'><%= label_tag "Network You Belong To" %></p></div> 
      <!--  <%= select_tag :network, params[:network], placeholder: "Network You Belong To" %>  -->
     </div>
     <div class="dropdown">
