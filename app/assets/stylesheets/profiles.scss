@@ -25,7 +25,7 @@ input[type="text"] {
   height: 150px;
 }
 
-.btn {
+.profile_btn {
   background: transparent; 
   border-color: transparent transparent #48484A transparent;
   margin: 20px;
@@ -33,10 +33,4 @@ input[type="text"] {
   width: 300px;
   border-width: 2px;
   text-align: left;
-}
-
-label:before {
-  display: none;
-  width: 17px;
-  margin: left;
 }
