@@ -1,12 +1,21 @@
-Hi.
-
-<ul>
-  <li> <%= link_to "Sign up", "/users/sign_up" %> </li>
-  
-  <% if current_user %>
-  <li> <%= link_to "Sign out", "/users/sign_out", method: "delete" %> </li>
-  <% else %>
-  <li> <%= link_to "Sign in", "/users/sign_in" %> </li>
-  <% end %>
-
-</ul>
+<div ng-app="app" class="events-table-div">
+  <div ng-controller="eventsCtrl" ng-init="setup()" class="events-cell-div">
+    <div class="events-inner-div">
+      <p class="events-heading font-montserrat"> Upcoming events near you:</p>
+      <div ng-repeat="event in events" class="event-repeat">
+        <div class="panel-default my-panel">  
+          <div class="panel-heading my-panel-heading font-montserrat-light">
+            <p class="event-title">{{event.title}}</p>
+            <p class="event-network">{{event.network.title.toUpperCase() + " NETWORK"}}</p>
+          </div>
+          <div class="panel-body my-panel-body font-hind">
+            <p>{{event.month + " " + event.date}}</p>
+            <p>{{event.hour + ":" + event.minute + " " + event.ampm}}</p>
+            <p>{{"at " + event.location}}</p>
+          </div>
+        </div>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>

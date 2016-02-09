@@ -2,6 +2,87 @@
   font-family: 'Hind', sans-serif;
 }
 
-.font-montserrat{
+.font-montserrat {
   font-family: 'Montserrat', sans-serif;
 }
+
+.font-montserrat-light {
+  font-family: 'Montserrat Light', arial;
+}
+
+.events-table-div {
+  background-color: white;
+  display: table;
+  width:100%;
+}
+
+.events-cell-div {
+  display: table-cell;
+  text-align: center;
+}
+
+.events-inner-div {
+  display: inline-block;
+  text-align: left;
+  width: 300px;
+}
+
+.events-inner-div>p {
+  font-size: 14.5px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding-left: 9px;
+  font-weight: 300;
+}
+
+.events-heading {
+  color: black;
+}
+
+.event-repeat>p {
+  line-height: 1.5;
+}
+
+.my-panel {
+  border-color: transparent;
+  box-shadow: 1.5px 0px 2.5px rgba(190, 190, 190, 0.5), 0px 5px 3px rgba(190, 190, 190, 0.5);
+  border-radius:2px 2px 2px 2px;
+}
+
+.my-panel-heading {
+  padding: 15px 18px;
+  background-color: #00B6AA !important;
+  border: none;
+  border-radius:2px 2px 0px 0px;
+}
+
+.my-panel-heading .event-title, .my-panel-heading .event-network {
+  color: white;
+  line-height: 1.5;
+}
+
+.my-panel-heading .event-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+.my-panel-heading .event-network {
+  font-size: 10px;
+  opacity: .75;
+  margin-bottom: 0px;
+}
+
+.my-panel-body {
+  padding: 15px 18px 10px 18px;
+  background-color:#FAFAFA;
+  border-radius:0px 0px 2px 2px;
+}
+
+.my-panel-body p {
+  line-height: 1.5;
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: black;
+} 
