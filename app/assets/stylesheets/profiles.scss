@@ -1,0 +1,42 @@
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.finalize_button {
+  width: auto;
+  background: #00B6AA;
+  height: 40px;
+  border: none;
+  font-size: 20px;
+}
+
+p {
+  color: #48484A;
+  font-family: Hind;
+  margin-left: 488px;
+  text-align: left;
+}
+
+input[type="text"] {
+  margin: 10px;
+}
+
+.profile_header {
+  height: 150px;
+}
+
+.btn {
+  background: transparent; 
+  border-color: transparent transparent #48484A transparent;
+  margin: 20px;
+  border-radius: 4px;
+  width: 300px;
+  border-width: 2px;
+  text-align: left;
+}
+
+label:before {
+  display: none;
+  width: 17px;
+  margin: left;
+}
