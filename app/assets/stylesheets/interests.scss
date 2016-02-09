@@ -62,7 +62,7 @@ label:before {
 }
 
 input[type="checkbox"]:checked + label:before {
-  content: "\2713";
+  content: "\2714";
   color: black;
   text-align: center;
   background: #00B6AA;
@@ -70,7 +70,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 input[type="radio"]:checked + label:before {
-  content: "\2713";
+  content: "\2714";
   color: black;
   text-align: center;
   background: #00B6AA;
