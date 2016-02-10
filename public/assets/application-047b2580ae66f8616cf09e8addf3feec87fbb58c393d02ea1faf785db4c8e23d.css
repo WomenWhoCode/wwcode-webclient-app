@@ -9226,16 +9226,11 @@ body.sign_up {
 }
 
 /* line 20, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
-input[type="text"] {
-  margin: 10px;
-}
-
-/* line 24, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .profile_header {
   height: 150px;
 }
 
-/* line 28, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 24, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .profile_btn {
   background: transparent;
   border-color: transparent transparent #48484A transparent;
