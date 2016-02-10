@@ -9218,7 +9218,7 @@ body.sign_up {
 }
 
 /* line 13, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
-p {
+.profile_text {
   color: #48484A;
   font-family: Hind;
   margin-left: 488px;
@@ -9236,7 +9236,7 @@ input[type="text"] {
 }
 
 /* line 28, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
-.btn {
+.profile_btn {
   background: transparent;
   border-color: transparent transparent #48484A transparent;
   margin: 20px;
@@ -9244,13 +9244,6 @@ input[type="text"] {
   width: 300px;
   border-width: 2px;
   text-align: left;
-}
-
-/* line 38, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
-label:before {
-  display: none;
-  width: 17px;
-  margin: left;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
