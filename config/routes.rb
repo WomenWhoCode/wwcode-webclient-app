@@ -5,10 +5,8 @@ Rails.application.routes.draw do
 
   resources :events
   resources :routes
-  resources :interests
-  resources :hopes
-  resources :experiences
   resources :pages
+  resources :personalization_details
   resources :profiles
 
 end

@@ -1,4 +1,4 @@
-class ExperiencesController < ApplicationController
+class PersonalizationDetailsController < ApplicationController
 
   def index
 
@@ -7,4 +7,5 @@ class ExperiencesController < ApplicationController
   def create
     redirect_to "/pages/sign_up"
   end
+  
 end
