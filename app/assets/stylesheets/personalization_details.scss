@@ -111,3 +111,27 @@ input[type="radio"]:checked + label:before {
   text-align: center;
   margin-top: 50px;
 }
+
+.next_div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6px;
+  margin-top: 20px;
+  border-radius: 2px;
+  background: #00B6AA;
+  height: 40px;
+  width: 100px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#form_title_experience {
+  margin-top: 15px;
+  font-size: 22px;
+  width: 285px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
