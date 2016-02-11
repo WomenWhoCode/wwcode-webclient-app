@@ -10,22 +10,18 @@
   font-size: 20px;
 }
 
-p {
+.profile_text {
   color: #48484A;
   font-family: Hind;
-  // margin-left: 488px;
+  margin-left: 488px;
   text-align: left;
-}
-
-input[type="text"] {
-  margin: 10px;
 }
 
 .profile_header {
   height: 150px;
 }
 
-.btn {
+.profile_btn {
   background: transparent; 
   border-color: transparent transparent #48484A transparent;
   margin: 20px;
@@ -33,8 +29,4 @@ input[type="text"] {
   width: 300px;
   border-width: 2px;
   text-align: left;
-}
-
-.profile_div {
-  width: 300px;
 }
