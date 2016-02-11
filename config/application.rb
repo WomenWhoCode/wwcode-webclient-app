@@ -1,4 +1,4 @@
-require File.expand_path('../boot', __FILE__)
+    require File.expand_path('../boot', __FILE__)
 
 require "rails"
 # Pick the frameworks you want:
@@ -42,5 +42,7 @@ module WwcodeWebclientApp
             request_specs: false
         g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
+
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
   end
 end
