@@ -52,13 +52,7 @@ label:before {
   height: 17px;
   margin-left: -17%;
   background: #212121;
-  outline: 2px solid  #48484A;
-  position: absolute;
-  margin-right: 10px;
-  top: 50%;
-  transform: translate(-50%,-50%);
-
-
+  outline: 2px solid  #48484A; 
 }
 
 input[type="checkbox"]:checked + label:before {
