@@ -1,0 +1,43 @@
+
+<div class="profile_header"><h4>Review Your Profile</h4>
+
+<%= image_tag('personalization_3.png', class: 'circle_number_pic')%>
+ 
+ </div>
+<%= form_tag '/profiles', method: :post do %>
+    <div class="profile_div">
+      <div>
+        <p class='profile_text'><%= label_tag "Full Name" %></p>
+      </div>
+      <div>
+        <%= text_field_tag :full_name, params[:full_name] %>
+      </div> 
+    </div>
+      <br />
+    <div class="profile_div">
+      <div><p class='profile_text'><%= label_tag "Email Address" %></p></div>
+      <div><%= text_field_tag :email, params[:email] %></div> 
+    </div>
+      <br />
+    <div class="profile_div">
+      <div><p class='profile_text'><%= label_tag "Job Title" %></p></div>
+      <div><%= text_field_tag :job_title, params[:job_title] %></div> 
+    </div>
+      <br />
+    <div class="profile_div">
+      <div><p class='profile_text'><%= label_tag "Network You Belong To" %></p></div> 
+     <!--  <%= select_tag :network, params[:network], placeholder: "Network You Belong To" %>  -->
+    </div>
+    <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle profile_btn" type="button" data-toggle="dropdown">Select
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div>
+    <div>
+      <%= submit_tag "FINALIZE PROFILE", class: "finalize_button" %> 
+    </div> 
+<% end %>

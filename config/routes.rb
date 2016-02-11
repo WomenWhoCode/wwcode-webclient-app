@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :routes
   resources :pages
   resources :personalization_details
+  resources :profiles
 
 end
