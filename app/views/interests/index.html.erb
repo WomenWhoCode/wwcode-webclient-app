@@ -6,43 +6,43 @@
 
 <%= form_tag '/interests', method: :post do %>
   <div class='form_checkboxes_list'>
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= check_box_tag 'architecture' %> 
       <%= label_tag 'architecture', 'architecture', class: "form_checkbox_labels" %> 
     </div>
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= check_box_tag 'security' %> 
       <%= label_tag 'security', 'security', class: "form_checkbox_labels" %> 
     </div>
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= check_box_tag 'data science' %> 
       <%= label_tag 'data science', 'data science', class: "form_checkbox_labels" %> 
     </div>
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= check_box_tag 'analytics' %> 
       <%= label_tag 'analytics', 'analytics', class: "form_checkbox_labels" %> 
     </div>
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= check_box_tag 'open source' %> 
       <%= label_tag 'open source', 'open source', class: "form_checkbox_labels" %> 
     </div >
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= check_box_tag 'devops' %> 
       <%= label_tag 'devops', 'devops', class: "form_checkbox_labels" %> 
     </div>
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= check_box_tag 'web' %> 
       <%= label_tag 'web', 'web', class: "form_checkbox_labels" %> 
     </div>
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= check_box_tag 'mobile' %> 
       <%= label_tag 'mobile', 'mobile', class: "form_checkbox_labels" %> 
     </div>
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= check_box_tag 'enterprise' %> 
       <%= label_tag 'enterprise', 'enterprise', class: "form_checkbox_labels" %>
     </div>
-    <div class='form_checkboxes'>
+    <div class='form_checkboxes field_padding'>
       <%= text_field_tag "Other", nil, placeholder: "Other", class: "other" %>
     </div>
     <%= submit_tag "Next", class: "next_button" %>  
