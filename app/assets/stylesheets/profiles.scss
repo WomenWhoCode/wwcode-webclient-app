@@ -13,8 +13,11 @@
 .profile_text {
   color: #48484A;
   font-family: Hind;
-  margin-left: 488px;
-  text-align: left;
+  position: relative;
+}
+
+#profiles input[type="text"] {
+  margin: 10px;
 }
 
 .profile_header {
@@ -29,4 +32,40 @@
   width: 300px;
   border-width: 2px;
   text-align: left;
+}
+
+.profile_label:before {
+  display: none;
+  width: 17px;
+  margin: left;
+}
+
+#profile_dropdown {
+  background-color: transparent;
+}
+
+.profile_caret {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #48484A;
+}
+
+.dropdown_tab {
+  padding: 0 220px 0 0;
+}
+
+.name_span {
+  padding: 0 220px 0 0;
+}
+
+.email_span {
+  padding: 0 195px 0 0;
+}
+
+.job_span {
+  padding: 0 230px 0 0;
+}
+
+.network_span {
+  padding: 0 140px 0 0;
 }
