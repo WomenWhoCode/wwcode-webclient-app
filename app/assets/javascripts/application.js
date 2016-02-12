@@ -16,6 +16,6 @@
 // require turbolinks
 //= require angular
 //= require app
-//= require moment/moment.js
-//= require moment-timezone/builds/moment-timezone-with-data.js
+//= require moment.js
+//= require moment-timezone-with-data.js
 //= require_tree .
