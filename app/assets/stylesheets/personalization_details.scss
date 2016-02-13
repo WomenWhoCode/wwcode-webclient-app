@@ -52,11 +52,15 @@ label:before {
   height: 17px;
   margin-left: -17%;
   background: #212121;
-  outline: 2px solid  #48484A; 
+  outline: 2px solid  #48484A;
+  position: absolute;
+  margin-right: 10px;
+  top: 50%;
+  transform: translate(-50%,-50%); 
 }
 
 input[type="checkbox"]:checked + label:before {
-  content: "\2714";
+  content: "";
   color: black;
   text-align: center;
   background: #00B6AA;
@@ -64,7 +68,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 input[type="radio"]:checked + label:before {
-  content: "\2714";
+  content: "";
   color: black;
   text-align: center;
   background: #00B6AA;
@@ -88,6 +92,15 @@ input[type="radio"]:checked + label:before {
   width: 100px;
   border: none;
   font-size: 20px;
+  transition: background-color .1s;
+}
+
+.next_button:hover {
+  color: #00B6AA;
+  background: white;
+  border: 2px solid #00B6AA;
+  text-decoration: none;
+  transition: background-color .1s;
 }
 
 .check_pic {
@@ -119,6 +132,16 @@ input[type="radio"]:checked + label:before {
   border: none;
   font-size: 20px;
   cursor: pointer;
+  transition: background-color .1s;
+}
+
+.next_div:hover {
+  color: #00B6AA;
+  background: white;
+  border: 2px solid #00B6AA;
+  padding-top: 4px;
+  text-decoration: none;
+  transition: background-color .1s;
 }
 
 #form_title_experience {
