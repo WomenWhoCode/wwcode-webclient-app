@@ -2,7 +2,7 @@
   <div ng-controller="eventsCtrl" ng-init="setup()" class="events-cell-div">
     <div class="events-inner-div">
       <p class="events-heading font-montserrat"> Upcoming events near you:</p>
-      <div ng-repeat="event in events" class="event-repeat">
+      <div ng-repeat="event in events" class="event-repeat" ng-click="select_event(event.id)">
         <div class="panel-default my-panel">  
           <div class="panel-heading my-panel-heading font-montserrat-light">
             <p class="event-title">{{event.title}}</p>
@@ -16,6 +16,8 @@
         </div>
         <p></p>
       </div>
+    </div>
+    <div class="event-show-div events-inner-div" ng-show="events.selected_id">Event Show Div
     </div>
   </div>
 </div>

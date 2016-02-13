@@ -6,8 +6,9 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.font-montserrat-light {
-  font-family: 'Montserrat Light', arial;
+.font-montserrat-light{
+font-family: 'Montserrat Light', arial;
+src: url("Montserrat-Light.otf") format("opentype");
 }
 
 .events-table-div {
@@ -86,3 +87,7 @@
   font-size: 14px;
   color: black;
 } 
+
+.event-show-div {
+  color: black !important;
+}
