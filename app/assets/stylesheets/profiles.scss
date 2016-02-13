@@ -8,13 +8,24 @@
   height: 40px;
   border: none;
   font-size: 20px;
+  z-index: -1;
+  border-radius: 2px;
+  transition: background-color .1s;
 }
 
+.finalize_button:hover {
+  background-color: white;
+  border: 2px solid #00b6aa;
+  color: #00b6aa;
+}
 .profile_text {
   color: #48484A;
   font-family: Hind;
-  margin-left: 488px;
-  text-align: left;
+  position: relative;
+}
+
+#profiles input[type="text"] {
+  margin: 10px;
 }
 
 .profile_header {
@@ -25,8 +36,65 @@
   background: transparent; 
   border-color: transparent transparent #48484A transparent;
   margin: 20px;
-  border-radius: 4px;
+  border-radius: 2px;
   width: 300px;
   border-width: 2px;
   text-align: left;
+}
+
+.profile_label:before {
+  display: none;
+  width: 17px;
+  margin: left;
+}
+
+#profile_dropdown {
+  background-color: transparent;
+}
+
+.dropdown_networks {
+  position: absolute;
+  z-index: 99;
+  background-color: black;
+  margin: 430px;
+  margin-top: -16px;
+  width: 300px;
+}
+
+.dropdown_networks li>a{
+  color: #bebebe; 
+}
+
+.profile_caret {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #48484A;
+}
+
+.dropdown_tab {
+  padding: 0 220px 0 0;
+}
+
+.name_span {
+  padding: 0 220px 0 0;
+}
+
+.email_span {
+  padding: 0 195px 0 0;
+}
+
+.job_span {
+  padding: 0 230px 0 0;
+}
+
+.network_span {
+  padding: 0 140px 0 0;
+}
+
+.user_icon {
+  width: 50px;
+  height: 50px;
+  display: inline;
+  text-align: center;
+  margin-top: 25px;
 }
