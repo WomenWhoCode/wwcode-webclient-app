@@ -9229,93 +9229,111 @@ input[type="radio"]:checked + label:before {
   border: none;
   font-size: 20px;
   z-index: -1;
+  border-radius: 2px;
+  transition: background-color .1s;
 }
 
-/* line 14, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 16, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+.finalize_button:hover {
+  background-color: white;
+  border: 2px solid #00b6aa;
+  color: #00b6aa;
+}
+
+/* line 21, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .profile_text {
   color: #48484A;
   font-family: Hind;
   position: relative;
 }
 
-/* line 20, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 27, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 #profiles input[type="text"] {
   margin: 10px;
 }
 
-/* line 24, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 31, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .profile_header {
   height: 150px;
 }
 
-/* line 28, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 35, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .profile_btn {
   background: transparent;
   border-color: transparent transparent #48484A transparent;
   margin: 20px;
-  border-radius: 4px;
+  border-radius: 2px;
   width: 300px;
   border-width: 2px;
   text-align: left;
 }
 
-/* line 38, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 45, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .profile_label:before {
   display: none;
   width: 17px;
   margin: left;
 }
 
-/* line 44, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 51, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 #profile_dropdown {
   background-color: transparent;
 }
 
-/* line 48, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 55, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .dropdown_networks {
   position: absolute;
   z-index: 99;
   background-color: black;
-  margin: 480px;
+  margin: 430px;
   margin-top: -16px;
-  width: 280px;
+  width: 300px;
 }
 
-/* line 57, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 64, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .dropdown_networks li > a {
   color: #bebebe;
 }
 
-/* line 61, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 68, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .profile_caret {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid #48484A;
 }
 
-/* line 67, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 74, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .dropdown_tab {
   padding: 0 220px 0 0;
 }
 
-/* line 71, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 78, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .name_span {
   padding: 0 220px 0 0;
 }
 
-/* line 75, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 82, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .email_span {
   padding: 0 195px 0 0;
 }
 
-/* line 79, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 86, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .job_span {
   padding: 0 230px 0 0;
 }
 
-/* line 83, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 90, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .network_span {
   padding: 0 140px 0 0;
+}
+
+/* line 94, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+.user_icon {
+  width: 50px;
+  height: 50px;
+  display: inline;
+  text-align: center;
+  margin-top: 25px;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
