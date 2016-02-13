@@ -9,6 +9,15 @@ body.sign_up {
   height: 40px;
   width: 100px;
   border: none;
+  transition: background-color .1s;
+}
+
+.button:hover {
+  color: #00B6AA;
+  background: white;
+  border: 2px solid #00B6AA;
+  text-decoration: none;
+  transition: background-color .1s;
 }
 
 input {
