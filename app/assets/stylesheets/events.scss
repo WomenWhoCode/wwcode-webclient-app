@@ -12,6 +12,7 @@ src: url("Montserrat-Light.otf") format("opentype");
 }
 
 .events-table-div {
+  padding-top: 80px;
   background-color: white;
   display: table;
   width:100%;
@@ -19,19 +20,19 @@ src: url("Montserrat-Light.otf") format("opentype");
 
 .events-cell-div {
   display: table-cell;
-  text-align: center;
+  text-align: left;
 }
 
 .events-inner-div {
   display: inline-block;
   text-align: left;
-  width: 300px;
+  width: 500px;
+  margin-left: 20px;
 }
 
 .events-inner-div>p {
   font-size: 14.5px;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding-left: 9px;
   font-weight: 300;
 }
@@ -52,7 +53,7 @@ src: url("Montserrat-Light.otf") format("opentype");
 
 .my-panel-heading {
   padding: 15px 18px;
-  background-color: #00B6AA !important;
+  /*background-color: #00B6AA !important;*/
   border: none;
   border-radius:2px 2px 0px 0px;
 }
@@ -77,7 +78,7 @@ src: url("Montserrat-Light.otf") format("opentype");
 
 .my-panel-body {
   padding: 15px 18px 10px 18px;
-  background-color:#FAFAFA;
+  /*background-color:#FAFAFA;*/
   border-radius:0px 0px 2px 2px;
 }
 

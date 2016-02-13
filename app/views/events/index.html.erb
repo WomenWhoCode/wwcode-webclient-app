@@ -1,17 +1,16 @@
+<%= render "navbar" %>
 <div ng-app="app" class="events-table-div">
   <div ng-controller="eventsCtrl" ng-init="setup()" class="events-cell-div">
     <div class="events-inner-div">
       <p class="events-heading font-montserrat"> Upcoming events near you:</p>
-      <div ng-repeat="event in events" class="event-repeat" ng-click="select_event(event.id)">
+      <div ng-repeat="event in events" class="event-repeat" ng-attr-id="event{{event.id}}" ng-click="select_event(event)" ng-mousedown="highlightSelectedEvent(event)" ng-mouseover="mouseoverEvent(event)" ng-mouseleave="mouseleaveEvent(event)">
         <div class="panel-default my-panel">  
-          <div class="panel-heading my-panel-heading font-montserrat-light">
+          <div class="panel-heading my-panel-heading font-montserrat-light" ng-style="{background:event.bgColorHead}">
             <p class="event-title">{{event.title}}</p>
             <p class="event-network">{{event.network.title.toUpperCase() + " NETWORK"}}</p>
           </div>
-          <div class="panel-body my-panel-body font-hind">
-            <p>{{event.month + " " + event.date}}</p>
-            <p>{{event.hour + ":" + event.minute + " " + event.ampm}}</p>
-            <p>{{"at " + event.location}}</p>
+          <div class="panel-body my-panel-body font-hind" ng-style="{background:event.bgColorBody}">
+            <p>{{event.month + " " + event.date}}, {{event.hour + ":" + event.minute + " " + event.ampm}} {{"at " + event.location}}</p>
           </div>
         </div>
         <p></p>
