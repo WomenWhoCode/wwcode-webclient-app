@@ -1,7 +1,7 @@
 
 <div class="profile_header"><h4>Review Your Profile</h4>
 
-<%= image_tag('personalization_3.png', class: 'circle_number_pic')%>
+<%= image_tag('default_user_icon.png', class: 'user_icon')%>
  
  </div>
 <%= form_tag '/profiles', id: "profiles", method: :post do %>
@@ -27,10 +27,10 @@
     <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle profile_btn" type="button" data-toggle="dropdown" id="profile_dropdown"><span class="dropdown_tab">Select</span>
   <span class="caret profile_caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">HTML</a></li>
-    <li><a href="#">CSS</a></li>
-    <li><a href="#">JavaScript</a></li>
+  <ul class="dropdown-menu dropdown_networks">
+    <li><a href="#">San Francisco</a></li>
+    <li><a href="#">Seattle</a></li>
+    <li><a href="#">New York</a></li>
   </ul>
 </div>
     <div>
