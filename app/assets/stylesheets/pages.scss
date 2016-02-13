@@ -33,6 +33,11 @@ body.sign_up {
 
 }
 
+.center_buttons {
+  display: inline-block;
+  text-align: center; 
+}
+
 .join_us_button {
   float: left;
   text-decoration: none;
@@ -44,6 +49,7 @@ body.sign_up {
   padding-left: 35px;
   padding-right: 35px;
   border-radius: 5px;
+  transition: background-color .1s;
 }
 
 .log_in_button {
@@ -58,11 +64,26 @@ body.sign_up {
   padding-right: 45px;
   border-radius: 5px;
   margin-left: 10px;
+  transition: background-color .1s;
 }
 
-.center_buttons {
-  display: inline-block;
-  text-align: center; 
+
+.join_us_button:hover {
+  color: #00B6AA;
+  background: white;
+  padding-top: 13px;
+  border: 2px solid #00B6AA;
+  text-decoration: none;
+  transition: background-color .1s;
+}
+
+.log_in_button:hover {
+  color: #00B6AA;
+  background: white;
+  padding-top: 13px;
+  border: 2px solid #00B6AA;
+  text-decoration: none;
+  transition: background-color .1s;
 }
 
 #thanks_title {
@@ -96,9 +117,11 @@ body.sign_up {
 
 .email {
   display: block;
-  margin-top: 40px;
+  margin-top: 150px;
   text-align: center;
 }
+
+
 
 .mail_button {
   background: #00B6AA;
@@ -111,5 +134,18 @@ body.sign_up {
   padding-left: 17px;
   padding-right: 17px;
   border-radius: 5px;
+  transition: background-color .1s;
 }
+
+.email a:hover {
+  color: #00B6AA;
+  background: white;
+  border: 2px solid #00B6AA;
+  text-decoration: none;
+  transition: background-color .1s;
+}
+
+
+
+
 
