@@ -13,11 +13,11 @@
     //   });
     }
 
-    $scope.setupColors = function(){ $scope.events.defaultBgColorHead="#00B6AA";
-      $scope.events.defaultBgColorBody="#FAFAFA";
+    $scope.setupColors = function(){ $scope.events.bgColorHeadDefault="#00B6AA";
+      $scope.events.bgColorBodyDefault="#FAFAFA";
       for (var i=0;i<$scope.events.length;i++){   
-        $scope.events[i].bgColorHead=$scope.events.defaultBgColorHead;
-        $scope.events[i].bgColorBody=$scope.events.defaultBgColorBody;
+        $scope.events[i].bgColorHead=$scope.events.bgColorHeadDefault;
+        $scope.events[i].bgColorBody=$scope.events.bgColorBodyDefault;
       }
     }
 
@@ -41,8 +41,8 @@
         $scope.        highlightSelectedEvent(event);
       }
       else{
-      event.bgColorHead=$scope.events.defaultBgColorHead;
-      event.bgColorBody=$scope.events.defaultBgColorBody;
+      event.bgColorHead=$scope.events.bgColorHeadDefault;
+      event.bgColorBody=$scope.events.bgColorBodyDefault;
       }
     }
 

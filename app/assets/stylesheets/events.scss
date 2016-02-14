@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'montserrat-light';
+    src: font-url('montserrat-light.eot');
+    src: font-url('montserrat-light.eot?#iefix') format('embedded-opentype'),
+         font-url('montserrat-light.woff2') format('woff2'),
+         font-url('montserrat-light.woff') format('woff'),
+         font-url('montserrat-light.ttf') format('truetype'),
+         font-url('montserrat-light.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
   .font-hind {
   font-family: 'Hind', sans-serif;
 }
@@ -7,9 +19,8 @@
 }
 
 .font-montserrat-light{
-font-family: 'Montserrat Light', arial;
-src: url("Montserrat-Light.otf") format("opentype");
-}
+font-family: 'montserrat-light', sans-serif;
+} 
 
 .events-table-div {
   padding-top: 80px;
@@ -21,6 +32,8 @@ src: url("Montserrat-Light.otf") format("opentype");
 .events-cell-div {
   display: table-cell;
   text-align: left;
+  vertical-align: top;
+  padding-bottom: 20px;
 }
 
 .events-inner-div {
@@ -30,10 +43,10 @@ src: url("Montserrat-Light.otf") format("opentype");
   margin-left: 20px;
 }
 
-.events-inner-div>p {
+.events-cell-div>p {
   font-size: 14.5px;
   margin-bottom: 20px;
-  padding-left: 9px;
+  padding-left: 29px;
   font-weight: 300;
 }
 
@@ -41,14 +54,15 @@ src: url("Montserrat-Light.otf") format("opentype");
   color: black;
 }
 
-.event-repeat>p {
+/*.event-repeat p {
   line-height: 1.5;
-}
+}*/
 
 .my-panel {
   border-color: transparent;
   box-shadow: 1.5px 0px 2.5px rgba(190, 190, 190, 0.5), 0px 5px 3px rgba(190, 190, 190, 0.5);
   border-radius:2px 2px 2px 2px;
+  margin-bottom: 20px;
 }
 
 .my-panel-heading {
@@ -58,19 +72,19 @@ src: url("Montserrat-Light.otf") format("opentype");
   border-radius:2px 2px 0px 0px;
 }
 
-.my-panel-heading .event-title, .my-panel-heading .event-network {
+.my-panel-heading .event-title, .my-panel-heading .event-sub-head {
   color: white;
   line-height: 1.5;
 }
 
-.my-panel-heading .event-title {
+.my-panel-heading .event-sub-head {
   font-size: 16px;
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 3px;
 }
 
-.my-panel-heading .event-network {
+.my-panel-heading .event-sub-head {
   font-size: 10px;
   opacity: .75;
   margin-bottom: 0px;
@@ -90,5 +104,9 @@ src: url("Montserrat-Light.otf") format("opentype");
 } 
 
 .event-show-div {
-  color: black !important;
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+  width: 350px;
+  margin-left: 20px;
 }
