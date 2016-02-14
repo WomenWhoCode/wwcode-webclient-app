@@ -23,13 +23,13 @@ convertEventsDates = function(events){
     //For this we can use the getUTC... functions below to extract desired date/time parts: January, 1, 6(PM), and 30.
     events[i].month=monthNames[date_at_event_time_zone.getUTCMonth()];
 
-    events[i].date=Ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCDate());
+    events[i].date=ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCDate());
 
     var hourAndAMPM=convertToAMPM(date_at_event_time_zone.getUTCHours());
     events[i].hour=hourAndAMPM[0];
     events[i].ampm=hourAndAMPM[1];
 
-    events[i].minute=Ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCMinutes());
+    events[i].minute=ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCMinutes());
   };
   return events;
 };
@@ -62,7 +62,7 @@ convertToAMPM = function(hour){
     return result;
 };
 
-Ensure2DigitsWithLeadZero = function(number){
+ensure2DigitsWithLeadZero = function(number){
   var numStr = number.toString();
   if (numStr.length==1){
     numStr = "0" + numStr;
@@ -73,3 +73,13 @@ Ensure2DigitsWithLeadZero = function(number){
 var monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
+
+findSoonestEvent = function(events){
+  var soonestEvent = events[0];
+  for(var i=0;i<events.length;i++){
+    if (events[i].event_date<soonestEvent.event_date){
+      soonestEvent = events[i];
+    }
+  }
+  return soonestEvent;
+}

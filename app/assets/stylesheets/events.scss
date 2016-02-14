@@ -110,3 +110,18 @@ font-family: 'montserrat-light', sans-serif;
   width: 350px;
   margin-left: 20px;
 }
+
+.event-show-div .my-panel .my-panel-body {
+  min-height: 400px;
+}
+
+.event-text, .event-icon {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.event-icon {
+  padding-top: 10px;
+  padding-right: 10px;
+  color: white;
+}
