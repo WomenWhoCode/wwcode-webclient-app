@@ -22,6 +22,32 @@
 font-family: 'montserrat-light', sans-serif;
 } 
 
+.my-dropdown-menu-heading {
+  background-color: #009688 !important;
+  position: relative;
+  top: -7px;
+  padding-top: 10px;
+  padding-bottom:10px;
+}
+
+.my-dropdown-menu-heading>p {
+  padding-top: 5px;
+  padding-left: 15px;
+  color: #75cbc3;
+}
+
+.my-dropdown-menu-body {
+  background-color: white !important;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.my-dropdown-menu-body>p {
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+}
+
 .events-table-div {
   padding-top: 80px;
   background-color: white;
@@ -96,7 +122,7 @@ font-family: 'montserrat-light', sans-serif;
   border-radius:0px 0px 2px 2px;
 }
 
-.my-panel-body p {
+.my-panel-body .event-body-text {
   line-height: 1.5;
   margin-bottom: 0px;
   font-size: 14px;
