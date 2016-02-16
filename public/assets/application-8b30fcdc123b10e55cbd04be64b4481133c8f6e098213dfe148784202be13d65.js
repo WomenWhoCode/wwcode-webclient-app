@@ -47747,13 +47747,13 @@ convertEventsDates = function(events){
     //For this we can use the getUTC... functions below to extract desired date/time parts: January, 1, 6(PM), and 30.
     events[i].month=monthNames[date_at_event_time_zone.getUTCMonth()];
 
-    events[i].date=Ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCDate());
+    events[i].date=ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCDate());
 
     var hourAndAMPM=convertToAMPM(date_at_event_time_zone.getUTCHours());
     events[i].hour=hourAndAMPM[0];
     events[i].ampm=hourAndAMPM[1];
 
-    events[i].minute=Ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCMinutes());
+    events[i].minute=ensure2DigitsWithLeadZero(date_at_event_time_zone.getUTCMinutes());
   };
   return events;
 };
@@ -47786,7 +47786,7 @@ convertToAMPM = function(hour){
     return result;
 };
 
-Ensure2DigitsWithLeadZero = function(number){
+ensure2DigitsWithLeadZero = function(number){
   var numStr = number.toString();
   if (numStr.length==1){
     numStr = "0" + numStr;
@@ -47797,6 +47797,17 @@ Ensure2DigitsWithLeadZero = function(number){
 var monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
+
+findSoonestEvent = function(events){
+  var soonestEvent = events[0];
+  for(var i=0;i<events.length;i++){
+    if (events[i].event_date<soonestEvent.event_date){
+      soonestEvent = events[i];
+    }
+  }
+  return soonestEvent;
+}
+;
 (function() {
 
 
@@ -47808,35 +47819,50 @@ var monthNames = ["January", "February", "March", "April", "May", "June",
 
     $scope.setup = function() {
       $scope.events=convertEventsDates($scope.events);
-      $scope.events.selected_id=null;
       $scope.setupColors();
+      $scope.selectEvent(findSoonestEvent($scope.events));
     //   $http.get("/api/v1/people.json").then(function(response) {
     //     $scope.people = response.data;
     //     console.log(response);
     //   });
     }
 
-    $scope.setupColors = function(){ $scope.events.bgColorHeadDefault="#00B6AA";
-      $scope.events.bgColorBodyDefault="#FAFAFA";
+    $scope.setupColors = function(){ $scope.events.bgColorHeadDefault="#00b6aa";
+      $scope.events.bgColorBodyDefault="#fafafa";
+      $scope.events.bgColorHeadSelected="#009688";
+      $scope.events.bgColorBodySelected="#ffffff";
+      $scope.events.bgColorHeadMouseover="#faa73f";
+      $scope.events.bgColorBodyMouseover="#eeeeee";
+
       for (var i=0;i<$scope.events.length;i++){   
         $scope.events[i].bgColorHead=$scope.events.bgColorHeadDefault;
         $scope.events[i].bgColorBody=$scope.events.bgColorBodyDefault;
       }
     }
 
-    $scope.select_event = function(event) {
+    $scope.selectEvent = function(event) {
       $scope.events.selected_id=event.id;
+      $scope.events.selected_title=event.title;
+      $scope.events.selected_subscribe_count=event.subscribe_count;
       $scope.setupColors();//reset the color settings so that any other events that were previously clicked are no longer highlighted
-      $scope.mouseoverEvent(event);
+      if ( $('#event'+event.id+':hover').length )//if the event's div is still being hovered (moused-over) after selection, return to hover colors:
+       {
+        $scope.mouseoverEvent(event);
+      }
+      //the only time the event's div is not hovered (moused-over) after selection is when an event is auto-selected on page load
+      else {
+        $scope.highlightSelectedEvent(event);
+      }
     }
 
     $scope.highlightSelectedEvent =function(event){
-      event.bgColorHead="#009688";
+      event.bgColorHead=$scope.events.bgColorHeadSelected;
+      event.bgColorBody=$scope.events.bgColorBodySelected;
     }
 
     $scope.mouseoverEvent = function(event){
-      event.bgColorHead="#faa73f";
-      event.bgColorBody="#EEEEEE";
+      event.bgColorHead=$scope.events.bgColorHeadMouseover;
+      event.bgColorBody=$scope.events.bgColorBodyMouseover;
     }
 
     $scope.mouseleaveEvent = function(event){
@@ -47853,22 +47879,24 @@ var monthNames = ["January", "February", "March", "April", "May", "June",
         { 
           id: 1,
           title: "Women Who Code - Medellín",
-          event_date: "2016-12-23 18:00:00 UTC",
+          event_date: "2015-12-23 18:00:00 UTC",
           time_zone: 'US/Pacific',
           location: "Hack Reactor",
           network: {
             title:"San Francisco"
-          }
+          },
+          subscribe_count: 1
         },
         { 
-          id: 2,
+          id: 4,
           title: "Algorhitms and Interview Prep - TBD",
           event_date: "2016-01-01 18:45:00 UTC",
           location: "Hack Reactor",
           time_zone: 'US/Pacific',
           network: {
             title:"East Bay"
-          }
+          },
+          subscribe_count: 11
         },
         { 
           id: 3,
@@ -47878,7 +47906,8 @@ var monthNames = ["January", "February", "March", "April", "May", "June",
           time_zone: 'US/Eastern',
           network: {
             title:"New York City"
-          }
+          },
+          subscribe_count: 0
         }
     ];
 

@@ -8816,25 +8816,76 @@ input {
   margin-top: 75px;
 }
 @font-face {
-  font-family: 'Montserrat Light', sans-serif;
-  src: url(/assets/montserrat-light-6754a6bbc036bf4569a429a3659f10c61fa471e55bcd7d5379a1e2d39ab7e267.otf) format("opentype");
+  font-family: 'montserrat-light';
+  src: url(/assets/montserrat-light-dab4c418d696df8ad919941562639f8e8ecf1f6e73b72059c6523698cdb1769f.eot);
+  src: url(/assets/montserrat-light-dab4c418d696df8ad919941562639f8e8ecf1f6e73b72059c6523698cdb1769f.eot?#iefix) format("embedded-opentype"), url(/assets/montserrat-light-db289f277d508f8646377acdc5109ddfca03af891679609c05fd33fb6d94d276.woff2) format("woff2"), url(/assets/montserrat-light-c81e6f9e3ee94e4806ae9822e8fafb98932c9d52332c3f09ac30d50dccefd916.woff) format("woff"), url(/assets/montserrat-light-205ec18d9c1079d9932bb351490154594565fbc05b69a9358a9e03ebd0ce4de7.ttf) format("truetype"), url(/assets/montserrat-light-bceae9007bea651519439d568c09597525892e5cd2186dece7e8e49a3110472e.svg#montserratlight) format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
-/* line 5, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 15, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .font-hind {
   font-family: 'Hind', sans-serif;
 }
 
-/* line 9, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 19, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* line 13, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 23, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .font-montserrat-light {
-  font-family: 'Montserrat Light', sans-serif;
+  font-family: 'montserrat-light', sans-serif;
 }
 
-/* line 17, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 27, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.svg-icon-menu {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  background-color: #009688;
+}
+
+/* line 35, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.svg-icon-menu path {
+  fill: white;
+}
+
+/* line 40, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.my-dropdown-menu p {
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+/* line 47, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.my-dropdown-menu-heading {
+  background-color: #009688 !important;
+  position: relative;
+  top: -7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 55, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.my-dropdown-menu-heading > p {
+  color: #75cbc3;
+}
+
+/* line 59, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.my-dropdown-menu-body {
+  background-color: white !important;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+/* line 65, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.my-dropdown-menu-body > p {
+  color: black;
+}
+
+/* line 69, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-table-div {
   padding-top: 80px;
   background-color: white;
@@ -8842,7 +8893,7 @@ input {
   width: 100%;
 }
 
-/* line 24, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 76, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-cell-div {
   display: table-cell;
   text-align: left;
@@ -8850,7 +8901,7 @@ input {
   padding-bottom: 20px;
 }
 
-/* line 31, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 83, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-inner-div {
   display: inline-block;
   text-align: left;
@@ -8858,7 +8909,7 @@ input {
   margin-left: 20px;
 }
 
-/* line 38, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 90, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-cell-div > p {
   font-size: 14.5px;
   margin-bottom: 20px;
@@ -8866,7 +8917,7 @@ input {
   font-weight: 300;
 }
 
-/* line 45, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 97, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-heading {
   color: black;
 }
@@ -8874,7 +8925,7 @@ input {
 /*.event-repeat p {
   line-height: 1.5;
 }*/
-/* line 53, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 105, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel {
   border-color: transparent;
   box-shadow: 1.5px 0px 2.5px rgba(190, 190, 190, 0.5), 0px 5px 3px rgba(190, 190, 190, 0.5);
@@ -8882,7 +8933,7 @@ input {
   margin-bottom: 20px;
 }
 
-/* line 60, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 112, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-heading {
   padding: 15px 18px;
   /*background-color: #00B6AA !important;*/
@@ -8890,13 +8941,13 @@ input {
   border-radius: 2px 2px 0px 0px;
 }
 
-/* line 67, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 119, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-heading .event-title, .my-panel-heading .event-sub-head {
   color: white;
   line-height: 1.5;
 }
 
-/* line 72, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 124, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-heading .event-sub-head {
   font-size: 16px;
   font-weight: bold;
@@ -8904,35 +8955,53 @@ input {
   margin-bottom: 3px;
 }
 
-/* line 79, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 131, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-heading .event-sub-head {
   font-size: 10px;
   opacity: .75;
   margin-bottom: 0px;
 }
 
-/* line 85, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 137, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-body {
   padding: 15px 18px 10px 18px;
   /*background-color:#FAFAFA;*/
   border-radius: 0px 0px 2px 2px;
 }
 
-/* line 91, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
-.my-panel-body p {
+/* line 143, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.my-panel-body .event-body-text {
   line-height: 1.5;
   margin-bottom: 0px;
   font-size: 14px;
   color: black;
 }
 
-/* line 98, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 150, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .event-show-div {
   vertical-align: top;
   display: inline-block;
   text-align: left;
   width: 350px;
   margin-left: 20px;
+}
+
+/* line 158, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.event-show-div .my-panel .my-panel-body {
+  min-height: 400px;
+}
+
+/* line 162, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.event-text, .event-icon {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 167, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.event-icon {
+  padding-top: 10px;
+  padding-right: 10px;
+  color: white;
 }
 /* line 1, /Users/sergeipreobrahensky/acltc/rails/wwcode-webclient-app/app/assets/stylesheets/navbar.scss */
 .navbar-item {

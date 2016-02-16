@@ -1,3 +1,5 @@
+$primary: #009688;
+
 @font-face {
     font-family: 'montserrat-light';
     src: font-url('montserrat-light.eot');
@@ -22,8 +24,28 @@
 font-family: 'montserrat-light', sans-serif;
 } 
 
+.svg-icon-menu {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  background-color: $primary
+}
+
+.svg-icon-menu path {
+  fill: white;
+}
+
+
+.my-dropdown-menu p{
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
 .my-dropdown-menu-heading {
-  background-color: #009688 !important;
+  background-color: $primary !important;
   position: relative;
   top: -7px;
   padding-top: 10px;
@@ -31,8 +53,6 @@ font-family: 'montserrat-light', sans-serif;
 }
 
 .my-dropdown-menu-heading>p {
-  padding-top: 5px;
-  padding-left: 15px;
   color: #75cbc3;
 }
 
@@ -43,8 +63,6 @@ font-family: 'montserrat-light', sans-serif;
 }
 
 .my-dropdown-menu-body>p {
-  padding-top: 5px;
-  padding-left: 15px;
   color: black;
 }
 

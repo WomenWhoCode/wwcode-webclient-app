@@ -3,18 +3,18 @@
     <div class="nav navbar-nav">
       <div class="dropdown navbar-item">
           <a href="#" class="dropdown-toggle navbar-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars"></i></a>
-          <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <div class="dropdown-menu my-dropdown-menu" role="menu" aria-labelledby="dLabel">
 <!--             <div class="panel-default my-panel"> -->
               <div class="my-dropdown-menu-heading">
-                <p><%= image_tag "default_user_icon.png", size: "40x40"%></p>
                 <p><%= current_user.email %></p>
                 <p>San Francisco</p>
               </div>
             <div class="my-dropdown-menu-body">
                 <p> Profile </p>
-                <p> Contact WWCode </p>
-                <p> Switch your theme!</p>
-                <p> <%= link_to "Sign out", "/users/sign_out", method: "delete" %>
+                <p> <%= inline_svg "ic_email.svg", class: 'svg-icon-menu' %>Contact WWCode </p>
+                <p> <%= inline_svg "ic_invert_colors.svg", class: 'svg-icon-menu'%> Switch your theme!</p>
+                <p> <%= inline_svg "ic_logout.svg", class: 'svg-icon-menu'%> 
+                  <%= link_to "Sign out", "/users/sign_out", method: "delete" %>
                 </p> 
             </div>
 <!--           </div> -->
