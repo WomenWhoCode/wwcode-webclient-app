@@ -1,3 +1,5 @@
+<div id="form_error"><h4>Error: Form cannot be blank! Please make at least one selection!</h4></div>
+
 <div class="hopes">
 
   <%= image_tag('personalization_1.png', class: 'check_pic')%>
@@ -31,27 +33,27 @@
   <div class="hopes">
     <div class='form_checkboxes_list'>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'enhancing_your_technical_skills' %>
-        <%= label_tag 'enhancing_your_technical_skills', 'enhancing your technical skills', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'hopes[enhancing your technical skills]' %>
+        <%= label_tag 'hopes[enhancing your technical skills]', 'enhancing your technical skills', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'leadership_skills' %> 
-        <%= label_tag 'leadership_skills', 'leadership skills', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'hopes[leadership skills]' %> 
+        <%= label_tag 'hopes[leadership skills]', 'leadership skills', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'career_development' %> 
-        <%= label_tag 'career_development', 'career development (e.g. negotiating, interviewing)', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'hopes[career_development]' %> 
+        <%= label_tag 'hopes[career_development]', 'career development (e.g. negotiating, interviewing)', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'professional_network' %> 
-        <%= label_tag 'professional_network', 'professional network', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'hopes[professional_network]' %> 
+        <%= label_tag 'hopes[professional_network]', 'professional network', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'technical_profile' %> 
-        <%= label_tag 'technical_profile', 'enhancing your technical profile (e.g. speaking opportunities, techinical blogging)', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'hopes[technical_profile]' %> 
+        <%= label_tag 'hopes[technical_profile]', 'enhancing your technical profile (e.g. speaking opportunities, techinical blogging)', class: "form_checkbox_labels" %> 
       </div >
       <div class='form_checkboxes'>
-        <%= text_field_tag "Other", nil, placeholder: "Other", class: "other" %>
+        <%= text_field_tag "hopes[HopesOther]", nil, placeholder: "Other", class: "other" %>
       </div>
       <div class="next_div">Next</div> 
     </div> 
@@ -60,43 +62,43 @@
   <div class="interests">
     <div class='form_checkboxes_list'>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'architecture' %> 
-        <%= label_tag 'architecture', 'architecture', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'interests[architecture]' %> 
+        <%= label_tag 'interests[architecture]', 'architecture', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'security' %> 
-        <%= label_tag 'security', 'security', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'interests[security]' %> 
+        <%= label_tag 'interests[security]', 'security', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'data science' %> 
-        <%= label_tag 'data science', 'data science', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'interests[data science]' %> 
+        <%= label_tag 'interests[data science]', 'data science', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'analytics' %> 
-        <%= label_tag 'analytics', 'analytics', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'interests[analytics]' %> 
+        <%= label_tag 'interests[analytics]', 'analytics', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'open source' %> 
-        <%= label_tag 'open source', 'open source', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'interests[open source]' %> 
+        <%= label_tag 'interests[open source]', 'open source', class: "form_checkbox_labels" %> 
       </div >
       <div class='form_checkboxes'>
-        <%= check_box_tag 'devops' %> 
-        <%= label_tag 'devops', 'devops', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'interests[devops]' %> 
+        <%= label_tag 'interests[devops]', 'devops', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'web' %> 
-        <%= label_tag 'web', 'web', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'interests[web]' %> 
+        <%= label_tag 'interests[web]', 'web', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'mobile' %> 
-        <%= label_tag 'mobile', 'mobile', class: "form_checkbox_labels" %> 
+        <%= check_box_tag 'interests[mobile]' %> 
+        <%= label_tag 'interests[mobile]', 'mobile', class: "form_checkbox_labels" %> 
       </div>
       <div class='form_checkboxes'>
-        <%= check_box_tag 'enterprise' %> 
-        <%= label_tag 'enterprise', 'enterprise', class: "form_checkbox_labels" %>
+        <%= check_box_tag 'interests[enterprise]' %> 
+        <%= label_tag 'interests[enterprise]', 'enterprise', class: "form_checkbox_labels" %>
       </div>
       <div class='form_checkboxes'>
-        <%= text_field_tag "Other", nil, placeholder: "Other", class: "other" %>
+        <%= text_field_tag "interests[InterestsOther]", nil, placeholder: "Other", class: "other" %>
       </div>
       <div class="next_div">Next</div>  
     </div>
@@ -125,9 +127,11 @@
         <%= label_tag 'experience_newbie', 'newbie (1 year)', class: "form_checkbox_labels" %> 
       </div >
       <div class='form_checkboxes'>
-        <%= text_field_tag "Other", nil, placeholder: "Other", class: "other" %>
+        <%= text_field_tag "ExperiencesOther", nil, placeholder: "Other", class: "other" %>
       </div>
-      <%= submit_tag "Next", class: "next_button" %>  
+      <div id="next_button">
+        <%= submit_tag "Next", class: "next_button" %> 
+      </div>   
     </div>
   </div> 
 <% end %>
@@ -138,17 +142,39 @@
   $(document).ready(function(){
     $('.interests').hide();
     $('.experience').hide();
+    $('#form_error').hide();
+  
   })
 
+
+  //   if($('div.experience input[type = text].other').val() ==  "") {
+  //     $('.next_button').prop('disabled', true);
+  //   }
+  // $('.next_button').click(function(){
+  //   $('#form_error').show();
+  // })
+  
+
   $('.next_div').click(function(){
-    showCounter += 1;
-    if(showCounter === 1){
-      $('.hopes').hide();
-      $('.interests').show();
-    } else if (showCounter === 2) {
-      $('.interests').hide();
-      $('.experience').show();
-    }
+    if(showCounter == 0) {
+      if($('div.hopes input[type = checkbox]:checked').length > 0 || $('div.hopes input[type = text].other').val() != "") {
+        showCounter += 1;
+        $('#form_error').hide();
+        $('.hopes').hide();
+        $('.interests').show();
+      } else {
+      $('#form_error').show();
+      }
+    } else if (showCounter == 1) {    
+      if($('div.interests input[type = checkbox]:checked').length > 0 || $('div.interests input[type = text].other').val() != "") {
+        showCounter += 1;
+        $('#form_error').hide();
+        $('.interests').hide();
+        $('.experience').show();
+      } else {
+      $('#form_error').show();
+      }
+    }    
   })
 
   $('.other').click(function() {
