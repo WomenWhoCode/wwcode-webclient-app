@@ -127,10 +127,10 @@
         <%= label_tag 'experience_newbie', 'newbie (1 year)', class: "form_checkbox_labels" %> 
       </div >
       <div class='form_checkboxes'>
-        <%= text_field_tag "ExperiencesOther", nil, placeholder: "Other", class: "other" %>
+        <%= text_field_tag "ExperiencesOther", nil, placeholder: "Other", class: "other reference_class" %>
       </div>
       <div id="next_button">
-        <%= submit_tag "Next", class: "next_button" %> 
+        <%= submit_tag "Next", class: "next_button next_button_z_index" %> 
       </div>   
     </div>
   </div> 
@@ -143,18 +143,31 @@
     $('.interests').hide();
     $('.experience').hide();
     $('#form_error').hide();
-  
   })
 
+  $('div.experience input[type = radio]').change(function(){
+    if($('div.experience input[type = text].other').val() !=  "" || $('div.experience input[type = radio]:checked').length > 0) {
+      $('.next_button').removeAttr('disabled');
+      $('.next_button_z_index').removeClass("next_button_z_index");
+      $('#next_button').removeAttr('id');
+    };
+  })
 
-  //   if($('div.experience input[type = text].other').val() ==  "") {
-  //     $('.next_button').prop('disabled', true);
-  //   }
-  // $('.next_button').click(function(){
-  //   $('#form_error').show();
-  // })
+  $('.reference_class').change(function(){
+    if($('div.experience input[type = text].other').val() !=  "" || $('div.experience input[type = radio]:checked').length > 0) {
+      $('.next_button').removeAttr('disabled');
+      $('.next_button_z_index').removeClass("next_button_z_index");
+      $('#next_button').removeAttr('id');
+    };
+  })
+
+  $('div#next_button').click(function(){
+    if($('div.experience input[type = text].other').val() ==  "" && $('div.experience input[type = radio]:checked').length == 0) {
+        $('#form_error').show();
+        $('.next_button').prop('disabled', true);
+    }
+  })
   
-
   $('.next_div').click(function(){
     if(showCounter == 0) {
       if($('div.hopes input[type = checkbox]:checked').length > 0 || $('div.hopes input[type = text].other').val() != "") {
@@ -182,7 +195,7 @@
   });
 
   $('input[type=radio]').click(function () {
-    $('input:text.other').val('');
+    $('input:text.reference_class').val('');
   });
 
  </script>
