@@ -1,4 +1,6 @@
-$primary: #009688;
+$primary: #00b6aa;
+$selected: #009688;
+$background: white;
 
 @font-face {
     font-family: 'montserrat-light';
@@ -25,17 +27,28 @@ font-family: 'montserrat-light', sans-serif;
 } 
 
 .svg-icon-menu {
+  background-color: $primary;
   height: 20px;
   width: 20px;
   margin-right: 5px;
   vertical-align: bottom;
-  background-color: $primary
 }
 
-.svg-icon-menu path {
-  fill: white;
+.svg-icon-menu path{
+  fill: $primary;
 }
 
+.svg-icon-event { 
+  background-color: $selected;
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/*.svg-icon-event path{
+  fill: $primary !important;
+}*/
 
 .my-dropdown-menu p{
   padding-top: 5px;
@@ -162,10 +175,4 @@ font-family: 'montserrat-light', sans-serif;
 .event-text, .event-icon {
   display: inline-block;
   vertical-align: top;
-}
-
-.event-icon {
-  padding-top: 10px;
-  padding-right: 10px;
-  color: white;
 }
