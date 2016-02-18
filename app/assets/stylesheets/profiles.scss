@@ -56,9 +56,14 @@
   position: absolute;
   z-index: 99;
   background-color: black;
-  margin: 430px;
+  margin-left:-150px;
   margin-top: -16px;
   width: 300px;
+  left:50%; 
+}
+
+.dropdown_networks ul li{
+  text-align: center;
 }
 
 .dropdown_networks li>a{
