@@ -1,3 +1,17 @@
+$primary: #009688;
+
+@font-face {
+    font-family: 'montserrat-light';
+    src: font-url('montserrat-light.eot');
+    src: font-url('montserrat-light.eot?#iefix') format('embedded-opentype'),
+         font-url('montserrat-light.woff2') format('woff2'),
+         font-url('montserrat-light.woff') format('woff'),
+         font-url('montserrat-light.ttf') format('truetype'),
+         font-url('montserrat-light.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
   .font-hind {
   font-family: 'Hind', sans-serif;
 }
@@ -6,11 +20,54 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.font-montserrat-light {
-  font-family: 'Montserrat Light', arial;
+.font-montserrat-light{
+font-family: 'montserrat-light', sans-serif;
+} 
+
+.svg-icon-menu {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  background-color: $primary
+}
+
+.svg-icon-menu path {
+  fill: white;
+}
+
+
+.my-dropdown-menu p{
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+.my-dropdown-menu-heading {
+  background-color: $primary !important;
+  position: relative;
+  top: -7px;
+  padding-top: 10px;
+  padding-bottom:10px;
+}
+
+.my-dropdown-menu-heading>p {
+  color: #75cbc3;
+}
+
+.my-dropdown-menu-body {
+  background-color: white !important;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.my-dropdown-menu-body>p {
+  color: black;
 }
 
 .events-table-div {
+  padding-top: 80px;
   background-color: white;
   display: table;
   width:100%;
@@ -18,20 +75,22 @@
 
 .events-cell-div {
   display: table-cell;
-  text-align: center;
+  text-align: left;
+  vertical-align: top;
+  padding-bottom: 20px;
 }
 
 .events-inner-div {
   display: inline-block;
   text-align: left;
-  width: 300px;
+  width: 500px;
+  margin-left: 20px;
 }
 
-.events-inner-div>p {
+.events-cell-div>p {
   font-size: 14.5px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  padding-left: 9px;
+  margin-bottom: 20px;
+  padding-left: 29px;
   font-weight: 300;
 }
 
@@ -39,36 +98,37 @@
   color: black;
 }
 
-.event-repeat>p {
+/*.event-repeat p {
   line-height: 1.5;
-}
+}*/
 
 .my-panel {
   border-color: transparent;
   box-shadow: 1.5px 0px 2.5px rgba(190, 190, 190, 0.5), 0px 5px 3px rgba(190, 190, 190, 0.5);
   border-radius:2px 2px 2px 2px;
+  margin-bottom: 20px;
 }
 
 .my-panel-heading {
   padding: 15px 18px;
-  background-color: #00B6AA !important;
+  /*background-color: #00B6AA !important;*/
   border: none;
   border-radius:2px 2px 0px 0px;
 }
 
-.my-panel-heading .event-title, .my-panel-heading .event-network {
+.my-panel-heading .event-title, .my-panel-heading .event-sub-head {
   color: white;
   line-height: 1.5;
 }
 
-.my-panel-heading .event-title {
+.my-panel-heading .event-sub-head {
   font-size: 16px;
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 3px;
 }
 
-.my-panel-heading .event-network {
+.my-panel-heading .event-sub-head {
   font-size: 10px;
   opacity: .75;
   margin-bottom: 0px;
@@ -76,13 +136,36 @@
 
 .my-panel-body {
   padding: 15px 18px 10px 18px;
-  background-color:#FAFAFA;
+  /*background-color:#FAFAFA;*/
   border-radius:0px 0px 2px 2px;
 }
 
-.my-panel-body p {
+.my-panel-body .event-body-text {
   line-height: 1.5;
   margin-bottom: 0px;
   font-size: 14px;
   color: black;
 } 
+
+.event-show-div {
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+  width: 350px;
+  margin-left: 20px;
+}
+
+.event-show-div .my-panel .my-panel-body {
+  min-height: 400px;
+}
+
+.event-text, .event-icon {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.event-icon {
+  padding-top: 10px;
+  padding-right: 10px;
+  color: white;
+}
