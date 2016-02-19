@@ -9436,49 +9436,55 @@ input[type="radio"]:checked + label:before {
   position: absolute;
   z-index: 99;
   background-color: black;
-  margin: 430px;
+  margin-left: -150px;
   margin-top: -16px;
   width: 300px;
+  left: 50%;
 }
 
-/* line 64, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 65, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+.dropdown_networks ul li {
+  text-align: center;
+}
+
+/* line 69, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .dropdown_networks li > a {
   color: #bebebe;
 }
 
-/* line 68, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 73, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .profile_caret {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid #48484A;
 }
 
-/* line 74, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 79, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .dropdown_tab {
   padding: 0 220px 0 0;
 }
 
-/* line 78, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 83, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .name_span {
   padding: 0 220px 0 0;
 }
 
-/* line 82, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 87, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .email_span {
   padding: 0 195px 0 0;
 }
 
-/* line 86, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 91, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .job_span {
   padding: 0 230px 0 0;
 }
 
-/* line 90, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 95, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .network_span {
   padding: 0 140px 0 0;
 }
 
-/* line 94, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 99, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .user_icon {
   width: 50px;
   height: 50px;
