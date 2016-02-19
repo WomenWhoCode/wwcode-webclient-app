@@ -56,22 +56,22 @@ label:before {
   position: absolute;
   margin-right: 10px;
   top: 50%;
-  transform: translate(-50%,-50%); 
+  transform: translate(-50%,-50%);
 }
 
 input[type="checkbox"]:checked + label:before {
-  content: "";
+  background: url('iconmonstr-checkbox-4-240.png');
+  background-size: 17px 17px;
   color: black;
   text-align: center;
-  background: #00B6AA;
   vertical-align: middle;
 }
 
 input[type="radio"]:checked + label:before {
-  content: "";
+  background: url('iconmonstr-checkbox-4-240.png');
+  background-size: 17px 17px;
   color: black;
   text-align: center;
-  background: #00B6AA;
   vertical-align: middle;
 }
 
@@ -82,7 +82,7 @@ input[type="radio"]:checked + label:before {
   padding-left: 5px;
   margin-top: 5px;
   padding-top: 3px;
-  color: #00B6AA;
+  color: #bebebe;;
   font-size: 16px;
 }
 
@@ -93,6 +93,11 @@ input[type="radio"]:checked + label:before {
   border: none;
   font-size: 20px;
   transition: background-color .1s;
+  position: relative;
+}
+
+.next_button_z_index {
+  z-index: -1;
 }
 
 .next_button:hover {
@@ -101,6 +106,15 @@ input[type="radio"]:checked + label:before {
   border: 2px solid #00B6AA;
   text-decoration: none;
   transition: background-color .1s;
+}
+
+#next_button {
+  height: 80px;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  position:  relative;
+  z-index: 1000;
 }
 
 .check_pic {
@@ -151,4 +165,10 @@ input[type="radio"]:checked + label:before {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+#form_error {
+  color: red;
+  margin-top: 30px;
+  margin-bottom: -40px;
 }
