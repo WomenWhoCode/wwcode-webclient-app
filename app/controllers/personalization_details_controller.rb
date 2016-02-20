@@ -10,7 +10,7 @@ class PersonalizationDetailsController < ApplicationController
     experience = format_array_data([params[:experience], params[:ExperiencesOther]])
     session[:form_data] = {hopes: hopes, interests: interests, experience: experience}
     puts session[:form_data]
-    redirect_to "/users/sign_up"
+    redirect_to "/user_accounts/sign_up"
   end
 
   private

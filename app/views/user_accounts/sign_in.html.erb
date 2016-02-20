@@ -1,0 +1,21 @@
+<h2 id="sign_in_title">Log in</h2>
+
+<%= form_tag '/user_accounts', method: :post do %>
+  <div class="sign_in">
+    <%= text_field_tag "email", nil, placeholder: "Email", class: "user_account_text_field" %>
+  </div>
+
+  <div class="sign_in">
+    <%= text_field_tag "pasword", nil, placeholder: "Password", class: "user_account_text_field" %>
+  </div>
+
+  <div class="sign_in">
+    <%= check_box_tag "remember_me", class: "remember_me_checkbox" %>
+    <%= label_tag "remember_me", "Remember Me", class: "remember_me" %>
+  </div>
+
+  <%= submit_tag "LOG IN", class: "button" %>
+<% end %>
+
+<p><a href="/personalization_details">Sign Up</a></p>
+<p><a href="#">Forgot Your Password?</a></p>

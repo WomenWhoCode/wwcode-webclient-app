@@ -1,0 +1,82 @@
+body.sign_up { 
+  background: #212121 !important; 
+  color: white !important;
+  text-align: center !important;
+}
+
+#sign_up_title {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+#sign_in_title {
+  margin-top: 80px;
+  font-size: 22px;
+}
+
+.user_account_text_field {
+ background: transparent; 
+ border-color: transparent transparent #48484A transparent;
+ margin: 20px;
+ border-radius: 4px;
+ width: 300px;
+ padding: 5px;
+}
+
+
+.button {
+  background: #00B6AA;
+  height: 40px;
+  width: 100px;
+  border: none;
+  transition: background-color .1s;
+  margin-top: 40px;
+}
+
+.button:hover {
+  color: #00B6AA;
+  background: white;
+  border: 2px solid #00B6AA;
+  text-decoration: none;
+  transition: background-color .1s;
+}
+
+.user_account_text_field::-webkit-input-placeholder { /* WebKit browsers */
+  position: relative; bottom: -5px; left: 0;
+  height: 100px;
+  width:300px;
+}
+
+.user_account_text_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  position: relative; bottom: -5px; left: -5px;
+  height: 100px;
+  width:400px;
+}
+
+.user_account_text_field::-moz-placeholder { /* Mozilla Firefox 19+ */
+  position: relative; bottom: -5px; left: -5px;
+  height: 100px;
+  width:400px;
+}
+
+.user_account_text_field:-ms-input-placeholder { /* Internet Explorer 10+ */
+  position: relative; bottom: -5px; left: -5px;
+  height: 100px;
+  width:400px;
+}
+
+.remember_me_checkbox {
+  float: left;
+  width: 10px;
+}
+
+.remember_me {
+  margin-left: 40px;
+  
+}
+
+.remember_me_div {
+  display: inline-block;
+  width: 170px; 
+  margin-left: -30px;
+}
