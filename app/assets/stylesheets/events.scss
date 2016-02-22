@@ -26,19 +26,30 @@ $background: white;
 font-family: 'montserrat-light', sans-serif;
 } 
 
-.svg-icon-menu {
-  background-color: $primary;
+.icon-menu-hamburger {
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+.icon-menu-heading {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 7px;
+}
+
+.icon-menu-body {
+  background-color: $background;
   height: 20px;
   width: 20px;
   margin-right: 5px;
   vertical-align: bottom;
 }
 
-.svg-icon-menu path{
-  fill: $primary;
-}
-
-.svg-icon-event { 
+.icon-event { 
   background-color: $selected;
   height: 40px;
   width: 40px;
@@ -50,7 +61,12 @@ font-family: 'montserrat-light', sans-serif;
   fill: $primary !important;
 }*/
 
-.my-dropdown-menu p{
+.navbar-title>p{
+  color: white;
+  opacity: 0.80;
+}
+
+.my-dropdown-menu p {
   padding-top: 5px;
   padding-left: 15px;
   padding-right: 10px;
@@ -62,11 +78,13 @@ font-family: 'montserrat-light', sans-serif;
   position: relative;
   top: -7px;
   padding-top: 10px;
-  padding-bottom:10px;
+  padding-bottom: 15px;
 }
 
 .my-dropdown-menu-heading>p {
-  color: #75cbc3;
+  color: white;
+  opacity: 0.75;
+  margin-bottom: 5px;
 }
 
 .my-dropdown-menu-body {
