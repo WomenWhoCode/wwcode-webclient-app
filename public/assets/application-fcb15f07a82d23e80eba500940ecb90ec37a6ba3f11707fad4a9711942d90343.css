@@ -8823,7 +8823,8 @@ input {
 
 /* line 47, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/devise.css.scss */
 #sign_up_title {
-  margin-top: 75px;
+  margin-top: 20px;
+  font-size: 22px;
 }
 @font-face {
   font-family: 'montserrat-light';
@@ -9142,7 +9143,7 @@ body.sign_up {
 
 /* line 89, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/pages.scss */
 #thanks_title {
-  margin-top: 50px;
+  margin-top: 5px;
   font-size: 22px;
   width: 285px;
   text-align: center;
@@ -9271,19 +9272,19 @@ label:before {
 
 /* line 62, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
 input[type="checkbox"]:checked + label:before {
-  content: "";
+  background: url("iconmonstr-checkbox-4-240.png");
+  background-size: 17px 17px;
   color: black;
   text-align: center;
-  background: #00B6AA;
   vertical-align: middle;
 }
 
 /* line 70, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
 input[type="radio"]:checked + label:before {
-  content: "";
+  background: url("iconmonstr-checkbox-4-240.png");
+  background-size: 17px 17px;
   color: black;
   text-align: center;
-  background: #00B6AA;
   vertical-align: middle;
 }
 
@@ -9295,7 +9296,7 @@ input[type="radio"]:checked + label:before {
   padding-left: 5px;
   margin-top: 5px;
   padding-top: 3px;
-  color: #00B6AA;
+  color: #bebebe;
   font-size: 16px;
 }
 
@@ -9307,9 +9308,15 @@ input[type="radio"]:checked + label:before {
   border: none;
   font-size: 20px;
   transition: background-color .1s;
+  position: relative;
 }
 
-/* line 98, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
+/* line 99, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
+.next_button_z_index {
+  z-index: -1;
+}
+
+/* line 103, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
 .next_button:hover {
   color: #00B6AA;
   background: white;
@@ -9318,7 +9325,17 @@ input[type="radio"]:checked + label:before {
   transition: background-color .1s;
 }
 
-/* line 106, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
+/* line 111, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
+#next_button {
+  height: 80px;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1000;
+}
+
+/* line 120, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
 .check_pic {
   width: 50px;
   height: 50px;
@@ -9327,7 +9344,7 @@ input[type="radio"]:checked + label:before {
   margin-top: 50px;
 }
 
-/* line 114, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
+/* line 128, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
 .circle_number_pic {
   width: 50px;
   height: 50px;
@@ -9336,7 +9353,7 @@ input[type="radio"]:checked + label:before {
   margin-top: 50px;
 }
 
-/* line 122, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
+/* line 136, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
 .next_div {
   width: 100%;
   margin-left: auto;
@@ -9353,7 +9370,7 @@ input[type="radio"]:checked + label:before {
   transition: background-color .1s;
 }
 
-/* line 138, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
+/* line 152, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
 .next_div:hover {
   color: #00B6AA;
   background: white;
@@ -9363,7 +9380,7 @@ input[type="radio"]:checked + label:before {
   transition: background-color .1s;
 }
 
-/* line 147, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
+/* line 161, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
 #form_title_experience {
   margin-top: 15px;
   font-size: 22px;
@@ -9371,6 +9388,13 @@ input[type="radio"]:checked + label:before {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* line 170, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/personalization_details.scss */
+#form_error {
+  color: red;
+  margin-top: 30px;
+  margin-bottom: -40px;
 }
 /* line 5, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .finalize_button {
@@ -9436,49 +9460,55 @@ input[type="radio"]:checked + label:before {
   position: absolute;
   z-index: 99;
   background-color: black;
-  margin: 430px;
+  margin-left: -150px;
   margin-top: -16px;
   width: 300px;
+  left: 50%;
 }
 
-/* line 64, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 65, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+.dropdown_networks ul li {
+  text-align: center;
+}
+
+/* line 69, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .dropdown_networks li > a {
   color: #bebebe;
 }
 
-/* line 68, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 73, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .profile_caret {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid #48484A;
 }
 
-/* line 74, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 79, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .dropdown_tab {
   padding: 0 220px 0 0;
 }
 
-/* line 78, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 83, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .name_span {
   padding: 0 220px 0 0;
 }
 
-/* line 82, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 87, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .email_span {
   padding: 0 195px 0 0;
 }
 
-/* line 86, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 91, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .job_span {
   padding: 0 230px 0 0;
 }
 
-/* line 90, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 95, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .network_span {
   padding: 0 140px 0 0;
 }
 
-/* line 94, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
+/* line 99, /Users/Luke/acltc/projects/wwcode-webclient-app/app/assets/stylesheets/profiles.scss */
 .user_icon {
   width: 50px;
   height: 50px;
@@ -9512,6 +9542,7 @@ input[type="radio"]:checked + label:before {
 .field_padding {
   padding:5px;
 }
+
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
