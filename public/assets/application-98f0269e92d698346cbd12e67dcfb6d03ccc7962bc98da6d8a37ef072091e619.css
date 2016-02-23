@@ -8833,36 +8833,66 @@ input {
   font-weight: normal;
   font-style: normal;
 }
-/* line 15, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 17, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .font-hind {
   font-family: 'Hind', sans-serif;
 }
 
-/* line 19, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 21, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* line 23, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 25, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .font-montserrat-light {
   font-family: 'montserrat-light', sans-serif;
 }
 
-/* line 27, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
-.svg-icon-menu {
+/* line 29, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.icon-menu-hamburger {
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+/* line 36, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.icon-menu-heading {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 7px;
+}
+
+/* line 44, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.icon-menu-body {
+  background-color: white;
   height: 20px;
   width: 20px;
   margin-right: 5px;
   vertical-align: bottom;
+}
+
+/* line 52, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.icon-event {
   background-color: #009688;
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
-/* line 35, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
-.svg-icon-menu path {
-  fill: white;
+/*.svg-icon-event path{
+  fill: $primary !important;
+}*/
+/* line 64, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+.navbar-title > p {
+  color: white;
+  opacity: 0.80;
 }
 
-/* line 40, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 69, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-dropdown-menu p {
   padding-top: 5px;
   padding-left: 15px;
@@ -8870,33 +8900,35 @@ input {
   white-space: nowrap;
 }
 
-/* line 47, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 76, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-dropdown-menu-heading {
-  background-color: #009688 !important;
+  background-color: #00b6aa !important;
   position: relative;
   top: -7px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
-/* line 55, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 84, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-dropdown-menu-heading > p {
-  color: #75cbc3;
+  color: white;
+  opacity: 0.75;
+  margin-bottom: 5px;
 }
 
-/* line 59, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 90, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-dropdown-menu-body {
   background-color: white !important;
   padding-top: 5px;
   padding-bottom: 3px;
 }
 
-/* line 65, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 96, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-dropdown-menu-body > p {
   color: black;
 }
 
-/* line 69, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 100, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-table-div {
   padding-top: 80px;
   background-color: white;
@@ -8904,7 +8936,7 @@ input {
   width: 100%;
 }
 
-/* line 76, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 107, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-cell-div {
   display: table-cell;
   text-align: left;
@@ -8912,7 +8944,7 @@ input {
   padding-bottom: 20px;
 }
 
-/* line 83, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 114, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-inner-div {
   display: inline-block;
   text-align: left;
@@ -8920,7 +8952,7 @@ input {
   margin-left: 20px;
 }
 
-/* line 90, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 121, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-cell-div > p {
   font-size: 14.5px;
   margin-bottom: 20px;
@@ -8928,7 +8960,7 @@ input {
   font-weight: 300;
 }
 
-/* line 97, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 128, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .events-heading {
   color: black;
 }
@@ -8936,7 +8968,7 @@ input {
 /*.event-repeat p {
   line-height: 1.5;
 }*/
-/* line 105, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 136, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel {
   border-color: transparent;
   box-shadow: 1.5px 0px 2.5px rgba(190, 190, 190, 0.5), 0px 5px 3px rgba(190, 190, 190, 0.5);
@@ -8944,7 +8976,7 @@ input {
   margin-bottom: 20px;
 }
 
-/* line 112, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 143, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-heading {
   padding: 15px 18px;
   /*background-color: #00B6AA !important;*/
@@ -8952,13 +8984,13 @@ input {
   border-radius: 2px 2px 0px 0px;
 }
 
-/* line 119, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 150, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-heading .event-title, .my-panel-heading .event-sub-head {
   color: white;
   line-height: 1.5;
 }
 
-/* line 124, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 155, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-heading .event-sub-head {
   font-size: 16px;
   font-weight: bold;
@@ -8966,21 +8998,21 @@ input {
   margin-bottom: 3px;
 }
 
-/* line 131, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 162, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-heading .event-sub-head {
   font-size: 10px;
   opacity: .75;
   margin-bottom: 0px;
 }
 
-/* line 137, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 168, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-body {
   padding: 15px 18px 10px 18px;
   /*background-color:#FAFAFA;*/
   border-radius: 0px 0px 2px 2px;
 }
 
-/* line 143, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 174, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .my-panel-body .event-body-text {
   line-height: 1.5;
   margin-bottom: 0px;
@@ -8988,7 +9020,7 @@ input {
   color: black;
 }
 
-/* line 150, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 181, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .event-show-div {
   vertical-align: top;
   display: inline-block;
@@ -8997,22 +9029,15 @@ input {
   margin-left: 20px;
 }
 
-/* line 158, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 189, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .event-show-div .my-panel .my-panel-body {
   min-height: 400px;
 }
 
-/* line 162, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
+/* line 193, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
 .event-text, .event-icon {
   display: inline-block;
   vertical-align: top;
-}
-
-/* line 167, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/events.scss */
-.event-icon {
-  padding-top: 10px;
-  padding-right: 10px;
-  color: white;
 }
 /* line 1, /Users/tprice/CODING/ACLTC/internship/wwcode-webclient-app/app/assets/stylesheets/navbar.scss */
 .navbar-item {
