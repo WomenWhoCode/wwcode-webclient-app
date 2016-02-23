@@ -15,6 +15,7 @@
 
     $scope.setupColors = function(){ $scope.events.bgColorHeadDefault="#00b6aa";
       $scope.events.bgColorBodyDefault="#fafafa";
+      //009688
       $scope.events.bgColorHeadSelected="#009688";
       $scope.events.bgColorBodySelected="#ffffff";
       $scope.events.bgColorHeadMouseover="#faa73f";

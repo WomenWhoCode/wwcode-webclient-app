@@ -1,8 +1,10 @@
 <div class="event-show-div ">
   <div class="panel-default my-panel">
     <div class="panel-heading my-panel-heading" ng-style="{background:events.bgColorHeadSelected}">
-      <div class="event-icon">
-        <i class="fa fa-calendar fa-2x"></i>
+      <div class="event-icon-div">
+        <%= image_tag "events_calendar_white.png", class: 'icon-event' %>
+        <!-- events_calendar.svg -->
+        <!-- <i class="fa fa-calendar fa-2x"></i> -->
       </div>
       <div class="event-text">
         <p class="event-title" ng-bind="events.selected_title">Event 1</p>

@@ -2,18 +2,19 @@
   <div class="container-fluid">
     <div class="nav navbar-nav">
       <div class="dropdown navbar-item">
-          <a href="#" class="dropdown-toggle navbar-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars"></i></a>
-          <div class="dropdown-menu my-dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <a href="#" class="dropdown-toggle navbar-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= image_tag "menu_hamburger_white.png", class: 'icon-menu-hamburger' %></a>
+          <div class="dropdown-menu my-dropdown-menu font-hind" role="menu" aria-labelledby="dLabel">
 <!--             <div class="panel-default my-panel"> -->
               <div class="my-dropdown-menu-heading">
-                <p><%= current_user.email %></p>
+                <%= image_tag "default_user_icon.png", class: 'icon-menu-heading' %>
+                <p><%= current_user.email if current_user%></p>
                 <p>San Francisco</p>
               </div>
             <div class="my-dropdown-menu-body">
-                <p> Profile </p>
-                <p> <%= inline_svg "ic_email.svg", class: 'svg-icon-menu' %>Contact WWCode </p>
-                <p> <%= inline_svg "ic_invert_colors.svg", class: 'svg-icon-menu'%> Switch your theme!</p>
-                <p> <%= inline_svg "ic_logout.svg", class: 'svg-icon-menu'%> 
+                <p> <%= image_tag "menu_account_p-teal.png", class: 'icon-menu-body' %>Profile </p>
+                <p> <%= image_tag "menu_email_p-teal.png", class: 'icon-menu-body' %>Contact WWCode </p>
+                <p> <%= image_tag "menu_invert_p-teal.png", class: 'icon-menu-body'%> Switch your theme!</p>
+                <p> <%= image_tag "menu_logout_p-teal.png", class: 'icon-menu-body'%> 
                   <%= link_to "Sign out", "/users/sign_out", method: "delete" %>
                 </p> 
             </div>
