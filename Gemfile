@@ -29,6 +29,7 @@ gem 'puma'
 gem 'devise'
 gem "font-awesome-rails"
 gem 'inline_svg'
+gem 'unirest', '~> 1.1.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

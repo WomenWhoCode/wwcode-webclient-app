@@ -60,7 +60,7 @@ label:before {
 }
 
 input[type="checkbox"]:checked + label:before {
-  background: url('iconmonstr-checkbox-4-240.png');
+  background: asset_url('iconmonstr-checkbox-4-240.png');
   background-size: 17px 17px;
   color: black;
   text-align: center;
@@ -68,7 +68,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 input[type="radio"]:checked + label:before {
-  background: url('iconmonstr-checkbox-4-240.png');
+  background: asset_url('iconmonstr-checkbox-4-240.png');
   background-size: 17px 17px;
   color: black;
   text-align: center;

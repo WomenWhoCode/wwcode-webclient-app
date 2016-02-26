@@ -1,25 +1,3 @@
-body.sign_up { 
-  background: #212121 !important; 
-  color: white !important;
-  text-align: center !important;
-}
-
-.button {
-  background: #00B6AA;
-  height: 40px;
-  width: 100px;
-  border: none;
-  transition: background-color .1s;
-}
-
-.button:hover {
-  color: #00B6AA;
-  background: white;
-  border: 2px solid #00B6AA;
-  text-decoration: none;
-  transition: background-color .1s;
-}
-
 input {
  background: transparent; 
  border-color: transparent transparent #48484A transparent;
@@ -44,7 +22,3 @@ input {
   margin-left: -25px;
 }
 
-#sign_up_title {
-  margin-top: 20px;
-  font-size: 22px;
-}
