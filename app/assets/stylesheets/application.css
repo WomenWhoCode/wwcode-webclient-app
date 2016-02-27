@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require snapjs/snap
+ *= require angular-snap/angular-snap
  */
 
  .alert-dismissible{

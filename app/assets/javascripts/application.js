@@ -14,8 +14,12 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 // require turbolinks
+//= require snapjs/snap
 //= require angular
-//= require app
-//= require moment.js
-//= require moment-timezone-with-data.js
+//= require angular-snap/angular-snap
+//= require angular.ng-modules
+//= require events_app
+//= require hamburger_app
+//= require moment
+//= require moment-timezone-with-data
 //= require_tree .

@@ -9,7 +9,7 @@
   <%= csrf_meta_tags %>
 
 </head>
-<body class="sign_up">
+<body class="sign_up" ng-modules="EventsApp, HamburgerApp">
   <div class="flash-messages">
     <%flash.each do |name, message| %>
       <% if !message.empty? %>
@@ -20,10 +20,22 @@
       <% end %>
     <%end %>
   </div>
-  
-  <!-- <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p> -->
-<%= yield %>
+  <div ng-controller="HamburgerCtrl">
+    <snap-drawers>
+      <snap-drawer class="snap-drawer">
+      <p>I'm a drawer! I maybe I've got some sweet {{name}} links.</p>
+      </snap-drawer>
+    </snap-drawers>
+    <snap-content>
+              <button class="snap-drawer"snap-toggle></button>
+    
+    <!-- <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
 
+
+    
+    <%= yield %>
+    </snap-content>
+  </div>
 </body>
 </html>
