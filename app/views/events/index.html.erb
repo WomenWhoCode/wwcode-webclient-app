@@ -1,33 +1,30 @@
-<div ng-modules = "HamburgerApp, EventsApp">
-  <%= render "navbar" %>
-  <div class="events-table-div">
-    <div class="events-cell-div"
-    ng-controller="EventsCtrl" 
-    ng-init="setup()" >
-      <p class="events-heading font-montserrat"> Upcoming events near you:</p>  
-      <div class="events-inner-div">
-        <div class="event-repeat" 
-        ng-repeat="event in events" 
-        ng-attr-id="event{{event.id}}" 
-        ng-click="selectEvent(event)" 
-        ng-mousedown="highlightSelectedEvent(event)" 
-        ng-mouseover="mouseoverEvent(event)" 
-        ng-mouseleave="mouseleaveEvent(event)">
-          <div class="panel-default my-panel">  
-            <div class="panel-heading my-panel-heading font-montserrat-light" 
-            ng-style="{background:event.bgColorHead}">
-              <p class="event-title">{{event.title}}</p>
-              <p class="event-sub-head">{{event.network.title.toUpperCase() + " NETWORK"}}</p>
-            </div>
-            <div class="panel-body my-panel-body font-hind" 
-            ng-style="{background:event.bgColorBody}">
-              <p class="event-body-text">{{event.month + " " + event.date}} - {{event.hour + ":" + event.minute + " " + event.ampm}}</p>
-              <p class="event-body-text">{{"at " + event.location}}</p>
-            </div>
+<div class="events-table-div">
+  <div class="events-cell-div"
+  ng-controller="EventsCtrl" 
+  ng-init="setup()" >
+    <p class="events-heading font-montserrat"> Upcoming events near you:</p>  
+    <div class="events-inner-div">
+      <div class="event-repeat" 
+      ng-repeat="event in events" 
+      ng-attr-id="event{{event.id}}" 
+      ng-click="selectEvent(event)" 
+      ng-mousedown="highlightSelectedEvent(event)" 
+      ng-mouseover="mouseoverEvent(event)" 
+      ng-mouseleave="mouseleaveEvent(event)">
+        <div class="panel-default my-panel">  
+          <div class="panel-heading my-panel-heading font-montserrat-light" 
+          ng-style="{background:event.bgColorHead}">
+            <p class="event-title">{{event.title}}</p>
+            <p class="event-sub-head">{{event.network.title.toUpperCase() + " NETWORK"}}</p>
+          </div>
+          <div class="panel-body my-panel-body font-hind" 
+          ng-style="{background:event.bgColorBody}">
+            <p class="event-body-text">{{event.month + " " + event.date}} - {{event.hour + ":" + event.minute + " " + event.ampm}}</p>
+            <p class="event-body-text">{{"at " + event.location}}</p>
           </div>
         </div>
       </div>
-      <%= render "event_info" %>
     </div>
+    <%= render "event_info" %>
   </div>
 </div>

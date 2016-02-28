@@ -1,6 +1,6 @@
 (function() {
   "use strict";
 
-  angular.module("EventsApp", []);
+  angular.module("app", ['snap']);
 
 }());

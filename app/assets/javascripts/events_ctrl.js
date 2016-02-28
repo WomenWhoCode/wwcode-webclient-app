@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  angular.module("EventsApp").controller("EventsCtrl", function($scope, $http) {
-    
+  angular.module("app").controller("EventsCtrl", function($scope, $http) {
+
     $scope.setup = function() {
       $scope.events=convertEventsDates($scope.events);
       $scope.setupColors();

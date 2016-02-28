@@ -1,0 +1,66 @@
+$primary: #00b6aa;
+$background: white;
+
+.snap-drawer {
+  width: 270px !important;
+  background-color: white;
+}
+
+.drawer-menu {
+  padding-top: 65px;
+  box-shadow: 1.5px 0px 2.5px rgba(190, 190, 190, 0.5), 0px 5px 3px rgba(190, 190, 190, 0.5);;
+  margin-right: 5px;
+}
+
+.drawer-menu p {
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 10px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.drawer-menu-heading {
+  background-color: $primary !important;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.drawer-menu-heading-icon-container {
+  text-align: left;
+}
+
+.drawer-menu-heading-icon {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 7px;
+}
+
+.drawer-menu-heading>p {
+  color: white;
+  opacity: 0.75;
+  margin-bottom: 5px;
+}
+
+.drawer-menu-body {
+  background-color: white !important;
+  padding-top: 5px;
+  padding-bottom: 3px;
+/*border-right: solid;
+  border-right-width: 1px;
+  border-right-color: #eeeeee;*/
+}
+
+.drawer-menu-body-icon {
+  background-color: $background;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+
+.drawer-menu-body>p {
+  color: black;
+}

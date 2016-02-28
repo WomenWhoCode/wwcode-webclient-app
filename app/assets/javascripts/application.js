@@ -17,9 +17,7 @@
 //= require snapjs/snap
 //= require angular
 //= require angular-snap/angular-snap
-//= require angular.ng-modules
-//= require events_app
-//= require hamburger_app
+//= require app
 //= require moment
 //= require moment-timezone-with-data
 //= require_tree .

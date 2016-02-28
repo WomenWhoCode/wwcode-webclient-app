@@ -1,33 +1,14 @@
-<div ng-controller="HamburgerCtrl">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="nav navbar-nav">
-        <div class="dropdown navbar-item">
-            <a href="#" class="dropdown-toggle navbar-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= image_tag "menu_hamburger_white.png", class: 'icon-menu-hamburger' %></a>
-            <div class="dropdown-menu my-dropdown-menu font-hind" role="menu" aria-labelledby="dLabel">
-  <!-- <div class="panel-default my-panel"> -->
-                <div class="my-dropdown-menu-heading">
-                  <%= image_tag "default_user_icon.png", class: 'icon-menu-heading' %>
-                  <p><%= current_user.email if current_user%></p>
-                  <p>San Francisco</p>
-                </div>
-              <div class="my-dropdown-menu-body">
-                  <p> <%= image_tag "menu_account_p-teal.png", class: 'icon-menu-body' %>Profile </p>
-                  <p> <%= image_tag "menu_email_p-teal.png", class: 'icon-menu-body' %>Contact WWCode </p>
-                  <p> <%= image_tag "menu_invert_p-teal.png", class: 'icon-menu-body'%> Switch your theme!</p>
-                  <p> <%= image_tag "menu_logout_p-teal.png", class: 'icon-menu-body'%> 
-                    <%= link_to "Sign out", "/users/sign_out", method: "delete" %>
-                  </p> 
-              </div>
-            <!-- </div> -->
-            </div>
-        </div>
-        <div class="navbar-title navbar-item">
-          <p class="font-montserrat">
-              Women Who Code
-          </p>
-        </div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="nav navbar-nav">
+      <div class="dropdown navbar-item">
+        <a snap-toggle href="#" class="dropdown-toggle navbar-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= image_tag "menu_hamburger_white.png", class: 'icon-menu-hamburger' %></a>
+      </div>
+      <div class="navbar-title navbar-item">
+        <p class="font-montserrat">
+            Women Who Code
+        </p>
       </div>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>

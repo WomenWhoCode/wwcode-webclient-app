@@ -17,12 +17,15 @@
  *= require angular-snap/angular-snap
  */
 
- .alert-dismissible{
- margin-top:65px;
- margin-bottom:0px;
+.alert-dismissible{
+ margin-top: 65px;
+ margin-bottom: 0px;
 }
 
 .field_padding {
-  padding:5px;
+  padding: 5px;
 }
 
+.snap-content {
+  background-color: white;
+}

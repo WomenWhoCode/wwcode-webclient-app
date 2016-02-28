@@ -1,0 +1,14 @@
+<div class="drawer-menu font-hind">
+  <div class="drawer-menu-heading">
+    <div class="drawer-menu-heading-icon-container"> <%= image_tag "default_user_icon.png", class: 'drawer-menu-heading-icon' %> </div>
+    <p> <%= current_user.email if current_user%></p>
+    <p> San Francisco</p>
+  </div>
+  <div class="drawer-menu-body">
+    <p> <%= image_tag "menu_account_p-teal.png", class: 'drawer-menu-body-icon' %><span class="drawer-menu-body-text">Profile </span> </p>
+    <p> <%= image_tag "menu_email_p-teal.png", class: 'drawer-menu-body-icon' %> <span class="drawer-menu-body-text">Contact WWCode </span> </p>
+    <p> <%= image_tag "menu_invert_p-teal.png", class: 'drawer-menu-body-icon'%> <span class="drawer-menu-body-text">Switch your theme! </span> </p>
+    <p> <%= image_tag "menu_logout_p-teal.png", class: 'drawer-menu-body-icon'%> <span class="drawer-menu-body-text">
+      <%= link_to "Sign out", "/users/sign_out", method: "delete" %> </span> </p> 
+  </div>
+</div>
