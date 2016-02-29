@@ -1,1 +1,4 @@
-angular.module("app").controller("DrawerCtrl", function($scope, $http) {});
+angular.module("app").controller("DrawerCtrl", function($scope, $http) {
+  $scope.options = {
+  maxPosition: 300, minPosition: -300};
+});

@@ -14,7 +14,7 @@
  *= require_self
  *= require font-awesome
  *= require snapjs/snap
- *= require angular-snap/angular-snap
+ *= require angular-snap/angular-snap.min
  */
 
 .alert-dismissible{
