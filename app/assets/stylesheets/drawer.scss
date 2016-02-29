@@ -24,10 +24,12 @@ $background: white;
   background-color: $primary !important;
   padding-top: 10px;
   padding-bottom: 15px;
+  padding-left: 3px;
 }
 
 .drawer-menu-heading-icon-container {
   text-align: left;
+  padding-bottom: 10px;
 }
 
 .drawer-menu-heading-icon {
@@ -38,7 +40,7 @@ $background: white;
   margin-bottom: 7px;
 }
 
-.drawer-menu-heading>p {
+.drawer-menu-heading > p {
   color: white;
   opacity: 0.75;
   margin-bottom: 5px;
@@ -46,11 +48,8 @@ $background: white;
 
 .drawer-menu-body {
   background-color: white !important;
-  padding-top: 5px;
-  padding-bottom: 3px;
-/*border-right: solid;
-  border-right-width: 1px;
-  border-right-color: #eeeeee;*/
+  padding-top: 13px;
+  padding-bottom: 5px;
 }
 
 .drawer-menu-body-icon {
