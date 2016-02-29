@@ -27,10 +27,12 @@
     <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle profile_btn" type="button" data-toggle="dropdown" id="profile_dropdown"><span class="dropdown_tab">Select</span>
   <span class="caret profile_caret"></span></button>
+ 
   <ul class="dropdown-menu dropdown_networks">
-    <li><a href="#">San Francisco</a></li>
-    <li><a href="#">Seattle</a></li>
-    <li><a href="#">New York</a></li>
+     <% @networks.each do |network|  %>
+    <li><a href="#"><%= network.title %></a></li>
+    <!-- <li><a href="#">Seattle</a></li>
+    <li><a href="#">New York</a></li> -->
   </ul>
 </div>
     <div>
