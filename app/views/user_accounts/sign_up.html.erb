@@ -7,7 +7,7 @@
 
 <div><h4 id="sign_up_title">Sign up</h4></div>
 
-<%= form_tag '/user_accounts/new', method: :post do %>
+<%= form_tag '/user_accounts', method: :post do %>
   <div class="sign_up">
     <%= text_field_tag "username", nil, placeholder: "Username", class: "user_account_text_field username_text_field" %>
     <p class="username_error">*Username cannot be blank</p>

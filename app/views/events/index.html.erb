@@ -1,10 +1,8 @@
-<%= render "navbar" %>
-<div class="events-table-div"
-ng-app="app" >
+<div class="events-table-div">
   <div class="events-cell-div"
-  ng-controller="eventsCtrl" 
+  ng-controller="EventsCtrl" 
   ng-init="setup()" >
-    <p class="events-heading font-montserrat"> Upcoming events near you:</p>
+    <p class="events-heading font-montserrat"> Upcoming events near you:</p>  
     <div class="events-inner-div">
       <div class="event-repeat" 
       ng-repeat="event in events" 

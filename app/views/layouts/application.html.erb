@@ -9,21 +9,32 @@
   <%= csrf_meta_tags %>
 
 </head>
-<body class="sign_up">
+<body class="sign_up" ng-app="app">
   <div class="flash-messages">
-    <%flash.each do |name, message| %>
+    <% flash.each do |name, message| %>
       <% if !message.empty? %>
         <div class="alert alert-<%= name %> alert-dismissible">
           <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
           <%= message %>
         </div>
       <% end %>
-    <%end %>
+    <% end %>
   </div>
-  
-  <!-- <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p> -->
-<%= yield %>
-
+  <% if @action_is_events_index %>
+  <!-- the navbar and drawer menu is only rendered if the above condition is true -->
+    <%= render "/events/navbar" %>
+    <div ng-controller="DrawerCtrl">
+      <snap-drawers>
+        <snap-drawer class="snap-drawer">
+          <%= render "/events/drawer_menu" %>
+        </snap-drawer>
+      </snap-drawers>
+      <snap-content class="snap-content">
+        <%= yield %>
+      </snap-content>
+    </div>
+  <% else %> 
+    <%= yield %>
+  <% end %>
 </body>
 </html>

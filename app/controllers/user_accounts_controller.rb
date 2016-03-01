@@ -1,6 +1,5 @@
 class UserAccountsController < ApplicationController
 
-
   def sign_up
 
   end
@@ -8,10 +7,10 @@ class UserAccountsController < ApplicationController
   def sign_in
 
   end
-  
+ 
   def create
     response = Unirest.post "http://staging-wwcode-api.herokuapp.com/auth/sign_in",
-      # headers: {"Accept" => "application/json" },
+      headers: {"Accept" => "application/json" },
       parameters: {
         email: params[:email],
         password: params[:password]
@@ -27,8 +26,8 @@ class UserAccountsController < ApplicationController
   end
 
   def new
-    response = Unirest.post "http://staging-wwcode-api.herokuapp.com/auth",
-      # headers: {"Accept" => "application/json" },
+    response = Unirest.post "http://localhost:3000/auth",
+      headers: {"Accept" => "application/json" },
       parameters: {
         personalization_details: session[:form_data],
         username: params[:username],

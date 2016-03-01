@@ -13,15 +13,23 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require snapjs/snap
+ *= require angular-snap/angular-snap.min
  */
 
- .alert-dismissible{
- margin-top:65px;
- margin-bottom:0px;
+.alert-dismissible{
+ margin-top: 65px;
+ margin-bottom: 0px;
 }
 
 .field_padding {
-  padding:5px;
+  padding: 5px;
 }
 
+<<<<<<< HEAD
 
+=======
+.snap-content {
+  background-color: white;
+}
+>>>>>>> f6494c82eefabc8ae3bbb329d1a7a8f61f11f84e
