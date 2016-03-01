@@ -1,6 +1,5 @@
 $primary: #00b6aa;
 $selected: #009688;
-$background: white;
 
 @font-face {
     font-family: 'montserrat-light';
@@ -14,7 +13,7 @@ $background: white;
     font-style: normal;
 }
 
-  .font-hind {
+.font-hind {
   font-family: 'Hind', sans-serif;
 }
 
@@ -25,77 +24,6 @@ $background: white;
 .font-montserrat-light{
 font-family: 'montserrat-light', sans-serif;
 } 
-
-.icon-menu-hamburger {
-  height: 40px;
-  width: 40px;
-  vertical-align: middle;
-  margin-bottom: 4px;
-}
-
-.icon-menu-heading {
-  height: 40px;
-  width: 40px;
-  margin-top: 10px;
-  margin-left: 15px;
-  margin-bottom: 7px;
-}
-
-.icon-menu-body {
-  background-color: $background;
-  height: 20px;
-  width: 20px;
-  margin-right: 5px;
-  vertical-align: bottom;
-}
-
-.icon-event { 
-  background-color: $selected;
-  height: 40px;
-  width: 40px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-
-/*.svg-icon-event path{
-  fill: $primary !important;
-}*/
-
-.navbar-title>p{
-  color: white;
-  opacity: 0.80;
-}
-
-.my-dropdown-menu p {
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-right: 10px;
-  white-space: nowrap;
-}
-
-.my-dropdown-menu-heading {
-  background-color: $primary !important;
-  position: relative;
-  top: -7px;
-  padding-top: 10px;
-  padding-bottom: 15px;
-}
-
-.my-dropdown-menu-heading>p {
-  color: white;
-  opacity: 0.75;
-  margin-bottom: 5px;
-}
-
-.my-dropdown-menu-body {
-  background-color: white !important;
-  padding-top: 5px;
-  padding-bottom: 3px;
-}
-
-.my-dropdown-menu-body>p {
-  color: black;
-}
 
 .events-table-div {
   padding-top: 80px;
@@ -118,7 +46,7 @@ font-family: 'montserrat-light', sans-serif;
   margin-left: 20px;
 }
 
-.events-cell-div>p {
+.events-cell-div > p {
   font-size: 14.5px;
   margin-bottom: 20px;
   padding-left: 29px;
@@ -129,9 +57,13 @@ font-family: 'montserrat-light', sans-serif;
   color: black;
 }
 
-/*.event-repeat p {
-  line-height: 1.5;
-}*/
+.event-icon { 
+  background-color: $selected;
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
 
 .my-panel {
   border-color: transparent;

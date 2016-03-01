@@ -9,20 +9,23 @@ class UserAccountsController < ApplicationController
 
   end
   
-  def create
-    response = Unirest.post "http://staging-wwcode-api.herokuapp.com/auth/sign_in",
-      headers: {"Accept" => "application/json" },
-      parameters: {
-        email: params[:email],
-        password: params[:password]
-      } {|response|
-        response.headers
-      }  
-    redirect_to "/profiles"  
-  end
+  #you have two "create's here, one for the session, and one for the registration. To keep things more clean, I would create two controllers (registrations and sessions) to mimic the api. That way, you can have two "create"s and not have to break REST.
 
-  def new
-    response = Unirest.post "http://staging-wwcode-api.herokuapp.com/auth",
+  # def create
+  #   response = Unirest.post "http://localhost:3000/auth",
+  #     headers: {"Accept" => "application/json" },
+  #     parameters: {
+  #       email: params[:email],
+  #       password: params[:password],
+  #       password_confirmation: params[:password_confirmation]
+  #     } 
+  #   puts "coolness"
+  #   p response.body
+  #   redirect_to "/profiles"  
+  # end
+
+  def create
+    response = Unirest.post "http://localhost:3000/auth",
       headers: {"Accept" => "application/json" },
       parameters: {
         personalization_details: session[:form_data],
