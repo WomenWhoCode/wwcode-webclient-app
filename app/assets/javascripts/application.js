@@ -15,7 +15,9 @@
 //= require jquery_ujs
 // require turbolinks
 //= require angular
+//= require angular-snap/angular-snap.min
+//= require snapjs/snap.min
 //= require app
-//= require moment.js
-//= require moment-timezone-with-data.js
+//= require moment.min
+//= require moment-timezone-with-data-2010-2020.min
 //= require_tree .

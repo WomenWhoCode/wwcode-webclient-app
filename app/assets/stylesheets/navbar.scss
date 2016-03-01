@@ -1,10 +1,22 @@
+.icon-menu-hamburger {
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+.navbar-title > p {
+  color: white;
+  opacity: 0.80;
+}
+
 .navbar-item{
   display: inline-block;
   color: grey;
   margin-bottom: 0px;
 }
 
-.navbar-title{
+.navbar-title {
   font-size: 20px;
   margin-top: 10px;
   margin-left: 10px;
@@ -26,5 +38,5 @@
 }
 
 .container-fluid {
-  padding-left: 10px !important
+  padding-left: 0px
 }
