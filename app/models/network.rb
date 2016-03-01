@@ -23,10 +23,10 @@ class Network
 
   def self.all
     networks = []
-    networks_hashes = Unirest.get("http://staging-wwcode-api.herokuapp.com/api/v1/networks.json",
+    network_hashes = Unirest.get("http://staging-wwcode-api.herokuapp.com/api/v1/networks.json",
         headers: {"Accept" => "application/json"},
         parameters: attributes).body
-    networks_hashes.each do |networks_hash|
+    network_hashes.each do |network_hash|
       networks << Network.new(network_hash)
     end
     return networks
