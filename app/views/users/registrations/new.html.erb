@@ -1,3 +1,11 @@
+<% if @response %>
+    <div class= "backend_errors">
+      <% @response.body["errors"]["full_messages"].each do |error| %>
+          <p class="backend_onboarding_errors"><%= error %></p>
+      <% end %>
+    </div>
+<% end %> 
+
 <br>
 <%= image_tag('personalization.gif', class: 'check_pic')%>
 <%= image_tag('personalization.gif', class: 'check_pic')%>
@@ -7,31 +15,31 @@
 
 <div><h4 id="sign_up_title">Sign up</h4></div>
 
-<%= form_tag '/user_accounts', method: :post do %>
+<%= form_tag '/users/registrations', method: :post do %>
   <div class="sign_up">
-    <%= text_field_tag "username", nil, placeholder: "Username", class: "user_account_text_field username_text_field" %>
-    <p class="username_error">*Username cannot be blank</p>
+    <%= text_field_tag "username", params[:username], placeholder: "Username", class: "user_account_text_field username_text_field" %>
+    <p class="username_error">Username cannot be blank</p>
   </div> 
 
   <div class="sign_up">
-    <%= text_field_tag "email", nil, placeholder: "Email Address", class: "user_account_text_field email_text_field" %>
-    <p class="email_error">*Email cannot be blank</p>
+    <%= text_field_tag "email", params[:email], placeholder: "Email Address", class: "user_account_text_field email_text_field" %>
+    <p class="email_error">Email cannot be blank</p>
   </div>  
 
   <div class="sign_up">
-    <%= text_field_tag "password", nil, placeholder: "Password", class: "user_account_text_field password_text_field" %>
-    <p class="password_error">*Password cannot be blank</p>
+    <%= password_field_tag "password", nil, placeholder: "Password", class: "user_account_text_field password_text_field" %>
+    <p class="password_error">Password cannot be blank</p>
   </div>  
 
   <div class="sign_up">
-    <%= text_field_tag "password_confirmation", nil, placeholder: "Password Confirmation", class: "user_account_text_field password_confirmation_text_field" %>
-    <p class="password_confirmation_error">*Password confirmation cannot be blank</p>
-    <p class="password_match_error">*Password confirmation does not match password</p>
+    <%= password_field_tag "password_confirmation", nil, placeholder: "Password Confirmation", class: "user_account_text_field password_confirmation_text_field" %>
+    <p class="password_confirmation_error">Password confirmation cannot be blank</p>
+    <p class="password_match_error">Password confirmation does not match password</p>
   </div>  
 
   <div class="sign_up">
-    <%= text_field_tag "access_code", nil, placeholder: "Access Code", class: "user_account_text_field access_code_text_field" %>
-    <p class="access_code_error">*Access code cannot be blank</p>
+    <%= text_field_tag "access_code", params[:access_code], placeholder: "Access Code", class: "user_account_text_field access_code_text_field" %>
+    <p class="access_code_error">Access code cannot be blank</p>
   </div>
 
   <div id="next_div">

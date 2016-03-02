@@ -108,32 +108,55 @@ body.sign_up {
 }
 
 .email_error{
-  color: red;
-  margin-left: -155px;
+  color: #a94442;
+  margin-left: -150px;
+  size: 12px;
+  margin-top: -20px;
 }
 
 .password_error {
-  color: red;
+  color: #a94442;
   margin-left: -125px;
+  size: 12px;
+  margin-top: -20px;
 }
 
 .password_confirmation_error {
-  color: red;
+  color: #a94442;
   margin-left: -40px;
+  size: 12px;
+  margin-top: -20px;
 }
 
 .password_match_error {
-  color: red;
+  color: #a94442;
   margin-left: 22px;
+  size: 12px;
+  margin-top: -20px;
 }
 
 .username_error {
-  color: red;
-  margin-left: -125px;
+  color: #a94442;
+  margin-left: -120px;
+  size: 12px;
+  margin-top: -20px;
 }
 
 .access_code_error {
-  color: red;
+  color: #a94442;
   margin-left: -105px;
+  size: 12px;
+  margin-top: -20px;
 }
 
+.backend_onboarding_errors {
+  text-align: left;
+  color: #a94442;
+  margin-left: 40%;
+  size: 12px;
+}
+
+.backend_errors {
+  margin-top: 30px;
+  margin-bottom: -50px;
+}

@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
-  
   root to: "pages#index"
 
   resources :events
@@ -9,9 +7,13 @@ Rails.application.routes.draw do
   resources :personalization_details
   resources :profiles
 
-  post "/user_accounts", to: "user_accounts#create"
-  get "/user_accounts/sign_up", to: "user_accounts#sign_up"
-  post "user_accounts/new", to: "user_accounts#new"
-  get "/user_accounts/sign_in", to: "user_accounts#sign_in"
+
+  namespace :users do
+    get "/registrations/sign_up", to: "registrations#new"
+    post "/registrations", to: "registrations#create"
+    get "/sessions/sign_in", to: "sessions#new"
+    post "/sessions", to: "sessions#create"
+    delete "/sessions", to: "sessions#destroy"
+  end
 
 end

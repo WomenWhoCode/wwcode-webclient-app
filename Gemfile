@@ -26,7 +26,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'puma'
-gem 'devise'
 gem "font-awesome-rails"
 gem 'inline_svg'
 gem 'unirest', '~> 1.1.2'
@@ -45,6 +44,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'dotenv-rails'
 end
 
 group :development do
