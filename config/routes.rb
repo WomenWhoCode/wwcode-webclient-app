@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
-  
   root to: "pages#index"
 
   resources :events
@@ -15,6 +13,7 @@ Rails.application.routes.draw do
     post "/registrations", to: "registrations#create"
     get "/sessions/sign_in", to: "sessions#new"
     post "/sessions", to: "sessions#create"
+    delete "/sessions", to: "sessions#destroy"
   end
 
 end

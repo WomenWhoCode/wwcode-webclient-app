@@ -1,14 +1,22 @@
+<% if @response %>
+    <div class= "backend_errors">
+      <% @response.body["errors"].each do |error| %>
+          <p class="backend_onboarding_errors"><%= error %></p>
+      <% end %>
+    </div>
+<% end %> 
+
 <h2 id="sign_in_title">Log in</h2>
 
-<%= form_tag '/user_accounts', method: :post do %>
+<%= form_tag '/users/sessions', method: :post do %>
   <div class="sign_in">
-    <%= text_field_tag "email", nil, placeholder: "Email", class: "user_account_text_field email_text_field" %> 
-    <p class="email_error">*Email cannot be blank</p>
+    <%= text_field_tag "email", params[:email], placeholder: "Email", class: "user_account_text_field email_text_field" %> 
+    <p class="email_error">Email cannot be blank</p>
   </div>
 
   <div class="sign_in">
-    <%= text_field_tag "pasword", nil, placeholder: "Password", class: "user_account_text_field password_text_field" %>
-    <p class="password_error">*Password cannot be blank</p>
+    <%= text_field_tag "password", nil, placeholder: "Password", class: "user_account_text_field password_text_field" %>
+    <p class="password_error">Password cannot be blank</p>
   </div>
 
   <div class="sign_in">

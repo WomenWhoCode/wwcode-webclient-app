@@ -5,7 +5,8 @@ class Users::RegistrationsController < ApplicationController
   end
 
   def create
-    response = Unirest.post "http://localhost:3000/auth",
+    api_domain = ENV['API_DOMAIN']
+    @response = Unirest.post "#{api_domain}/auth",
       headers: {"Accept" => "application/json" },
       parameters: {
         personalization_details: session[:form_data],
@@ -15,13 +16,15 @@ class Users::RegistrationsController < ApplicationController
         password_confirmation: params[:password_confirmation],
         access_code: params[:access_code]
       }
-      puts "?????????"
-      puts response.code
-      puts response.body
-      puts response.headers
-      puts "///////////"
-    redirect_to "/profiles"
+    if /2[0-9][0-9]/ === @response.code
+      session[:api_headers] = {"uid" => @response.headers[:uid], "token_type" => @response.headers[:token_type], "expiry" => @response.headers[:expiry], "client" => @response.headers[:client], "access_token" => @response.headers[:access_token]}
+      redirect_to "/profiles"
+    else  
+      render :new    
+    end   
   end
+
+
 
 
 end
