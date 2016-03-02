@@ -26,16 +26,24 @@
     </div>
     <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle profile_btn" type="button" data-toggle="dropdown" id="profile_dropdown"><span class="dropdown_tab">Select</span>
+
   <span class="caret profile_caret"></span></button>
  
-  <ul class="dropdown-menu dropdown_networks">
+  <ul class="dropdown-menu scrollable-menu dropdown_networks" role="menu">
      <% @networks.each do |network|  %>
     <li><a href="#"><%= network.title %></a></li>
     <!-- <li><a href="#">Seattle</a></li>
     <li><a href="#">New York</a></li> -->
+    <% end %>
   </ul>
 </div>
     <div>
       <%= submit_tag "FINALIZE PROFILE", class: "finalize_button" %> 
     </div> 
 <% end %>
+<script type="text/javascript">
+$(".dropdown-menu li a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+});
+</script>
