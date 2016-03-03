@@ -29,16 +29,16 @@ body.sign_up {
   height: 40px;
   width: 100px;
   border: none;
-  transition: background-color .1s;
+  transition: background-color .3s;
   margin-top: 25px;
 }
 
 .button:hover {
-  color: #00B6AA;
-  background: white;
+  color: white;
+  opacity: 0.9;
   border: 2px solid #00B6AA;
   text-decoration: none;
-  transition: background-color .1s;
+  transition: background-color .3s;
 }
 
 .user_account_text_field::-webkit-input-placeholder { /* WebKit browsers */
@@ -150,13 +150,13 @@ body.sign_up {
 }
 
 .backend_onboarding_errors {
-  text-align: left;
   color: #a94442;
-  margin-left: 40%;
   size: 12px;
+  position: relative;
 }
 
 .backend_errors {
+  text-align: center;
   margin-top: 30px;
   margin-bottom: -50px;
 }

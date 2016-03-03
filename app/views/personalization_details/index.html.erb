@@ -145,48 +145,52 @@
     $('#form_error').hide();
   })
 
-  $('div.experience input[type = radio]').change(function(){
-    if($('div.experience input[type = text].other').val() !=  "" || $('div.experience input[type = radio]:checked').length > 0) {
-      $('.next_button').removeAttr('disabled');
-      $('.next_button_z_index').removeClass("next_button_z_index");
-      $('#next_button').removeAttr('id');
-    };
-  })
+  // validations to be sure that user makes a selection for the radio box form commented out below
 
-  $('.reference_class').change(function(){
-    if($('div.experience input[type = text].other').val() !=  "" || $('div.experience input[type = radio]:checked').length > 0) {
-      $('.next_button').removeAttr('disabled');
-      $('.next_button_z_index').removeClass("next_button_z_index");
-      $('#next_button').removeAttr('id');
-    };
-  })
+  // $('div.experience input[type = radio]').change(function(){
+  //   if($('div.experience input[type = text].other').val() !=  "" || $('div.experience input[type = radio]:checked').length > 0) {
+  //     $('.next_button').removeAttr('disabled');
+  //     $('.next_button_z_index').removeClass("next_button_z_index");
+  //     $('#next_button').removeAttr('id');
+  //   };
+  // })
 
-  $('div#next_button').click(function(){
-    if($('div.experience input[type = text].other').val() ==  "" && $('div.experience input[type = radio]:checked').length == 0) {
-        $('#form_error').show();
-        $('.next_button').prop('disabled', true);
-    }
-  })
+  // $('.reference_class').change(function(){
+  //   if($('div.experience input[type = text].other').val() !=  "" || $('div.experience input[type = radio]:checked').length > 0) {
+  //     $('.next_button').removeAttr('disabled');
+  //     $('.next_button_z_index').removeClass("next_button_z_index");
+  //     $('#next_button').removeAttr('id');
+  //   };
+  // })
+
+  // $('div#next_button').click(function(){
+  //   if($('div.experience input[type = text].other').val() ==  "" && $('div.experience input[type = radio]:checked').length == 0) {
+  //       $('#form_error').show();
+  //       $('.next_button').prop('disabled', true);
+  //   }
+  // })
   
+  // commented out front end validations that require user to make a selection
   $('.next_div').click(function(){
     if(showCounter == 0) {
-      if($('div.hopes input[type = checkbox]:checked').length > 0 || $('div.hopes input[type = text].other').val() != "") {
+      // if($('div.hopes input[type = checkbox]:checked').length > 0 || $('div.hopes input[type = text].other').val() != "") {
         showCounter += 1;
         $('#form_error').hide();
         $('.hopes').hide();
         $('.interests').show();
-      } else {
-      $('#form_error').show();
-      }
+      // } else {
+      // $('#form_error').show();
     } else if (showCounter == 1) {    
-      if($('div.interests input[type = checkbox]:checked').length > 0 || $('div.interests input[type = text].other').val() != "") {
+      // if($('div.interests input[type = checkbox]:checked').length > 0 || $('div.interests input[type = text].other').val() != "") {
         showCounter += 1;
         $('#form_error').hide();
         $('.interests').hide();
         $('.experience').show();
-      } else {
-      $('#form_error').show();
-      }
+        $('.next_button_z_index').removeClass("next_button_z_index");
+        $('#next_button').removeAttr('id');
+      // } else {
+      // $('#form_error').show();
+      // }
     }    
   })
 
