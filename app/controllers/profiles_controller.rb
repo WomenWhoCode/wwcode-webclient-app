@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
 
   def index
+    @networks = Network.all
     @profiles = Profile.all
   end
 
