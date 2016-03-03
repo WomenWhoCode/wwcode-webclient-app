@@ -24,7 +24,4 @@ class Users::RegistrationsController < ApplicationController
     end   
   end
 
-
-
-
 end
