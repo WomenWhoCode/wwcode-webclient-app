@@ -1,6 +1,6 @@
-<% if @response %>
+<% if @new_user %>
     <div class= "backend_errors">
-      <% @response.body["errors"]["full_messages"].each do |error| %>
+      <% @new_user.body["errors"]["full_messages"].each do |error| %>
           <p class="backend_onboarding_errors"><%= error %></p>
       <% end %>
     </div>
