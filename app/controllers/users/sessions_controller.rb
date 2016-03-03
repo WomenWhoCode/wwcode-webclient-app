@@ -5,15 +5,9 @@ class Users::SessionsController < ApplicationController
   end
 
   def create
-    api_domain = ENV['API_DOMAIN']
-    @response = Unirest.post "#{api_domain}/auth/sign_in",
-      headers: {"Accept" => "application/json" },
-      parameters: {
-        email: params[:email],
-        password: params[:password]
-      } 
-    if /2[0-9][0-9]/ === @response.code.to_s
-      session[:api_headers] = {"uid" => @response.headers[:uid], "token_type" => @response.headers[:token_type], "expiry" => @response.headers[:expiry], "client" => @response.headers[:client], "access_token" => @response.headers[:access_token]}
+    @new_session = Session.create(email: params[:email], password: params[:password])
+    if success?(@new_session.code)
+      session[:api_headers] = {"uid" => @new_session.headers[:uid], "token_type" => @new_session.headers[:token_type], "expiry" => @new_session.headers[:expiry], "client" => @new_session.headers[:client], "access_token" => @new_session.headers[:access_token], "Accept" => "application/json"}
       redirect_to "/profiles"
     else  
       render :new    
@@ -21,17 +15,15 @@ class Users::SessionsController < ApplicationController
   end
 
   def destroy
-    api_domain = ENV['API_DOMAIN']
-    @response = Unirest.delete "#{api_domain}/auth/sign_out",
-      headers: {"Accept" => "application/json",
-                "uid" => session[:api_headers]["uid"],
-                "token_type" => session[:api_headers]["token_type"],
-                "expiry" => session[:api_headers]["expiry"],
-                "client" => session[:api_headers]["client"],
-                "access_token" => session[:api_headers]["access_token"]
-      }
+    Session.destroy(session[:api_headers])
     session[:api_headers] = nil
     redirect_to "/"
   end
+
+  private 
+
+  def success?(response_code)
+    /20[0-9]/ === response_code.to_s
+  end  
 
 end

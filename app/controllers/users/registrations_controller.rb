@@ -5,23 +5,19 @@ class Users::RegistrationsController < ApplicationController
   end
 
   def create
-    api_domain = ENV['API_DOMAIN']
-    @response = Unirest.post "#{api_domain}/auth",
-      headers: {"Accept" => "application/json" },
-      parameters: {
-        personalization_details: session[:form_data],
-        username: params[:username],
-        email: params[:email],
-        password: params[:password],
-        password_confirmation: params[:password_confirmation],
-        access_code: params[:access_code]
-      }
-    if /2[0-9][0-9]/ === @response.code
-      session[:api_headers] = {"uid" => @response.headers[:uid], "token_type" => @response.headers[:token_type], "expiry" => @response.headers[:expiry], "client" => @response.headers[:client], "access_token" => @response.headers[:access_token]}
+    @new_user = Registration.create(form_data: session[:form_data], username: params[:username], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation], access_code: params[:access_code])
+    if success?(@new_user.code)
+      session[:api_headers] = {"uid" => @new_user.headers[:uid], "token_type" => @new_user.headers[:token_type], "expiry" => @new_user.headers[:expiry], "client" => @new_user.headers[:client], "access_token" => @new_user.headers[:access_token], "Accept" => "application/json"}
       redirect_to "/profiles"
-    else  
-      render :new    
-    end   
+    else
+      render :new
+    end
   end
+
+  private 
+
+  def success?(response_code)
+    /20[0-9]/ === response_code.to_s
+  end  
 
 end
