@@ -10,12 +10,12 @@
 
 <%= form_tag '/users/sessions', method: :post do %>
   <div class="sign_in">
-    <%= text_field_tag "email", params[:email], placeholder: "Email", class: "user_account_text_field email_text_field" %> 
+    <%= text_field_tag "email", params[:email], placeholder: "Email", autocomplete: :off, class: "user_account_text_field email_text_field" %> 
     <p class="email_error">Email cannot be blank</p>
   </div>
 
   <div class="sign_in">
-    <%= text_field_tag "password", nil, placeholder: "Password", class: "user_account_text_field password_text_field" %>
+    <%= password_field_tag "password", nil, placeholder: "Password", autocomplete: :off, class: "user_account_text_field password_text_field" %>
     <p class="password_error">Password cannot be blank</p>
   </div>
 

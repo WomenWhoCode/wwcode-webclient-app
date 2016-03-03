@@ -60,16 +60,22 @@ label:before {
 }
 
 input[type="checkbox"]:checked + label:before {
-  background: asset_url('iconmonstr-checkbox-4-240.png');
-  background-size: 17px 17px;
+  background: asset_url('check-mark-4.svg');
+  height: 21px;
+  width: 21px;
+  outline: none;
+  background-size: 21px 21px;
   color: black;
   text-align: center;
   vertical-align: middle;
 }
 
 input[type="radio"]:checked + label:before {
-  background: asset_url('iconmonstr-checkbox-4-240.png');
-  background-size: 17px 17px;
+  background: asset_url('check-mark-4.svg');
+  height: 21px;
+  width: 21px;
+  outline: none;
+  background-size: 21px 21px;
   color: black;
   text-align: center;
   vertical-align: middle;
@@ -92,7 +98,7 @@ input[type="radio"]:checked + label:before {
   width: 100px;
   border: none;
   font-size: 20px;
-  transition: background-color .1s;
+  transition: background-color .3s;
   position: relative;
 }
 
@@ -102,10 +108,10 @@ input[type="radio"]:checked + label:before {
 
 .next_button:hover {
   color: #00B6AA;
-  background: white;
+  opacity: 0.9;
   border: 2px solid #00B6AA;
   text-decoration: none;
-  transition: background-color .1s;
+  transition: background-color .3s;
 }
 
 #next_button {
@@ -172,3 +178,4 @@ input[type="radio"]:checked + label:before {
   margin-top: 30px;
   margin-bottom: -40px;
 }
+

@@ -49,7 +49,7 @@ body.sign_up {
   padding-left: 35px;
   padding-right: 35px;
   border-radius: 5px;
-  transition: background-color .1s;
+  transition: background-color .3s;
 }
 
 .log_in_button {
@@ -64,26 +64,26 @@ body.sign_up {
   padding-right: 45px;
   border-radius: 5px;
   margin-left: 10px;
-  transition: background-color .1s;
+  transition: background-color .3s;
 }
 
 
 .join_us_button:hover {
   color: #00B6AA;
-  background: white;
+  opacity: 0.9;
   padding-top: 13px;
   border: 2px solid #00B6AA;
   text-decoration: none;
-  transition: background-color .1s;
+  transition: background-color .3s;
 }
 
 .log_in_button:hover {
   color: #00B6AA;
-  background: white;
+  opacity: 0.9;
   padding-top: 13px;
   border: 2px solid #00B6AA;
   text-decoration: none;
-  transition: background-color .1s;
+  transition: background-color .3s;
 }
 
 #thanks_title {
