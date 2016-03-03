@@ -52,23 +52,7 @@
   background-color: transparent;
 }
 
-.dropdown_networks {
-  position: absolute;
-  z-index: 99;
-  background-color: black;
-  margin-left:-150px;
-  margin-top: -16px;
-  width: 300px;
-  left:50%;
-}
 
-.dropdown_networks ul li{
-  text-align: center;
-}
-
-.dropdown_networks li>a{
-  color: #bebebe; 
-}
 
 .profile_caret {
   border-left: 7px solid transparent;
@@ -102,4 +86,22 @@
   display: inline;
   text-align: center;
   margin-top: 25px;
+}
+
+.dropdown_networks {
+  position: absolute;
+  z-index: 99;
+  background-color: black;
+  margin-left:-150px;
+  margin-top: -16px;
+  width: 300px;
+  left:50%;
+}
+
+.dropdown_networks ul li{
+  text-align: center;
+}
+
+.dropdown_networks li>a{
+  color: #bebebe; 
 }
