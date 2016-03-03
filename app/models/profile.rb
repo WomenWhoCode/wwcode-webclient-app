@@ -26,7 +26,7 @@ class Profile
 
   def self.search(search_params)
     profiles = []
-    profile_hashes = Unirest.post("http://staging-wwcode-api.herokuapp.com/api/v1/profiles.json/?search_params=#{search_params}",
+    profile_hashes = Unirest.post("#{ENV['API_DOMAIN']}/?search_params=#{search_params}",
       headers: {"Accept" => "application/json"}).body
     profile_hashes.each do |profile_hash|
       profiles << Profile.new(profile_hash)
@@ -35,14 +35,14 @@ class Profile
   end
 
   def self.find(id)
-    profile_hash = Unirest.get("http://staging-wwcode-api.herokuapp.com/api/v1/profiles.json",
+    profile_hash = Unirest.get("#{ENV['API_DOMAIN']}/profiles.json",
       headers: {"Accept" => "application/json"}).body
     Profile.new(profile_hash)
   end
 
   def self.all
     profiles = []
-    profile_hashes = Unirest.get("http://staging-wwcode-api.herokuapp.com/api/v1/profiles.json",
+    profile_hashes = Unirest.get("#{ENV['API_DOMAIN']}/profiles.json",
         headers: {"Accept" => "application/json"}).body
     profile_hashes.each do |profile_hash|
       profiles << Profile.new(profile_hash)
@@ -51,19 +51,19 @@ class Profile
   end
 
   def self.create(attributes)
-    profile_hash = Unirest.post("http://staging-wwcode-api.herokuapp.com/api/v1/profiles.json", 
+    profile_hash = Unirest.post("#{ENV['API_DOMAIN']}/profiles.json", 
       headers: {"Accept" => "application/json"},
       parameters: attributes).body
   end
 
   def update(attributes)
-    profile_hash = Unirest.patch("http://staging-wwcode-api.herokuapp.com/api/v1/profiles.json", 
+    profile_hash = Unirest.patch("#{ENV['API_DOMAIN']}/profiles.json", 
       headers: {"Accept" => "application/json"},
       parameters: attributes).body
   end
 
   def destroy
-    Unirest.delete("http://staging-wwcode-api.herokuapp.com/api/v1/profiles.json", 
+    Unirest.delete("#{ENV['API_DOMAIN']}/profiles.json", 
       headers: {"Accept" => "application/json"}).body
   end
 end
