@@ -4,13 +4,33 @@
   angular.module("app").controller("EventsCtrl", function($scope, $http) {
 
     $scope.setup = function() {
-      $scope.events=convertEventsDates($scope.events);
+      $http({method: 'JSONP',
+        url:'http://localhost:3000/api/v1/users/events/?user_id=5&callback=$scope.jsonpCallback'}).then(function(response) {
+      },
+        function(error){
+          console.log(error.data)
+      });
+    }
+
+    $scope.jsonpCallback = function(json){
+      var networks=[json]
+      var events = []
+      for (var i=0;i<networks.length;i++){
+        var network = networks[i];
+        console.log(network);
+        var networkTitle = network.title;
+        for (var j=0;j<network.events.length;j++){
+          network.events[j]["network_title"]=networkTitle
+          events.push(network.events[j])
+        }
+
+      }
+      console.log(events);
+      $scope.events = events
+
+      $scope.events = convertEventsDates($scope.events);
       $scope.setupColors();
       $scope.selectEvent(findSoonestEvent($scope.events));
-    //   $http.get("/api/v1/people.json").then(function(response) {
-    //     $scope.people = response.data;
-    //     console.log(response);
-    //   });
     }
 
     $scope.setupColors = function(){ $scope.events.bgColorHeadDefault="#00b6aa";
@@ -62,41 +82,41 @@
       }
     }
 
-    $scope.events = [
-        { 
-          id: 1,
-          title: "Women Who Code - Medellín",
-          event_date: "2015-12-23 18:00:00 UTC",
-          time_zone: 'US/Pacific',
-          location: "Hack Reactor",
-          network: {
-            title:"San Francisco"
-          },
-          subscribe_count: 1
-        },
-        { 
-          id: 4,
-          title: "Algorhitms and Interview Prep - TBD",
-          event_date: "2016-01-01 18:45:00 UTC",
-          location: "Hack Reactor",
-          time_zone: 'US/Pacific',
-          network: {
-            title:"East Bay"
-          },
-          subscribe_count: 11
-        },
-        { 
-          id: 3,
-          title: "JavaScript Study Group (Hack Reactor)",
-          event_date: "2016-01-23 24:00:00 UTC",
-          location: "Hack Reactor",
-          time_zone: 'US/Eastern',
-          network: {
-            title:"New York City"
-          },
-          subscribe_count: 0
-        }
-    ];
+    // $scope.events = [
+    //     { 
+    //       id: 1,
+    //       title: "Women Who Code - Medellín",
+    //       event_date: "2015-12-23 18:00:00 UTC",
+    //       time_zone: 'US/Pacific',
+    //       location: "Hack Reactor",
+    //       network: {
+    //         title:"San Francisco"
+    //       },
+    //       subscribe_count: 1
+    //     },
+    //     { 
+    //       id: 4,
+    //       title: "Algorhitms and Interview Prep - TBD",
+    //       event_date: "2016-01-01 18:45:00 UTC",
+    //       location: "Hack Reactor",
+    //       time_zone: 'US/Pacific',
+    //       network: {
+    //         title:"East Bay"
+    //       },
+    //       subscribe_count: 11
+    //     },
+    //     { 
+    //       id: 3,
+    //       title: "JavaScript Study Group (Hack Reactor)",
+    //       event_date: "2016-01-23 24:00:00 UTC",
+    //       location: "Hack Reactor",
+    //       time_zone: 'US/Eastern',
+    //       network: {
+    //         title:"New York City"
+    //       },
+    //       subscribe_count: 0
+    //     }
+    // ];
 
     window.$scope = $scope;
   
