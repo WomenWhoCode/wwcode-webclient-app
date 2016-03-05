@@ -5,19 +5,15 @@
 
     $scope.setup = function() {
       $http({method: 'JSONP',
-        url:'http://localhost:3000/api/v1/users/events/?user_id=5&callback=$scope.jsonpCallback'}).then(function(response) {
-      },
-        function(error){
-          console.log(error.data)
-      });
+        url:'http://localhost:3000/api/v1/users/events/?user_id=5&callback=$scope.jsonpCallback'})
     }
 
     $scope.jsonpCallback = function(json){
+      console.log(json)
       var networks=[json]
       var events = []
       for (var i=0;i<networks.length;i++){
         var network = networks[i];
-        console.log(network);
         var networkTitle = network.title;
         for (var j=0;j<network.events.length;j++){
           network.events[j]["network_title"]=networkTitle
@@ -25,7 +21,6 @@
         }
 
       }
-      console.log(events);
       $scope.events = events
 
       $scope.events = convertEventsDates($scope.events);
@@ -50,8 +45,8 @@
 
       // $scope.events.bgColorHeadSelected="#009688";
       // $scope.events.bgColorBodySelected="#ffffff";
-      // $scope.events.bgColorHeadMouseover="#faa73f";
-      $scope.events.bgColorBodyMouseover="#eeeeee";
+      $scope.events.bgColorHeadMouseover=$scope.events.bgColorHeadDefault.replace("1)",".8)");
+      $scope.events.bgColorBodyMouseover=$scope.events.bgColorBodyDefault.replace("1)",".3)");;
 
       for (var i=0;i<$scope.events.length;i++){   
         $scope.events[i].bgColorHead=$scope.events.bgColorHeadDefault;
@@ -82,21 +77,17 @@
     // }
 
     $scope.mouseoverEvent = function(event){
-      // event.bgColorHead=$scope.events.bgColorHeadMouseover;
-      event.headOpacity=1
-      event.bodyOpacity=1
-      // event.bgColorBody=$scope.events.bgColorBodyMouseover;
+      event.bgColorHead=$scope.events.bgColorHeadMouseover;
+      event.bgColorBody=$scope.events.bgColorBodyMouseover;
     }
 
     $scope.mouseleaveEvent = function(event){
-      event.headOpacity=1
-      event.bodyOpacity=1
       // if (event.id == $scope.events.selected_id){
       //   $scope.        highlightSelectedEvent(event);
       // }
       // else{
-      // // event.bgColorHeadDefaultad=$scope.events.bgColorHeadDefault;
-      // // event.bgColorBody=$scope.events.bgColorBodyDefault;
+      event.bgColorHead=$scope.events.bgColorHeadDefault;
+      event.bgColorBody=$scope.events.bgColorBodyDefault;
       // }
     }
 

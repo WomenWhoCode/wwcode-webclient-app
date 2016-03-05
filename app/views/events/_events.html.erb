@@ -13,12 +13,12 @@
       ng-mouseleave="mouseleaveEvent(event)">
         <div class="panel-default my-panel">  
           <div class="panel-heading my-panel-heading font-montserrat-light" 
-          ng-style="{background:event.bgColorHead, opacity:event.headOpacity}">
+          ng-style="{'background-color':event.bgColorHead}">
             <p class="event-title">{{event.title}}</p>
             <p class="event-sub-head">{{event.network_title.toUpperCase() + " NETWORK"}}</p>
           </div>
           <div class="panel-body my-panel-body font-hind" 
-          ng-style="{background:event.bgColorBody, opacity:event.bodyOpacity}">
+          ng-style="{'background-color':event.bgColorBody}">
             <p class="event-body-text">{{event.month + " " + event.date}} - {{event.hour + ":" + event.minute + " " + event.ampm}}</p>
             <p class="event-body-text">{{"at " + event.location}}</p>
           </div>
