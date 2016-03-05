@@ -1,0 +1,12 @@
+<div ng-controller="EventsCtrl">
+  <snap-drawers>
+    <snap-drawer class="snap-drawer">
+      <%= render "/events/drawer_menu" %>
+    </snap-drawer>
+  </snap-drawers>
+  <snap-content class="snap-content">
+    <% if @action_is_events_index %>
+      <%= render "/events/events" %>
+    <% end %>  
+  </snap-content>
+</div>
