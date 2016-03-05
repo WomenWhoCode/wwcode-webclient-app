@@ -33,16 +33,30 @@
       $scope.selectEvent(findSoonestEvent($scope.events));
     }
 
-    $scope.setupColors = function(){ $scope.events.bgColorHeadDefault="#00b6aa";
-      $scope.events.bgColorBodyDefault="#fafafa";
-      //009688
-      $scope.events.bgColorHeadSelected="#009688";
-      $scope.events.bgColorBodySelected="#ffffff";
-      $scope.events.bgColorHeadMouseover="#faa73f";
+    $scope.setupColors = function(){ 
+      var bgColorHeadRGB = hexToRgb("#00b6aa");
+      var bgColorBodyRGB = hexToRgb("#fafafa");
+
+      $scope.events.bgColorHeadDefault= 
+      "rgba(" + bgColorHeadRGB['r'].toString() + "," +
+        bgColorHeadRGB['g'].toString()+ "," +
+        bgColorHeadRGB['b'].toString()+ ",1)"
+        ;
+      $scope.events.bgColorBodyDefault= 
+      "rgba(" + bgColorBodyRGB['r'].toString() + "," +
+        bgColorBodyRGB['g'].toString()+ "," +
+        bgColorBodyRGB['b'].toString()+ ",1)"
+        ;
+
+      // $scope.events.bgColorHeadSelected="#009688";
+      // $scope.events.bgColorBodySelected="#ffffff";
+      // $scope.events.bgColorHeadMouseover="#faa73f";
       $scope.events.bgColorBodyMouseover="#eeeeee";
 
       for (var i=0;i<$scope.events.length;i++){   
         $scope.events[i].bgColorHead=$scope.events.bgColorHeadDefault;
+        $scope.events[i].headOpacity=1;
+        $scope.events[i].bodyOpacity=1;
         $scope.events[i].bgColorBody=$scope.events.bgColorBodyDefault;
       }
     }
@@ -52,34 +66,38 @@
       $scope.events.selected_title=event.title;
       $scope.events.selected_subscribe_count=event.subscribe_count;
       $scope.setupColors();//reset the color settings so that any other events that were previously clicked are no longer highlighted
-      if ( $('#event'+event.id+':hover').length )//if the event's div is still being hovered (moused-over) after selection, return to hover colors:
-       {
-        $scope.mouseoverEvent(event);
-      }
-      //the only time the event's div is not hovered (moused-over) after selection is when an event is auto-selected on page load
-      else {
-        $scope.highlightSelectedEvent(event);
-      }
+      // if ( $('#event'+event.id+':hover').length )//if the event's div is still being hovered (moused-over) after selection, return to hover colors:
+      //  {
+      //   $scope.mouseoverEvent(event);
+      // }
+      // //the only time the event's div is not hovered (moused-over) after selection is when an event is auto-selected on page load
+      // else {
+      //   $scope.highlightSelectedEvent(event);
+      // }
     }
 
-    $scope.highlightSelectedEvent =function(event){
-      event.bgColorHead=$scope.events.bgColorHeadSelected;
-      event.bgColorBody=$scope.events.bgColorBodySelected;
-    }
+    // $scope.highlightSelectedEvent =function(event){
+    //   event.bgColorHead=$scope.events.bgColorHeadSelected;
+    //   event.bgColorBody=$scope.events.bgColorBodySelected;
+    // }
 
     $scope.mouseoverEvent = function(event){
-      event.bgColorHead=$scope.events.bgColorHeadMouseover;
-      event.bgColorBody=$scope.events.bgColorBodyMouseover;
+      // event.bgColorHead=$scope.events.bgColorHeadMouseover;
+      event.headOpacity=1
+      event.bodyOpacity=1
+      // event.bgColorBody=$scope.events.bgColorBodyMouseover;
     }
 
     $scope.mouseleaveEvent = function(event){
-      if (event.id == $scope.events.selected_id){
-        $scope.        highlightSelectedEvent(event);
-      }
-      else{
-      event.bgColorHead=$scope.events.bgColorHeadDefault;
-      event.bgColorBody=$scope.events.bgColorBodyDefault;
-      }
+      event.headOpacity=1
+      event.bodyOpacity=1
+      // if (event.id == $scope.events.selected_id){
+      //   $scope.        highlightSelectedEvent(event);
+      // }
+      // else{
+      // // event.bgColorHeadDefaultad=$scope.events.bgColorHeadDefault;
+      // // event.bgColorBody=$scope.events.bgColorBodyDefault;
+      // }
     }
 
     // $scope.events = [
