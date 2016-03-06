@@ -14,6 +14,10 @@ The dotenv gem will be installed when project is cloned and bundle install is ru
 
 This app works with the following API: [WWC API](https://github.com/WomenWhoCode/ww-code-api)
 
+## Known Bugs
+
+API is not fully built out yet so some endpoints are not working.
+
 ## Contributors
 
 To be filled out by Zassmin.
