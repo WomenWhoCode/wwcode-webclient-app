@@ -29,30 +29,17 @@
     }
 
     $scope.setupColors = function(){ 
-      var bgColorHeadRGB = hexToRgb("#00b6aa");
-      var bgColorBodyRGB = hexToRgb("#fafafa");
+      $scope.events.bgRgbaHeadDefault = hexToRgba("#00b6aa");
+      $scope.events.bgRgbaBodyDefault = hexToRgba("#fafafa");
 
-      $scope.events.bgColorHeadDefault= 
-      "rgba(" + bgColorHeadRGB['r'].toString() + "," +
-        bgColorHeadRGB['g'].toString()+ "," +
-        bgColorHeadRGB['b'].toString()+ ",1)"
-        ;
-      $scope.events.bgColorBodyDefault= 
-      "rgba(" + bgColorBodyRGB['r'].toString() + "," +
-        bgColorBodyRGB['g'].toString()+ "," +
-        bgColorBodyRGB['b'].toString()+ ",1)"
-        ;
-
-      // $scope.events.bgColorHeadSelected="#009688";
-      // $scope.events.bgColorBodySelected="#ffffff";
-      $scope.events.bgColorHeadMouseover=$scope.events.bgColorHeadDefault.replace("1)",".8)");
-      $scope.events.bgColorBodyMouseover=$scope.events.bgColorBodyDefault.replace("1)",".3)");;
+      $scope.events.bgRgbaHeadMouseover=replaceAlpha($scope.events.bgRgbaHeadDefault,".7")
+      $scope.events.bgRgbaBodyMouseover=replaceAlpha($scope.events.bgRgbaBodyDefault,".3")
 
       for (var i=0;i<$scope.events.length;i++){   
-        $scope.events[i].bgColorHead=$scope.events.bgColorHeadDefault;
+        $scope.events[i].bgRgbaHead=$scope.events.bgRgbaHeadDefault;
         $scope.events[i].headOpacity=1;
         $scope.events[i].bodyOpacity=1;
-        $scope.events[i].bgColorBody=$scope.events.bgColorBodyDefault;
+        $scope.events[i].bgRgbaBody=$scope.events.bgRgbaBodyDefault;
       }
     }
 
@@ -72,13 +59,13 @@
     }
 
     // $scope.highlightSelectedEvent =function(event){
-    //   event.bgColorHead=$scope.events.bgColorHeadSelected;
-    //   event.bgColorBody=$scope.events.bgColorBodySelected;
+    //   event.bgRgbaHead=$scope.events.bgRgbaHeadSelected;
+    //   event.bgRgbaBody=$scope.events.bgRgbaBodySelected;
     // }
 
     $scope.mouseoverEvent = function(event){
-      event.bgColorHead=$scope.events.bgColorHeadMouseover;
-      event.bgColorBody=$scope.events.bgColorBodyMouseover;
+      event.bgRgbaHead=$scope.events.bgRgbaHeadMouseover;
+      event.bgRgbaBody=$scope.events.bgRgbaBodyMouseover;
     }
 
     $scope.mouseleaveEvent = function(event){
@@ -86,8 +73,8 @@
       //   $scope.        highlightSelectedEvent(event);
       // }
       // else{
-      event.bgColorHead=$scope.events.bgColorHeadDefault;
-      event.bgColorBody=$scope.events.bgColorBodyDefault;
+      event.bgRgbaHead=$scope.events.bgRgbaHeadDefault;
+      event.bgRgbaBody=$scope.events.bgRgbaBodyDefault;
       // }
     }
 

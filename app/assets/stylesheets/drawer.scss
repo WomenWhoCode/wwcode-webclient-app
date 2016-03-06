@@ -1,8 +1,16 @@
 $primary: #00b6aa;
 $background: white;
 
+.snap-drawers {
+  background-color: white;
+}
+
 .snap-drawer {
   width: 266px !important;
+  background-color: white;
+}
+
+.snap-content {
   background-color: white;
 }
 
@@ -10,6 +18,7 @@ $background: white;
   padding-top: 65px;
   box-shadow: 1.5px 0px 2.5px rgba(190, 190, 190, 0.5), 0px 5px 3px rgba(190, 190, 190, 0.5);;
   margin-right: 5px;
+  border-bottom-right-radius: 4px;
 }
 
 .drawer-menu p {
@@ -50,6 +59,7 @@ $background: white;
   background-color: white !important;
   padding-top: 13px;
   padding-bottom: 5px;
+  border-bottom-right-radius: 4px;
 }
 
 .drawer-menu-body-icon {

@@ -58,7 +58,6 @@ font-family: 'montserrat-light', sans-serif;
 }
 
 .event-icon { 
-  background-color: $selected;
   height: 40px;
   width: 40px;
   margin-right: 5px;
@@ -68,7 +67,7 @@ font-family: 'montserrat-light', sans-serif;
 .my-panel {
   border-color: transparent;
   box-shadow: 1.5px 0px 2.5px rgba(190, 190, 190, 0.5), 0px 5px 3px rgba(190, 190, 190, 0.5);
-  border-radius:2px 2px 2px 2px;
+  border-radius:4px;
   margin-bottom: 20px;
 }
 
@@ -76,7 +75,7 @@ font-family: 'montserrat-light', sans-serif;
   padding: 15px 18px;
   /*background-color: #00B6AA !important;*/
   border: none;
-  border-radius:2px 2px 0px 0px;
+  border-radius:4px 4px 0px 0px;
 }
 
 .my-panel-heading .event-title, .my-panel-heading .event-sub-head {
@@ -100,7 +99,7 @@ font-family: 'montserrat-light', sans-serif;
 .my-panel-body {
   padding: 15px 18px 10px 18px;
   /*background-color:#FAFAFA;*/
-  border-radius:0px 0px 2px 2px;
+  border-radius:0px 0px 4px 4px;
 }
 
 .my-panel-body .event-body-text {

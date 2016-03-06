@@ -1,17 +1,18 @@
 <div class="event-show-div ">
   <div class="panel-default my-panel">
-    <div class="panel-heading my-panel-heading" ng-style="{background:event.bgColorHead}">
+    <div class="panel-heading my-panel-heading" 
+    ng-style="{'background-color':events.bgRgbaHeadDefault}">
       <div class="event-icon-div">
-        <%= image_tag "events_calendar_white.png", class: 'event-icon' %>
-        <!-- events_calendar.svg -->
-        <!-- <i class="fa fa-calendar fa-2x"></i> -->
+        <img class="event-icon"
+        src="<%= asset_path("events_calendar_white.png") %>"
+        ng-style: "{'background-color': events.bgRgbaHeadDefault'}"></img>
       </div>
       <div class="event-text">
         <p class="event-title" ng-bind="events.selected_title">Event 1</p>
         <p class="event-sub-head"> {{events.selected_subscribe_count}} FOLLOWERS</p>
       </div>
     </div>
-    <div class="panel-body my-panel-body" ng-style="{background:events.bgColorBodySelected}">
+    <div class="panel-body my-panel-body" ng-style="{background:events.bgRgbaBodyDefault}">
       <p>Posts happening!</p>
     </div>
   </div>
