@@ -6,13 +6,13 @@
     <div class="events-inner-div">
       <div class="event-repeat" 
       ng-repeat="event in events" 
-      ng-attr-id="event{{event.id}}" 
-      ng-click="selectEvent(event)" 
-      ng-mousedown="highlightSelectedEvent(event)" 
-      ng-mouseover="mouseoverEvent(event)" 
-      ng-mouseleave="mouseleaveEvent(event)">
+      ng-attr-id="event{{event.id}}">
         <div class="panel-default my-panel">  
           <div class="panel-heading my-panel-heading font-montserrat-light" 
+          ng-click="toggleExpandEvent(event)" 
+          ng-mousedown="highlightSelectedEvent(event)" 
+          ng-mouseover="mouseoverEvent(event)" 
+          ng-mouseleave="mouseleaveEvent(event)"
           ng-style="{'background-color':event.bgRgbaHead}">
             <div class="event-icon-div">
               <img class="event-icon"
@@ -27,7 +27,7 @@
             <p class="event-body-text">{{event.month + " " + event.date}} - {{event.hour + ":" + event.minute + " " + event.ampm}}</p>
             <p class="event-body-text">{{"at " + event.location}}</p>
           <div class="event-expand-div"
-          ng-show='events.selected_id==event.id'>
+          ng-show='event.expanded'>
             <%= render "event_info" %>
           </div>
         </div>

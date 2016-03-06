@@ -19,11 +19,11 @@
           network.events[j]["network_title"]=networkTitle;
           $scope.events.push(network.events[j]);
         }
-
       }
+
       $scope.events = convertEventsDates($scope.events);
       $scope.setupColors();
-      $scope.selectEvent(findSoonestEvent($scope.events));
+
     }
 
     $scope.setupColors = function(){ 
@@ -41,11 +41,15 @@
       }
     }
 
-    $scope.selectEvent = function(event) {
-      $scope.events.selected_id=event.id;
-      $scope.events.selected_title=event.title;
-      $scope.events.selected_subscribe_count=event.subscribe_count;
-      $scope.setupColors();
+    $scope.toggleExpandEvent = function(event) {
+      if (!event.expanded)
+      //if event.expanded is false or undefined (on page load)
+      {
+        event.expanded=true
+      }
+      else {
+        event.expanded=false
+      }
     }
 
 
