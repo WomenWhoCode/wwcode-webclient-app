@@ -14,6 +14,11 @@
         <div class="panel-default my-panel">  
           <div class="panel-heading my-panel-heading font-montserrat-light" 
           ng-style="{'background-color':event.bgRgbaHead}">
+            <div class="event-icon-div">
+              <img class="event-icon"
+              src="<%= asset_path("events_calendar_white.png") %>"
+              ng-style: "{'background-color': events.bgRgbaHeadDefault}"></img>
+            </div>
             <p class="event-title">{{event.title}}</p>
             <p class="event-sub-head">{{event.network_title.toUpperCase() + " NETWORK"}}</p>
           </div>
@@ -21,10 +26,12 @@
           ng-style="{'background-color':event.bgRgbaBody}">
             <p class="event-body-text">{{event.month + " " + event.date}} - {{event.hour + ":" + event.minute + " " + event.ampm}}</p>
             <p class="event-body-text">{{"at " + event.location}}</p>
+          <div class="event-expand-div"
+          ng-show='events.selected_id==event.id'>
+            <%= render "event_info" %>
           </div>
         </div>
       </div>
     </div>
-    <%= render "event_info" %>
   </div>
 </div>

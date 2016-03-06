@@ -102,26 +102,35 @@ font-family: 'montserrat-light', sans-serif;
   border-radius:0px 0px 4px 4px;
 }
 
-.my-panel-body .event-body-text {
+.event-body-text {
   line-height: 1.5;
   margin-bottom: 0px;
   font-size: 14px;
   color: black;
 } 
 
-.event-show-div {
-  vertical-align: top;
-  display: inline-block;
-  text-align: left;
-  width: 350px;
-  margin-left: 20px;
+.event-expand-div {
+  margin-top: 20px;
 }
 
-.event-show-div .my-panel .my-panel-body {
-  min-height: 400px;
+.event-icon-div {
+  float: left;
+  margin-right: 10px;
 }
 
-.event-text, .event-icon {
+.event-extra-text {
+  padding-right:10px;
   display: inline-block;
   vertical-align: top;
+  color: black;
 }
+
+.attendance-form input[type="radio"] {
+  display: inline-block !important;
+  width: 20px;
+}
+
+/*.attendance-form {
+  display: inline-block !important;
+}
+*/

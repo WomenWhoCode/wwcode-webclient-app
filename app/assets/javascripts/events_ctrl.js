@@ -5,24 +5,22 @@
 
     $scope.setup = function() {
       $http({method: 'JSONP',
-        url:'http://localhost:3000/api/v1/users/events/?user_id=5&callback=$scope.jsonpCallback'})
+        url:'http://localhost:3000/api/v1/users/events/?user_id=5&callback=$scope.jsonpCallback'});
     }
 
     $scope.jsonpCallback = function(json){
-      console.log(json)
-      var networks=[json]
-      var events = []
+      console.log(json);
+      var networks=[json];
+      $scope.events = [];
       for (var i=0;i<networks.length;i++){
         var network = networks[i];
         var networkTitle = network.title;
         for (var j=0;j<network.events.length;j++){
-          network.events[j]["network_title"]=networkTitle
-          events.push(network.events[j])
+          network.events[j]["network_title"]=networkTitle;
+          $scope.events.push(network.events[j]);
         }
 
       }
-      $scope.events = events
-
       $scope.events = convertEventsDates($scope.events);
       $scope.setupColors();
       $scope.selectEvent(findSoonestEvent($scope.events));
@@ -32,8 +30,8 @@
       $scope.events.bgRgbaHeadDefault = hexToRgba("#00b6aa");
       $scope.events.bgRgbaBodyDefault = hexToRgba("#fafafa");
 
-      $scope.events.bgRgbaHeadMouseover=replaceAlpha($scope.events.bgRgbaHeadDefault,".7")
-      $scope.events.bgRgbaBodyMouseover=replaceAlpha($scope.events.bgRgbaBodyDefault,".3")
+      $scope.events.bgRgbaHeadMouseover=replaceAlpha($scope.events.bgRgbaHeadDefault,".7");
+      $scope.events.bgRgbaBodyMouseover=replaceAlpha($scope.events.bgRgbaBodyDefault,".3");
 
       for (var i=0;i<$scope.events.length;i++){   
         $scope.events[i].bgRgbaHead=$scope.events.bgRgbaHeadDefault;
@@ -47,21 +45,9 @@
       $scope.events.selected_id=event.id;
       $scope.events.selected_title=event.title;
       $scope.events.selected_subscribe_count=event.subscribe_count;
-      $scope.setupColors();//reset the color settings so that any other events that were previously clicked are no longer highlighted
-      // if ( $('#event'+event.id+':hover').length )//if the event's div is still being hovered (moused-over) after selection, return to hover colors:
-      //  {
-      //   $scope.mouseoverEvent(event);
-      // }
-      // //the only time the event's div is not hovered (moused-over) after selection is when an event is auto-selected on page load
-      // else {
-      //   $scope.highlightSelectedEvent(event);
-      // }
+      $scope.setupColors();
     }
 
-    // $scope.highlightSelectedEvent =function(event){
-    //   event.bgRgbaHead=$scope.events.bgRgbaHeadSelected;
-    //   event.bgRgbaBody=$scope.events.bgRgbaBodySelected;
-    // }
 
     $scope.mouseoverEvent = function(event){
       event.bgRgbaHead=$scope.events.bgRgbaHeadMouseover;
@@ -69,13 +55,8 @@
     }
 
     $scope.mouseleaveEvent = function(event){
-      // if (event.id == $scope.events.selected_id){
-      //   $scope.        highlightSelectedEvent(event);
-      // }
-      // else{
       event.bgRgbaHead=$scope.events.bgRgbaHeadDefault;
       event.bgRgbaBody=$scope.events.bgRgbaBodyDefault;
-      // }
     }
 
     // $scope.events = [
