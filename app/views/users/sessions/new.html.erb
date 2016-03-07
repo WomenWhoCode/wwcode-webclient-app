@@ -1,0 +1,67 @@
+<% if @new_session %>
+    <div class= "backend_errors">
+      <% @new_session.body["errors"].each do |error| %>
+          <p class="backend_onboarding_errors"><%= error %></p>
+      <% end %>
+    </div>
+<% end %> 
+
+<h2 id="sign_in_title">Log in</h2>
+
+<%= form_tag '/users/sessions', method: :post do %>
+  <div class="sign_in">
+    <%= text_field_tag "email", params[:email], placeholder: "Email", autocomplete: :off, class: "user_account_text_field email_text_field" %> 
+    <p class="email_error">Email cannot be blank</p>
+  </div>
+
+  <div class="sign_in">
+    <%= password_field_tag "password", nil, placeholder: "Password", autocomplete: :off, class: "user_account_text_field password_text_field" %>
+    <p class="password_error">Password cannot be blank</p>
+  </div>
+
+  <div class="sign_in">
+    <%= check_box_tag "remember_me", class: "remember_me_checkbox" %>
+    <%= label_tag "remember_me", "Remember Me", class: "remember_me" %>
+  </div>
+
+  <div id="next_div">
+    <%= submit_tag "LOG IN", class: "button sign_in_button sign_in_button_z_index" %>
+  </div>
+<% end %>
+
+<p><a href="/personalization_details">Sign Up</a></p>
+<p><a href="#">Forgot Your Password?</a></p>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $('.email_error').hide();
+    $('.password_error').hide();
+
+  })
+    
+  $('div#next_div').click(function(){
+    if($('.email_text_field').val() ==  "") {
+      $('.email_error').show();
+      $('.button').prop('disabled', true);
+    } else {
+      $('.email_error').hide();
+    }
+    if($('.password_text_field').val() ==  "") {
+      $('.password_error').show();
+      $('.button').prop('disabled', true);
+    } else {
+      $('.password_error').hide();
+    }
+  })
+
+  $('div.sign_in input[type = text]').change(function(){
+    if($('email_text_field').val() != "" && $('.password_text_field').val() != "") {
+      $('.button').removeAttr('disabled');
+      $('.sign_in_button_z_index').removeClass("sign_in_button_z_index");
+      $('#next_div').removeAttr('id');
+    };
+  })
+
+
+</script>

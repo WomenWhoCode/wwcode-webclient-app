@@ -1,0 +1,37 @@
+<div class="events-table-div">
+  <div class="events-cell-div"
+  ng-controller="EventsCtrl" 
+  ng-init="setup()" >
+    <p class="events-heading font-montserrat"> Upcoming events near you:</p>
+    <div class="events-inner-div">
+      <div class="event-repeat" 
+      ng-repeat="event in events" 
+      ng-attr-id="event{{event.id}}">
+        <div class="panel-default my-panel">  
+          <div class="panel-heading my-panel-heading font-montserrat-light" 
+          ng-click="toggleExpandEvent(event)" 
+          ng-mousedown="highlightSelectedEvent(event)" 
+          ng-mouseover="mouseoverEvent(event)" 
+          ng-mouseleave="mouseleaveEvent(event)"
+          ng-style="{'background-color':event.bgRgbaHead}">
+            <div class="event-icon-div">
+              <img class="event-icon"
+              ng-src="{{ event.attending && '<%= asset_path("events_calendar_check_white.png") %>' || '<%= asset_path("events_calendar_white.png") %>'}}"
+              ng-style: "{'background-color': events.bgRgbaHeadDefault}"></img>
+            </div>
+            <p class="event-title">{{event.title}}</p>
+            <p class="event-sub-head">{{event.network_title.toUpperCase() + " NETWORK"}}</p>
+          </div>
+          <div class="panel-body my-panel-body font-hind" 
+          ng-style="{'background-color':event.bgRgbaBody}">
+            <p class="event-body-text">{{event.month + " " + event.date}} - {{event.hour + ":" + event.minute + " " + event.ampm}}</p>
+            <p class="event-body-text">{{"at " + event.location}}</p>
+          <div class="event-expand-div"
+          ng-show='event.expanded'>
+            <%= render "event_info" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,8 @@ class ProfilesController < ApplicationController
   def index
     @networks = Network.all
     @profiles = Profile.all
+    puts "??????"
+    puts session[:api_headers]
   end
 
   def show

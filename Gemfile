@@ -26,7 +26,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'puma'
-gem 'devise'
 gem "font-awesome-rails"
 gem 'inline_svg'
 gem 'unirest', '~> 1.1.2'

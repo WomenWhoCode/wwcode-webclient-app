@@ -20,21 +20,6 @@
       <% end %>
     <% end %>
   </div>
-  <% if @action_is_events_index %>
-  <!-- the navbar and drawer menu is only rendered if the above condition is true -->
-    <%= render "/events/navbar" %>
-    <div ng-controller="DrawerCtrl">
-      <snap-drawers>
-        <snap-drawer class="snap-drawer">
-          <%= render "/events/drawer_menu" %>
-        </snap-drawer>
-      </snap-drawers>
-      <snap-content class="snap-content">
-        <%= yield %>
-      </snap-content>
-    </div>
-  <% else %> 
-    <%= yield %>
-  <% end %>
+  <%= yield %>
 </body>
 </html>
