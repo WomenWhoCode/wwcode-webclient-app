@@ -10,7 +10,8 @@
 
     $scope.jsonpCallback = function(json){
       console.log(json);
-      var networks=[json];
+      $scope.user = json;
+      var networks = [$scope.user.network].concat($scope.user.login_location_networks);
       $scope.events = [];
       for (var i=0;i<networks.length;i++){
         var network = networks[i];
