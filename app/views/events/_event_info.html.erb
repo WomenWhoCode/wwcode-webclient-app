@@ -1,9 +1,2 @@
-<form class="attendance-form" action="">
-  <p class="event-body-text event-extra-text">{{event.subscribe_count}} followers</p>
-  <br>
-  <p class="event-body-text event-extra-text">Are you going? </p>
-  <input class="event-radio-button" type="radio" ng-model="event.attending" ng-value="true" ng-change="toggleAttendEvent(event)"> 
-  <p class="event-body-text event-extra-text"> yes! </p>
-  <input class="event-radio-button" type="radio" ng-model="event.attending" ng-value="false" ng-change="toggleAttendEvent(event)"> 
-  <p class="event-body-text event-extra-text"> no! </p>
-</form>
+<p class="event-body-text">{{event.month + " " + event.date}} - {{event.hour + ":" + event.minute + " " + event.ampm}}</p>
+<p class="event-body-text">{{"at " + event.location}}</p>

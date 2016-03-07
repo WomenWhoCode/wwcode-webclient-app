@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require jquery.easing.min
 // require turbolinks
 //= require angular.min
 //= require angular-animate.min
