@@ -1,18 +1,7 @@
-<div class="event-show-div ">
-  <div class="panel-default my-panel">
-    <div class="panel-heading my-panel-heading" ng-style="{background:events.bgColorHeadSelected}">
-      <div class="event-icon-div">
-        <%= image_tag "events_calendar_white.png", class: 'event-icon' %>
-        <!-- events_calendar.svg -->
-        <!-- <i class="fa fa-calendar fa-2x"></i> -->
-      </div>
-      <div class="event-text">
-        <p class="event-title" ng-bind="events.selected_title">Event 1</p>
-        <p class="event-sub-head"> {{events.selected_subscribe_count}} FOLLOWERS</p>
-      </div>
-    </div>
-    <div class="panel-body my-panel-body" ng-style="{background:events.bgColorBodySelected}">
-      <p>Posts happening!</p>
-    </div>
-  </div>
-</div>
+<form class="attendance-form" action="">
+  <p class="event-extra-text">Are you going? </p>
+  <input class="event-radio-button" type="radio" ng-model="event.attending" ng-value="true" ng-change="toggleAttendEvent(event)"> 
+  <p class="event-extra-text"> yes </p>
+  <input class="event-radio-button" type="radio" ng-model="event.attending" ng-value="false" ng-change="toggleAttendEvent(event)"> 
+  <p class="event-extra-text"> no </p>
+</form>
