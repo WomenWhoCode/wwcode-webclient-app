@@ -14,7 +14,8 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 // require turbolinks
-//= require angular
+//= require angular.min
+//= require angular-animate.min
 //= require angular-snap/angular-snap.min
 //= require snapjs/snap.min
 //= require app
