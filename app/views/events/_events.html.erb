@@ -2,7 +2,7 @@
   <div class="events-cell-div"
   ng-controller="EventsCtrl" 
   ng-init="setup()" >
-    <p class="events-heading font-montserrat"> Upcoming events near you:</p>  
+    <p class="events-heading font-montserrat"> Upcoming events near you:</p>
     <div class="events-inner-div">
       <div class="event-repeat" 
       ng-repeat="event in events" 
@@ -16,7 +16,7 @@
           ng-style="{'background-color':event.bgRgbaHead}">
             <div class="event-icon-div">
               <img class="event-icon"
-              src="<%= asset_path("events_calendar_white.png") %>"
+              ng-src="{{ event.attending && '<%= asset_path("events_calendar_check_white.png") %>' || '<%= asset_path("events_calendar_white.png") %>'}}"
               ng-style: "{'background-color': events.bgRgbaHeadDefault}"></img>
             </div>
             <p class="event-title">{{event.title}}</p>

@@ -1,7 +1,7 @@
 <form class="attendance-form" action="">
   <p class="event-extra-text">Are you going? </p>
-  <input class="event-radio-button" type="radio" ng-model="event.attending" ng-value="true"> 
+  <input class="event-radio-button" type="radio" ng-model="event.attending" ng-value="true" ng-change="toggleAttendEvent(event)"> 
   <p class="event-extra-text"> yes </p>
-  <input class="event-radio-button" type="radio" ng-model="event.attending" ng-value="false"> 
+  <input class="event-radio-button" type="radio" ng-model="event.attending" ng-value="false" ng-change="toggleAttendEvent(event)"> 
   <p class="event-extra-text"> no </p>
 </form>

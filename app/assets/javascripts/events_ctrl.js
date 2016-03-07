@@ -41,6 +41,16 @@
       }
     }
 
+    $scope.mouseoverEvent = function(event){
+      event.bgRgbaHead=$scope.events.bgRgbaHeadMouseover;
+      event.bgRgbaBody=$scope.events.bgRgbaBodyMouseover;
+    }
+
+    $scope.mouseleaveEvent = function(event){
+      event.bgRgbaHead=$scope.events.bgRgbaHeadDefault;
+      event.bgRgbaBody=$scope.events.bgRgbaBodyDefault;
+    }
+
     $scope.toggleExpandEvent = function(event) {
       if (!event.expanded)
       //if event.expanded is false or undefined (on page load)
@@ -52,15 +62,9 @@
       }
     }
 
-
-    $scope.mouseoverEvent = function(event){
-      event.bgRgbaHead=$scope.events.bgRgbaHeadMouseover;
-      event.bgRgbaBody=$scope.events.bgRgbaBodyMouseover;
-    }
-
-    $scope.mouseleaveEvent = function(event){
-      event.bgRgbaHead=$scope.events.bgRgbaHeadDefault;
-      event.bgRgbaBody=$scope.events.bgRgbaBodyDefault;
+    $scope.toggleAttendEvent = function(event) {
+      //need AJAX call here to puts that attending 
+      //need to 
     }
 
     // $scope.events = [
