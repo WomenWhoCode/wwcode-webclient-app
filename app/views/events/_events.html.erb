@@ -4,7 +4,7 @@
     <div class="events-inner-div">
       <div class="event-repeat" 
       ng-repeat="event in events" 
-      ng-attr-id="event{{event.id}}">
+      id="event{{event.id}}">
         <div class="panel-default my-panel">  
           <div class="panel-heading my-panel-heading font-montserrat-light" 
           ng-click="toggleExpandEvent(event)" 
@@ -18,15 +18,19 @@
               ng-style: "{'background-color': events.bgRgbaHeadDefault}"></img>
             </div>
             <p class="event-title">{{event.title}}</p>
-            <p class="event-sub-head">{{event.network_title.toUpperCase() + " NETWORK"}}</p>
+            <p class="event-sub-head event-sub-head-left">{{event.network_title.toUpperCase() + " NETWORK"}}</p>
+            <p class="event-sub-head event-sub-head-right">
+              {{event.subscribe_count}} FOLLOWERS</p>
+            <div class="event-heading-bottom-buffer">
+            </div>
           </div>
           <div class="panel-body my-panel-body font-hind" 
           ng-style="{'background-color':event.bgRgbaBody}">
-            <p class="event-body-text">{{event.month + " " + event.date}} - {{event.hour + ":" + event.minute + " " + event.ampm}}</p>
-            <p class="event-body-text">{{"at " + event.location}}</p>
-          <div class="event-expand-div"
-          ng-show='event.expanded'>
             <%= render "event_info" %>
+            <div class="event-expand-div"
+            id="event{{event.id}}extra-div">
+              <%= render "event_expand_info" %>
+            </div>
           </div>
         </div>
       </div>

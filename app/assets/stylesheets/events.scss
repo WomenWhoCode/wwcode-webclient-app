@@ -16,11 +16,9 @@ $selected: #009688;
 .font-hind {
   font-family: 'Hind', sans-serif;
 }
-
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
 }
-
 .font-montserrat-light{
 font-family: 'montserrat-light', sans-serif;
 } 
@@ -31,14 +29,12 @@ font-family: 'montserrat-light', sans-serif;
   display: table;
   width:100%;
 }
-
 .events-cell-div {
   display: table-cell;
   text-align: left;
   vertical-align: top;
   padding-bottom: 20px;
 }
-
 .events-inner-div {
   display: inline-block;
   text-align: left;
@@ -46,29 +42,21 @@ font-family: 'montserrat-light', sans-serif;
   margin-left: 20px;
 }
 
-.events-cell-div > p {
+.events-heading {
   font-size: 14.5px;
   margin-bottom: 20px;
   padding-left: 29px;
   font-weight: 300;
-}
-
-.events-heading {
   color: black;
 }
 
-.event-icon { 
-  height: 40px;
-  width: 40px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
 
 .my-panel {
   border-color: transparent;
   box-shadow: 1.5px 0px 2.5px rgba(190, 190, 190, 0.5), 0px 5px 3px rgba(190, 190, 190, 0.5);
   border-radius:4px;
   margin-bottom: 20px;
+  background: transparent;
 }
 
 .my-panel-heading {
@@ -78,27 +66,42 @@ font-family: 'montserrat-light', sans-serif;
   border-radius:4px 4px 0px 0px;
 }
 
-.my-panel-heading .event-title, .my-panel-heading .event-sub-head {
+.event-icon-div {
+  float: left;
+  margin-right: 10px;
+}
+.event-icon { 
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.event-title, .event-sub-head {
   color: white;
   line-height: 1.5;
 }
-
-.my-panel-heading .event-sub-head {
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 0px;
-  margin-bottom: 3px;
-}
-
-.my-panel-heading .event-sub-head {
+.event-sub-head {
   font-size: 10px;
+  font-weight: bold;
   opacity: .75;
-  margin-bottom: 0px;
+  margin-top: 0px;
 }
+.event-sub-head-left {
+  float: left;
+} 
+.event-sub-head-right {
+  display: inline-block;
+  float: right;
+}
+
+.event-heading-bottom-buffer {
+  height:10px;
+}
+
 
 .my-panel-body {
   padding: 15px 18px 10px 18px;
-  /*background-color:#FAFAFA;*/
   border-radius:0px 0px 4px 4px;
 }
 
@@ -110,26 +113,18 @@ font-family: 'montserrat-light', sans-serif;
 } 
 
 .event-expand-div {
+  display: none;
+}
+.event-extra-text-div {
   margin-top: 20px;
   margin-bottom: 10px;
-}
-
-.event-icon-div {
-  float: left;
-  margin-right: 10px;
 }
 
 .event-extra-text {
   padding-right:10px;
   display: inline-block;
 }
-
-.attendance-form input[type="radio"] {
+.event-extra-text-div input[type="radio"] {
   display: inline-block !important;
   width: 20px;
 }
-
-/*.attendance-form {
-  display: inline-block !important;
-}
-*/

@@ -24,6 +24,7 @@
 
       $scope.events = convertEventsDates($scope.events);
       $scope.setupColors();
+      $scope.events.expandCollpaseDelay=1000;
 
     }
 
@@ -53,14 +54,17 @@
     }
 
     $scope.toggleExpandEvent = function(event) {
-      if (!event.expanded)
+      if (!event.expanded) {
       //if event.expanded is false or undefined (on page load)
-      {
-        event.expanded=true
+        event.expanded=true;
+        $('#event'+event.id+'extra-div').slideDown(200,'easeInQuad');
+        // event.extraTextShown=true;
       }
       else {
-        event.expanded=false
-      }
+        event.expanded=false;
+        // event.extraTextShown=false;
+        $('#event'+event.id+'extra-div').slideUp(200,'easeInQuad');
+      }      
     }
 
     $scope.toggleAttendEvent = function(event) {
